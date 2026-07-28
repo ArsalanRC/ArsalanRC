@@ -6,6 +6,10 @@ Most of my working life goes on the unglamorous half of software: making systems
 
 The repos here are the other half, where I get to design something from scratch and take the architecture seriously.
 
+### ▶︎ [Play my chess engine in your browser](https://arsalanrc.github.io/chess-engine/)
+
+No install, no sign-up, nothing to download. It opens and you play. The board sits next to a live readout of what the engine is thinking: its evaluation, the legal move count, and the position hash it uses to detect repetition.
+
 ---
 
 ## Selected work
