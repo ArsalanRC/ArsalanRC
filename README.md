@@ -13,7 +13,7 @@ The repos here are the other half, where I get to design something from scratch 
 | Project | What it is | Stack |
 |---|---|---|
 | [**Game Arena**](#game-arena) | 28 playable games on one platform, sharing an engine architecture, with online multiplayer and 23 languages | Next.js 14 · TypeScript · Supabase |
-| [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) | Standalone chess engine: complete FIDE rules, minimax with alpha-beta pruning, zero dependencies | TypeScript |
+| [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) ·  [play it](https://arsalanrc.github.io/chess-engine/) | Standalone chess engine: complete FIDE rules, minimax with alpha-beta pruning, zero dependencies | TypeScript |
 | **`stylo`** | Stylometric text fingerprinting, measuring ~20 features against a real corpus distribution | TypeScript · MCP |
 | **`integration-patterns`** | Reference implementations for idempotent webhooks, retries, dead-letter queues, reconciliation | TypeScript · Postgres |
 
