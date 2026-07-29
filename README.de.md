@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
-  <img alt="Arsalan Khadim — Softwarearchitekt und Full-Stack-Engineer" src="./assets/header-light.svg" width="100%">
+  <img alt="Arsalan Khadim, Softwarearchitekt und Full-Stack-Engineer" src="./assets/header-light.svg" width="100%">
 </picture>
 
 <a href="https://github.com/ArsalanRC">

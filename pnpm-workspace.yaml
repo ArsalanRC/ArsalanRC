@@ -1,0 +1,4 @@
+# The engine is consumed straight from its GitHub repo until it is on npm. Its
+# `prepare` script compiles it on install, which pnpm blocks by default.
+allowBuilds:
+  '@arsalanrc/chess-engine': true

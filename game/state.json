@@ -1,0 +1,185 @@
+{
+  "state": {
+    "board": [
+      {
+        "type": "R",
+        "color": "white"
+      },
+      {
+        "type": "N",
+        "color": "white"
+      },
+      {
+        "type": "B",
+        "color": "white"
+      },
+      {
+        "type": "Q",
+        "color": "white"
+      },
+      {
+        "type": "K",
+        "color": "white"
+      },
+      {
+        "type": "B",
+        "color": "white"
+      },
+      {
+        "type": "N",
+        "color": "white"
+      },
+      {
+        "type": "R",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      {
+        "type": "P",
+        "color": "white"
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "P",
+        "color": "black"
+      },
+      {
+        "type": "R",
+        "color": "black"
+      },
+      {
+        "type": "N",
+        "color": "black"
+      },
+      {
+        "type": "B",
+        "color": "black"
+      },
+      {
+        "type": "Q",
+        "color": "black"
+      },
+      {
+        "type": "K",
+        "color": "black"
+      },
+      {
+        "type": "B",
+        "color": "black"
+      },
+      {
+        "type": "N",
+        "color": "black"
+      },
+      {
+        "type": "R",
+        "color": "black"
+      }
+    ],
+    "turnColor": "white",
+    "castlingRights": {
+      "whiteKingside": true,
+      "whiteQueenside": true,
+      "blackKingside": true,
+      "blackQueenside": true
+    },
+    "enPassantSquare": null,
+    "halfmoveClock": 0,
+    "fullmoveNumber": 1,
+    "check": false,
+    "gameResult": "in_progress",
+    "lastMove": null,
+    "positionHistory": [
+      "RNBQKBNRPPPPPPPP................................pppppppprnbqkbnr|w|KQkq|-"
+    ]
+  },
+  "selected": null,
+  "log": [],
+  "players": []
+}

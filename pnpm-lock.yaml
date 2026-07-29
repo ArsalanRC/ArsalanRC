@@ -1,0 +1,24 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@arsalanrc/chess-engine':
+        specifier: github:ArsalanRC/chess-engine
+        version: https://codeload.github.com/ArsalanRC/chess-engine/tar.gz/8c812e5dd5462b12f325a614416adaf82c414f6e
+
+packages:
+
+  '@arsalanrc/chess-engine@https://codeload.github.com/ArsalanRC/chess-engine/tar.gz/8c812e5dd5462b12f325a614416adaf82c414f6e':
+    resolution: {gitHosted: true, integrity: sha512-GoIj1eHcVSfx6jv+YEZ4JgrXvZAG0QnEfhWpFfogwc7WP/2MRdOSjqMwuH/iUCfM3Yfh48nWFSu2CqvR03gukw==, tarball: https://codeload.github.com/ArsalanRC/chess-engine/tar.gz/8c812e5dd5462b12f325a614416adaf82c414f6e}
+    version: 0.1.0
+    engines: {node: '>=18'}
+
+snapshots:
+
+  '@arsalanrc/chess-engine@https://codeload.github.com/ArsalanRC/chess-engine/tar.gz/8c812e5dd5462b12f325a614416adaf82c414f6e': {}
