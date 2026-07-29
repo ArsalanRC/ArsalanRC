@@ -3,6 +3,19 @@
   <img alt="Arsalan Khadim — Softwarearchitekt und Full-Stack-Engineer" src="./assets/header-light.svg" width="100%">
 </picture>
 
+<a href="https://github.com/ArsalanRC">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/badge-github-dark.svg">
+    <img alt="GitHub" src="./assets/badge-github-light.svg" height="40">
+  </picture>
+</a>
+<a href="https://www.linkedin.com/in/muhammad-arsalan-khadim-b87550259/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/badge-linkedin-dark.svg">
+    <img alt="LinkedIn" src="./assets/badge-linkedin-light.svg" height="40">
+  </picture>
+</a>
+
 [English](./README.md) · **Deutsch**
 
 ---
