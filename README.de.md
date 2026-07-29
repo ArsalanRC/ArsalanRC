@@ -26,6 +26,11 @@ Der Großteil meiner Arbeitszeit geht in die unglamouröse Hälfte der Softwaree
 
 Die Repos hier sind die andere Hälfte. Dort darf ich etwas von Grund auf entwerfen und die Architektur ernst nehmen.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.de.svg">
+  <img alt="5 öffentliche Repos, 75 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 7 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
+</picture>
+
 ---
 
 ## Portfolio
@@ -33,6 +38,46 @@ Die Repos hier sind die andere Hälfte. Dort darf ich etwas von Grund auf entwer
 ### [arsalanrc.github.io](https://arsalanrc.github.io)
 
 Alles an einem Ort, die Projekte in einer 3D-Szene, die sich mit der Maus steuern lässt. Englisch und Deutsch, hell und dunkel.
+
+---
+
+## Ein Rätsel, weil meine Schach-Engine gerade nichts zu tun hatte
+
+<!-- PUZZLE:START -->
+
+<img src="./assets/puzzle/board.svg" width="470" alt="Schachstellung, Weiß am Zug, Matt in eins">
+
+**Weiß am Zug. Matt in eins.** Wähle einen Zug und sieh nach, ob er funktioniert.
+
+<details>
+<summary><code>Ra1-a8</code> &nbsp; Turm nach a8</summary>
+
+**Richtig. Schachmatt.** Der schwarze König ist von den eigenen Bauern auf f7, g7 und h7 eingemauert. Ein Turm, der die Grundreihe erreicht, beendet die Partie deshalb sofort: nichts kann dazwischenziehen, nichts den Turm schlagen, und der König hat kein Feld.
+
+</details>
+
+<details>
+<summary><code>Bc4xb5</code> &nbsp; Läufer schlägt auf b5</summary>
+
+**Gewinnt Material, verpasst den Sieg.** Schwarz bekommt 8 legale Züge und die Partie geht weiter. Eine Figur geschenkt zu nehmen ist meistens richtig. Genau deshalb ist der Zug verlockend, und genau deshalb ist er hier falsch.
+
+</details>
+
+<details>
+<summary><code>Bc4xf7</code> &nbsp; Läufer schlägt auf f7</summary>
+
+**Schach, aber kein Matt.** Schwarz hat 3 legale Antworten, der Angriff läuft also ins Leere. Schach geben ist nicht dasselbe wie die Partie beenden, und genau darum geht es hier.
+
+</details>
+
+<!-- PUZZLE:END -->
+
+Jede Antwort oben wurde gegen [`chess-engine`](https://github.com/ArsalanRC/chess-engine)
+geprüft statt von Hand geschrieben. Das Rätsel kann also nichts behaupten, dem die Engine
+widerspricht. Zwei unsaubere Entwürfe hat sie vorher aussortiert.
+
+**Lieber eine echte Partie?** [Gegen die Engine im Browser spielen](https://arsalanrc.github.io/chess-engine/):
+Sie antwortet sofort, ganz ohne Formulare.
 
 ---
 
@@ -49,12 +94,24 @@ Keine Installation, keine Anmeldung, nichts herunterzuladen. Beides läuft direk
 
 ## Ausgewählte Projekte
 
-| Projekt | Worum es geht | Stack |
-|---|---|---|
-| [**Game Arena**](#game-arena) | 28 spielbare Spiele auf einer Plattform, gemeinsame Engine-Architektur, Online-Mehrspieler, 23 Sprachen | Next.js 14 · TypeScript · Supabase |
-| [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) · [spielen](https://arsalanrc.github.io/chess-engine/) | Eigenständige Engine: vollständige FIDE-Regeln, Minimax mit Alpha-Beta-Pruning, keine Abhängigkeiten | TypeScript |
-| [**`integration-patterns`**](https://github.com/ArsalanRC/integration-patterns) · [erklärt](https://arsalanrc.github.io/integration-patterns/) | Die Logik, die Integrationen zwischen Systemen korrekt hält: Idempotenz, Retry mit Backoff und Jitter, jeweils mit dem Fehlerfall, den sie verhindert | TypeScript · Postgres |
-| **`stylo`** | Stylometrischer Textabgleich: rund 20 Merkmale gegen eine echte Korpusverteilung gemessen | TypeScript · MCP |
+<a href="https://github.com/ArsalanRC/chess-engine">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-chess-dark.de.svg">
+    <img alt="chess-engine: alle FIDE-Regeln und ein Minimax-Bot mit Alpha-Beta-Pruning" src="./assets/components/card-chess-light.de.svg" width="480">
+  </picture>
+</a>
+<a href="https://github.com/ArsalanRC/integration-patterns">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-patterns-dark.de.svg">
+    <img alt="integration-patterns: Idempotenz und Retry mit Full Jitter" src="./assets/components/card-patterns-light.de.svg" width="480">
+  </picture>
+</a>
+<a href="#game-arena">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-arena-dark.de.svg">
+    <img alt="Game Arena: 28 Spiele, eine Codebasis, Spiellogik fasst React nie an" src="./assets/components/card-arena-light.de.svg" width="480">
+  </picture>
+</a>
 
 ---
 
@@ -120,13 +177,10 @@ Diese Grenze hat sich immer wieder ausgezahlt. Engines sind trivial testbar, wei
 
 ## Stack
 
-**Sprachen** · TypeScript · JavaScript · Python · SQL · Bash
-
-**Frontend** · React · Next.js (App Router) · Tailwind · Zustand · Framer Motion · SVG
-
-**Backend und Daten** · Node.js · PostgreSQL · Supabase · REST · Webhooks
-
-**Praxis** · Systemarchitektur · Systemintegration · Testgetriebene Entwicklung · CI/CD · Technische Führung
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stack-dark.de.svg">
+  <img alt="Stack: TypeScript, JavaScript, Node.js, PostgreSQL, React, Next.js im Einsatz; Python, SQL, Bash, Supabase, REST, Webhooks im Beruf; Python, Java, Rust, C++, C, C# als Nächstes geplant" src="./assets/components/stack-light.de.svg" width="100%">
+</picture>
 
 ---
 
