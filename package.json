@@ -1,0 +1,14 @@
+{
+  "name": "arsalanrc-profile",
+  "private": true,
+  "type": "module",
+  "description": "Tooling for the profile README, including the playable chess game.",
+  "scripts": {
+    "assets": "node game/build-assets.mjs",
+    "play": "node game/play.mjs"
+  },
+  "dependencies": {
+    "@arsalanrc/chess-engine": "github:ArsalanRC/chess-engine"
+  },
+  "packageManager": "pnpm@11.1.2"
+}
