@@ -19,7 +19,7 @@ No install, no sign-up, nothing to download. It opens and you play. The board si
 | [**Game Arena**](#game-arena) | 28 playable games on one platform, sharing an engine architecture, with online multiplayer and 23 languages | Next.js 14 · TypeScript · Supabase |
 | [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) ·  [play it](https://arsalanrc.github.io/chess-engine/) | Standalone chess engine: complete FIDE rules, minimax with alpha-beta pruning, zero dependencies | TypeScript |
 | **`stylo`** | Stylometric text fingerprinting, measuring ~20 features against a real corpus distribution | TypeScript · MCP |
-| **`integration-patterns`** | Reference implementations for idempotent webhooks, retries, dead-letter queues, reconciliation | TypeScript · Postgres |
+| [**`integration-patterns`**](https://github.com/ArsalanRC/integration-patterns) | The logic that keeps system-to-system integrations correct: idempotency, retry with backoff and jitter, each with the failure it prevents written down | TypeScript · Postgres |
 
 > This profile is still being built out. Repos appear once they are finished properly, rather than dumped here half-done.
 
