@@ -26,57 +26,61 @@ Most of my working life goes on the unglamorous half of software: making systems
 
 The repos here are the other half, where I get to design something from scratch and take the architecture seriously.
 
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.svg">
+  <img alt="5 public repos, 75 tests passing, 0 runtime dependencies, 100% community standards, 7 merged pull requests" src="./assets/components/stats-light.svg" width="100%">
+</picture>
 
 ---
 
-## Play me at chess, from inside this README
+---
 
-The board below is live. **Click a white piece, then click where it should go.** My own
-[`chess-engine`](https://github.com/ArsalanRC/chess-engine) plays black and answers within about a minute.
+## A puzzle, since my chess engine was going spare
 
-<!-- CHESS:START -->
+<!-- The board is an image and the answers are `<details>` blocks. That is real
+     interactivity with no JavaScript, no navigation and nothing left behind.
+     An earlier version made every square a link opening a pre-filled issue: it
+     worked, but a visitor clicking a pawn landed on a bug-report form with no
+     warning, and every move littered this repo's issue tracker. A bad trade
+     for a novelty. -->
 
-|   | a | b | c | d | e | f | g | h |
-|---|---|---|---|---|---|---|---|---|
-| **8** | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbr.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbb.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbq.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbk.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbb.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbn.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbr.svg" width="42"> |
-| **7** | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dbp.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbp.svg" width="42"> |
-| **6** | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lbn.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> |
-| **5** | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> |
-| **4** | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cd4&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> |
-| **3** | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/l.svg" width="42"> |
-| **2** | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Ca2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cb2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cc2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | <img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/d.svg" width="42"> | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Ce2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cf2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cg2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwp.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Ch2&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) |
-| **1** | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwr.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Ca1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwn.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cb1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwb.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cc1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwq.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cd1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwk.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Ce1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwb.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cf1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/dwn.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Cg1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) | [<img src="https://raw.githubusercontent.com/ArsalanRC/ArsalanRC/main/assets/chess/lwr.svg" width="42">](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cselect%7Ch1&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess) |
+<!-- PUZZLE:START -->
 
-**White to move.**  Click any **white** piece to select it.
+<img src="./assets/puzzle/board.svg" width="470" alt="Chess position, white to play and mate in one">
 
-`move 2` · `28 legal moves` · `eval -0.10` · [new game](https://github.com/ArsalanRC/ArsalanRC/issues/new?title=chess%7Cnew&body=Just%20submit%20this%20issue.%20A%20workflow%20reads%20the%20title%2C%20plays%20the%20move%2C%20and%20closes%20it.%0ANothing%20here%20is%20read%2C%20so%20you%20can%20ignore%20this%20box%20entirely.&labels=chess)
-
-**Moves** · 1. d4 Nc6
-
-<!-- CHESS:END -->
+**White to play. Mate in one.** Pick a move to see whether it works.
 
 <details>
-<summary><b>How this works, because GitHub does not allow JavaScript in a README</b></summary>
+<summary><code>Ra1-a8</code> &nbsp; rook to a8</summary>
 
-<br/>
-
-Markdown here is sanitised: no scripts, no forms, no event handlers. So the interactivity is not in the page at all.
-
-1. Every playable square is an **image wrapped in a link**, and that link opens a new issue with a pre-filled title such as `chess|move|e2e4`.
-2. Submitting it triggers a **GitHub Action**.
-3. The Action installs [`chess-engine`](https://github.com/ArsalanRC/chess-engine), validates the move, has the engine reply, rewrites this section of the README, commits, comments on your issue and closes it.
-4. You reload and the board has moved.
-
-The board you are looking at is a plain grid of static SVG images. All of the behaviour lives in CI.
-
-Two details that matter more than they look:
-
-**The issue title is untrusted input.** Anyone on the internet can open an issue titled anything. So `e2e4` is treated as a *request*, never an instruction: the move is only played if the engine lists it as legal in the current position. An illegal or malformed title leaves the game untouched and says so.
-
-**The engine is the same code as everywhere else.** The Action installs it straight from its repository, so the bot here, the bot in the [browser demo](https://arsalanrc.github.io/chess-engine/) and the bot in the test suite are one implementation with no copy kept in sync by hand.
+**Correct. Checkmate.** The black king is walled in by its own pawns on f7, g7 and h7, so a rook arriving on the back rank ends it immediately. Nothing blocks, nothing captures the rook, and the king has no square.
 
 </details>
+
+<details>
+<summary><code>Bc4xb5</code> &nbsp; bishop takes on b5</summary>
+
+**Wins material, misses the win.** Black gets 8 legal moves and the game carries on. Taking a free piece is usually right, which is exactly why it is tempting, and exactly why it is wrong here.
+
+</details>
+
+<details>
+<summary><code>Bc4xf7</code> &nbsp; bishop takes on f7</summary>
+
+**Check, but not mate.** Black has 3 legal replies, so the attack does not finish. Giving check is not the same as ending the game, which is the whole point of the puzzle.
+
+</details>
+
+<!-- PUZZLE:END -->
+
+Every answer above was verified against [`chess-engine`](https://github.com/ArsalanRC/chess-engine)
+rather than written by hand, so the puzzle cannot claim something the engine disagrees with.
+It rejected two unsound drafts before this one.
+
+**Want a real game?** [Play the engine in your browser](https://arsalanrc.github.io/chess-engine/):
+it answers instantly, with no forms involved.
+
+---
 
 ## Portfolio
 
@@ -99,12 +103,24 @@ No install, no sign-up, nothing to download. Both of these open and run in your 
 
 ## Selected work
 
-| Project | What it is | Stack |
-|---|---|---|
-| [**Game Arena**](#game-arena) | 28 playable games on one platform, sharing an engine architecture, with online multiplayer and 23 languages | Next.js 14 · TypeScript · Supabase |
-| [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) · [play](https://arsalanrc.github.io/chess-engine/) | Standalone engine: complete FIDE rules, minimax with alpha-beta pruning, zero dependencies | TypeScript |
-| [**`integration-patterns`**](https://github.com/ArsalanRC/integration-patterns) · [explained](https://arsalanrc.github.io/integration-patterns/) | The logic that keeps system-to-system integrations correct: idempotency, retry with backoff and jitter, each with the failure it prevents written down | TypeScript · Postgres |
-| **`stylo`** | Stylometric text fingerprinting, measuring around 20 features against a real corpus distribution | TypeScript · MCP |
+<a href="https://github.com/ArsalanRC/chess-engine">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-chess-dark.svg">
+    <img alt="chess-engine: full FIDE rules and a minimax bot with alpha-beta pruning" src="./assets/components/card-chess-light.svg" width="480">
+  </picture>
+</a>
+<a href="https://github.com/ArsalanRC/integration-patterns">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-patterns-dark.svg">
+    <img alt="integration-patterns: idempotency and retry with full jitter" src="./assets/components/card-patterns-light.svg" width="480">
+  </picture>
+</a>
+<a href="#game-arena">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-arena-dark.svg">
+    <img alt="Game Arena: 28 games, one codebase, game logic never touches React" src="./assets/components/card-arena-light.svg" width="480">
+  </picture>
+</a>
 
 ---
 
@@ -170,13 +186,10 @@ That boundary paid for itself repeatedly. Engines are trivially testable because
 
 ## Stack
 
-**Languages** · TypeScript · JavaScript · Python · SQL · Bash
-
-**Frontend** · React · Next.js (App Router) · Tailwind · Zustand · Framer Motion · SVG
-
-**Backend and data** · Node.js · PostgreSQL · Supabase · REST · Webhooks
-
-**Practice** · System architecture · Systems integration · Test-driven development · CI/CD · Technical leadership
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stack-dark.svg">
+  <img alt="Stack: TypeScript, JavaScript, Node.js, PostgreSQL, React, Next.js shipping today; Python, SQL, Bash, Supabase, REST, Webhooks in the day job; Python, Java, Rust, C++, C, C# next on the plan" src="./assets/components/stack-light.svg" width="100%">
+</picture>
 
 ---
 
