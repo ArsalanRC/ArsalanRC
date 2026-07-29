@@ -25,35 +25,14 @@
       .cyan    { fill: #146273; }
       .rule    { stroke: #9A6410; stroke-width: 3; stroke-linecap: round; }
 
-      /* Packets travelling the wire, left to right, staggered. */
-      .packet { animation: run 5s linear infinite; }
-      .packet.b { animation-delay: 1.7s; }
-      .packet.c { animation-delay: 3.4s; }
-      @keyframes run {
-        0%   { transform: translateX(0);    opacity: 0; }
-        6%   { opacity: 1; }
-        94%  { opacity: 1; }
-        100% { transform: translateX(824px); opacity: 0; }
-      }
-
-      /* The three nodes acknowledge each packet as it lands. */
-      .pulse   { animation: pulse 5s ease-in-out infinite; }
-      .pulse.b { animation-delay: 1.7s; }
-      .pulse.c { animation-delay: 3.4s; }
-      @keyframes pulse {
-        0%, 100% { opacity: 0; transform: scale(0.6); }
-        45%      { opacity: 0; transform: scale(0.6); }
-        60%      { opacity: 1; transform: scale(1); }
-        85%      { opacity: 0.15; transform: scale(1.5); }
-      }
-
-      /* The cursor block, because the display face is monospace and it earns it. */
+      /* The cursor block, because the display face is monospace and it earns it.
+         This is the only motion left: everything else is static by choice.
+         Drifting particles read as filler regardless of how well they are made. */
       .caret { animation: blink 1.15s steps(1) infinite; }
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
 
       @media (prefers-reduced-motion: reduce) {
-        .packet, .pulse, .caret { animation: none; }
-        .pulse { opacity: 0.9; transform: scale(1); }
+        .caret { animation: none; }
       }
     </style>
   </defs>
@@ -85,32 +64,24 @@
   <text class="tag"  x="76" y="248" font-size="15">TypeScript · Python · PostgreSQL · Systems integration</text>
 
   <!-- The wire runs from the name into the systems on the right, because that
-       is literally the job. Same motif as my project sites, so the properties
-       read as a set rather than three unrelated pages. -->
+       is literally the job. Static: it is a diagram, not a screensaver. -->
   <line class="wire" x1="76" y1="292" x2="900" y2="292"/>
-  <g class="packet">   <rect class="amber" x="76" y="288" width="30" height="7" rx="3.5"/></g>
-  <g class="packet b"> <rect class="cyan"  x="76" y="288" width="30" height="7" rx="3.5"/></g>
-  <g class="packet c"> <rect class="amber" x="76" y="288" width="30" height="7" rx="3.5"/></g>
+  <rect class="amber" x="76" y="288" width="34" height="7" rx="3.5"/>
 
-  <!-- Three systems, lit as each packet arrives -->
+  <!-- Three systems. Two lit, one not, which is what a real integration looks
+       like on any given afternoon. -->
   <g transform="translate(930, 78)">
     <line class="edge" x1="30"  y1="60"  x2="200" y2="24"/>
     <line class="edge" x1="30"  y1="60"  x2="150" y2="170"/>
     <line class="edge" x1="200" y1="24"  x2="150" y2="170"/>
-    <!-- the wire feeding the first node -->
     <line class="edge" x1="-30" y1="214" x2="30" y2="60"/>
 
-    <g>
-      <circle class="node" cx="30" cy="60" r="18"/>
-      <circle class="node-on pulse" cx="30" cy="60" r="8" style="transform-origin: 30px 60px"/>
-    </g>
-    <g>
-      <circle class="node" cx="200" cy="24" r="18"/>
-      <circle class="node-on pulse b" cx="200" cy="24" r="8" style="transform-origin: 200px 24px"/>
-    </g>
-    <g>
-      <circle class="node" cx="150" cy="170" r="18"/>
-      <circle class="node-on pulse c" cx="150" cy="170" r="8" style="transform-origin: 150px 170px"/>
-    </g>
+    <circle class="node" cx="30" cy="60" r="18"/>
+    <circle class="node-on" cx="30" cy="60" r="8"/>
+
+    <circle class="node" cx="200" cy="24" r="18"/>
+
+    <circle class="node" cx="150" cy="170" r="18"/>
+    <circle class="node-on" cx="150" cy="170" r="8"/>
   </g>
 </svg>
