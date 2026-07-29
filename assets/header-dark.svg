@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="Arsalan Khadim, software architect and full-stack engineer">
+  <title>Arsalan Khadim — software architect and full-stack engineer</title>
+
+  <!--
+    Hand-built rather than pulled from a stats widget, for two reasons: nothing
+    here can rate-limit or go offline, and nobody else's profile has it.
+
+    Animation is plain CSS inside the SVG. GitHub renders this as an <img>,
+    which blocks scripts but still runs CSS keyframes, so the motion survives.
+    Motion is disabled under prefers-reduced-motion further down.
+  -->
+
+  <defs>
+    <style>
+      .bg      { fill: #12151F; }
+      .grid    { fill: #232A3A; }
+      .name    { fill: #E8E4DA; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 700; letter-spacing: -1.5px; }
+      .role    { fill: #9BA1B4; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 400; letter-spacing: 3.5px; }
+      .tag     { fill: #6E7488; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 400; letter-spacing: 2px; }
+      .wire    { stroke: #2C3448; stroke-width: 2; }
+      .edge    { stroke: #2C3448; stroke-width: 1.5; }
+      .node    { fill: #12151F; stroke: #3A4459; stroke-width: 2; }
+      .node-on { fill: #E8A33D; stroke: none; }
+      .amber   { fill: #E8A33D; }
+      .cyan    { fill: #5BC8D4; }
+      .rule    { stroke: #E8A33D; stroke-width: 3; stroke-linecap: round; }
+
+      /* Packets travelling the wire, left to right, staggered. */
+      .packet { animation: run 5s linear infinite; }
+      .packet.b { animation-delay: 1.7s; }
+      .packet.c { animation-delay: 3.4s; }
+      @keyframes run {
+        0%   { transform: translateX(0);    opacity: 0; }
+        6%   { opacity: 1; }
+        94%  { opacity: 1; }
+        100% { transform: translateX(824px); opacity: 0; }
+      }
+
+      /* The three nodes acknowledge each packet as it lands. */
+      .pulse   { animation: pulse 5s ease-in-out infinite; }
+      .pulse.b { animation-delay: 1.7s; }
+      .pulse.c { animation-delay: 3.4s; }
+      @keyframes pulse {
+        0%, 100% { opacity: 0; transform: scale(0.6); }
+        45%      { opacity: 0; transform: scale(0.6); }
+        60%      { opacity: 1; transform: scale(1); }
+        85%      { opacity: 0.15; transform: scale(1.5); }
+      }
+
+      /* The cursor block, because the display face is monospace and it earns it. */
+      .caret { animation: blink 1.15s steps(1) infinite; }
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .packet, .pulse, .caret { animation: none; }
+        .pulse { opacity: 0.9; transform: scale(1); }
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1280" height="340" rx="10"/>
+
+  <!-- Faint plotting grid: technical paper, not decoration for its own sake -->
+  <g class="grid" opacity="0.5">
+    <g id="dots">
+      <circle cx="40" cy="40" r="1"/><circle cx="80" cy="40" r="1"/><circle cx="120" cy="40" r="1"/>
+      <circle cx="40" cy="80" r="1"/><circle cx="80" cy="80" r="1"/><circle cx="120" cy="80" r="1"/>
+    </g>
+    <use href="#dots" x="120"/><use href="#dots" x="240"/><use href="#dots" x="360"/>
+    <use href="#dots" x="480"/><use href="#dots" x="600"/><use href="#dots" x="720"/>
+    <use href="#dots" x="840"/><use href="#dots" x="960"/><use href="#dots" x="1080"/>
+    <use href="#dots" y="120"/><use href="#dots" x="120" y="120"/><use href="#dots" x="240" y="120"/>
+    <use href="#dots" x="960" y="120"/><use href="#dots" x="1080" y="120"/>
+    <use href="#dots" y="240"/><use href="#dots" x="120" y="240"/><use href="#dots" x="240" y="240"/>
+    <use href="#dots" x="840" y="240"/><use href="#dots" x="960" y="240"/><use href="#dots" x="1080" y="240"/>
+  </g>
+
+  <!-- Accent rule -->
+  <line class="rule" x1="72" y1="96" x2="132" y2="96"/>
+
+  <text class="name" x="72" y="168" font-size="76">Arsalan Khadim</text>
+  <rect class="amber caret" x="716" y="140" width="16" height="34" rx="2"/>
+
+  <text class="role" x="76" y="212" font-size="19">SOFTWARE ARCHITECT · FULL-STACK ENGINEER</text>
+  <text class="tag"  x="76" y="248" font-size="15">TypeScript · Python · PostgreSQL · Systems integration</text>
+
+  <!-- The wire runs from the name into the systems on the right, because that
+       is literally the job. Same motif as my project sites, so the properties
+       read as a set rather than three unrelated pages. -->
+  <line class="wire" x1="76" y1="292" x2="900" y2="292"/>
+  <g class="packet">   <rect class="amber" x="76" y="288" width="30" height="7" rx="3.5"/></g>
+  <g class="packet b"> <rect class="cyan"  x="76" y="288" width="30" height="7" rx="3.5"/></g>
+  <g class="packet c"> <rect class="amber" x="76" y="288" width="30" height="7" rx="3.5"/></g>
+
+  <!-- Three systems, lit as each packet arrives -->
+  <g transform="translate(930, 78)">
+    <line class="edge" x1="30"  y1="60"  x2="200" y2="24"/>
+    <line class="edge" x1="30"  y1="60"  x2="150" y2="170"/>
+    <line class="edge" x1="200" y1="24"  x2="150" y2="170"/>
+    <!-- the wire feeding the first node -->
+    <line class="edge" x1="-30" y1="214" x2="30" y2="60"/>
+
+    <g>
+      <circle class="node" cx="30" cy="60" r="18"/>
+      <circle class="node-on pulse" cx="30" cy="60" r="8" style="transform-origin: 30px 60px"/>
+    </g>
+    <g>
+      <circle class="node" cx="200" cy="24" r="18"/>
+      <circle class="node-on pulse b" cx="200" cy="24" r="8" style="transform-origin: 200px 24px"/>
+    </g>
+    <g>
+      <circle class="node" cx="150" cy="170" r="18"/>
+      <circle class="node-on pulse c" cx="150" cy="170" r="8" style="transform-origin: 150px 170px"/>
+    </g>
+  </g>
+</svg>

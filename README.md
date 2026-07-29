@@ -1,4 +1,11 @@
-# Arsalan Khadim
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
+  <img alt="Arsalan Khadim — software architect and full-stack engineer" src="./assets/header-light.svg" width="100%">
+</picture>
+
+**English** · [Deutsch](./README.de.md)
+
+---
 
 **Software architect and full-stack engineer.** Currently Software Development Manager, which means I own the systems and the roadmap along with a fair share of the commits.
 
@@ -6,9 +13,16 @@ Most of my working life goes on the unglamorous half of software: making systems
 
 The repos here are the other half, where I get to design something from scratch and take the architecture seriously.
 
-### ▶︎ [Play my chess engine in your browser](https://arsalanrc.github.io/chess-engine/)
+---
 
-No install, no sign-up, nothing to download. It opens and you play. The board sits next to a live readout of what the engine is thinking: its evaluation, the legal move count, and the position hash it uses to detect repetition.
+## Try something of mine, right now
+
+No install, no sign-up, nothing to download. Both of these open and run in your browser.
+
+| | |
+|---|---|
+| ▶︎ **[Play my chess engine](https://arsalanrc.github.io/chess-engine/)** | A minimax bot with alpha-beta pruning, and the engine's internal state on display beside the board |
+| ▶︎ **[See how integration-patterns works](https://arsalanrc.github.io/integration-patterns/)** | An animated walkthrough: watch a duplicate webhook get absorbed and a retry storm take down a recovering service |
 
 ---
 
@@ -17,11 +31,9 @@ No install, no sign-up, nothing to download. It opens and you play. The board si
 | Project | What it is | Stack |
 |---|---|---|
 | [**Game Arena**](#game-arena) | 28 playable games on one platform, sharing an engine architecture, with online multiplayer and 23 languages | Next.js 14 · TypeScript · Supabase |
-| [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) ·  [play it](https://arsalanrc.github.io/chess-engine/) | Standalone chess engine: complete FIDE rules, minimax with alpha-beta pruning, zero dependencies | TypeScript |
-| **`stylo`** | Stylometric text fingerprinting, measuring ~20 features against a real corpus distribution | TypeScript · MCP |
-| [**`integration-patterns`**](https://github.com/ArsalanRC/integration-patterns) | The logic that keeps system-to-system integrations correct: idempotency, retry with backoff and jitter, each with the failure it prevents written down | TypeScript · Postgres |
-
-> This profile is still being built out. Repos appear once they are finished properly, rather than dumped here half-done.
+| [**`chess-engine`**](https://github.com/ArsalanRC/chess-engine) · [play](https://arsalanrc.github.io/chess-engine/) | Standalone engine: complete FIDE rules, minimax with alpha-beta pruning, zero dependencies | TypeScript |
+| [**`integration-patterns`**](https://github.com/ArsalanRC/integration-patterns) · [explained](https://arsalanrc.github.io/integration-patterns/) | The logic that keeps system-to-system integrations correct: idempotency, retry with backoff and jitter, each with the failure it prevents written down | TypeScript · Postgres |
+| **`stylo`** | Stylometric text fingerprinting, measuring around 20 features against a real corpus distribution | TypeScript · MCP |
 
 ---
 
