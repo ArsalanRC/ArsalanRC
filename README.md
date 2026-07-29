@@ -99,5 +99,5 @@ That boundary paid for itself repeatedly. Engines are trivially testable because
 
 ## Elsewhere
 
-- **LinkedIn** · *coming soon*
+- **LinkedIn** · [muhammad-arsalan-khadim](https://www.linkedin.com/in/muhammad-arsalan-khadim-b87550259/)
 - **Email** · arsalanrc200014@gmail.com
