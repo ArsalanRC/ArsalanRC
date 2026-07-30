@@ -2,11 +2,11 @@
     role="img" aria-label="recon: Two systems disagree. Which of those disagreements are actually real.">
     <title>recon</title>
     <rect width="480" height="190" rx="10" fill="#FFFFFF" stroke="#D8D0BE"/>
-    <rect x="0" y="0" width="4" height="190" rx="2" fill="#9A6410"/>
+    <rect x="0" y="0" width="4" height="190" rx="2" fill="#146273"/>
     <text x="28" y="46" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="21" font-weight="800"
           fill="#1B2130">recon</text>
     <text x="28" y="70" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11" letter-spacing="2"
-          fill="#9A6410">PYTHON</text>
+          fill="#146273">PYTHON</text>
     <text x="28" y="106" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
              fill="#6B6A62">Two systems disagree. Which of those</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
              fill="#6B6A62">disagreements are actually real.</text>
