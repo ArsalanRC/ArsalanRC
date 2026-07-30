@@ -83,7 +83,7 @@ Sie antwortet sofort, ganz ohne Formulare.
 
 ## Direkt ausprobieren
 
-Keine Installation, keine Anmeldung, nichts herunterzuladen. Beides läuft direkt im Browser.
+Keine Installation, keine Anmeldung, nichts herunterzuladen. Alle drei laufen direkt im Browser.
 
 | | |
 |---|---|

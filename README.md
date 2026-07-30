@@ -92,7 +92,7 @@ Everything in one place, with the projects shown in a 3D scene you can steer wit
 
 ## Try something of mine, right now
 
-No install, no sign-up, nothing to download. Both of these open and run in your browser.
+No install, no sign-up, nothing to download. All three open and run in your browser.
 
 | | |
 |---|---|
