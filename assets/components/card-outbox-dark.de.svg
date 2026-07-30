@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
-    role="img" aria-label="recon: Two systems disagree. Which of those disagreements are actually real.">
-    <title>recon</title>
+    role="img" aria-label="pg-outbox: Eine Zeile committen und ein Event senden, ohne dass beides zerfällt.">
+    <title>pg-outbox</title>
     <rect width="480" height="190" rx="10" fill="#1A2030" stroke="#2C3448"/>
-    <rect x="0" y="0" width="4" height="190" rx="2" fill="#5BC8D4"/>
+    <rect x="0" y="0" width="4" height="190" rx="2" fill="#E8A33D"/>
     <text x="28" y="46" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="21" font-weight="800"
-          fill="#E8E4DA">recon</text>
+          fill="#E8E4DA">pg-outbox</text>
     <text x="28" y="70" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11" letter-spacing="2"
-          fill="#5BC8D4">PYTHON</text>
+          fill="#E8A33D">JAVA · POSTGRES</text>
     <text x="28" y="106" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
-             fill="#8A90A3">Two systems disagree. Which of those</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
-             fill="#8A90A3">disagreements are actually real.</text>
+             fill="#8A90A3">Eine Zeile committen und ein Event</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
+             fill="#8A90A3">senden, ohne dass beides zerfällt.</text>
     <line x1="28" y1="150" x2="452" y2="150" stroke="#2C3448"/>
     <text x="28" y="170" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11.5"
-          fill="#8A90A3">69 tests · 0 deps · 3.10 to 3.13</text>
+          fill="#8A90A3">41 Tests · 0 Abhängigkeiten · Java 17 und 21</text>
   </svg>

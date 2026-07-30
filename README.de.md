@@ -28,7 +28,7 @@ Die Repos hier sind die andere Hälfte. Dort darf ich etwas von Grund auf entwer
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.de.svg">
-  <img alt="6 öffentliche Repos, 144 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 16 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
+  <img alt="7 öffentliche Repos, 185 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 19 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
 </picture>
 
 ---
@@ -83,18 +83,25 @@ Sie antwortet sofort, ganz ohne Formulare.
 
 ## Direkt ausprobieren
 
-Keine Installation, keine Anmeldung, nichts herunterzuladen. Alle drei laufen direkt im Browser.
+Keine Installation, keine Anmeldung, nichts herunterzuladen. Alle vier laufen direkt im Browser.
 
 | | |
 |---|---|
 | ▶︎ **[Gegen meine Schach-Engine spielen](https://arsalanrc.github.io/chess-engine/)** | Ein Minimax-Bot mit Alpha-Beta-Pruning, und daneben die Innenansicht der Engine in Echtzeit |
 | ▶︎ **[integration-patterns erklärt](https://arsalanrc.github.io/integration-patterns/)** | Animiert Schritt für Schritt: ein doppelter Webhook wird abgefangen, ein Retry-Sturm wirft einen Dienst um |
 | ▶︎ **[recon beim Abgleich zusehen](https://arsalanrc.github.io/recon/)** | Sechs Zeilen und ein Schalter für die Toleranzen. Dieselben Zeilen, sechs Funde oder vier |
+| ▶︎ **[Einen Prozess mitten in der Transaktion abschießen](https://arsalanrc.github.io/pg-outbox/)** | Drei Wege, ein Event zu veröffentlichen, und die zwei, nach denen Datenbank und Broker sich widersprechen |
 
 ---
 
 ## Ausgewählte Projekte
 
+<a href="https://github.com/ArsalanRC/pg-outbox">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-outbox-dark.de.svg">
+    <img alt="pg-outbox: eine Zeile committen und ein Event senden, ohne dass beides zerfällt" src="./assets/components/card-outbox-light.de.svg" width="480">
+  </picture>
+</a>
 <a href="https://github.com/ArsalanRC/recon">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-recon-dark.de.svg">
@@ -186,7 +193,7 @@ Diese Grenze hat sich immer wieder ausgezahlt. Engines sind trivial testbar, wei
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stack-dark.de.svg">
-  <img alt="Stack: TypeScript, Python, JavaScript, Node.js, PostgreSQL, React, Next.js im Einsatz; Python, SQL, Bash, Supabase, REST, Webhooks im Beruf; Java, Rust, C++, C, C# als Nächstes geplant" src="./assets/components/stack-light.de.svg" width="100%">
+  <img alt="Stack: TypeScript, Python, Java, JavaScript, Node.js, PostgreSQL im Einsatz; Python, SQL, Bash, Supabase, REST, Webhooks im Beruf; Rust, C++, C, C# als Nächstes geplant" src="./assets/components/stack-light.de.svg" width="100%">
 </picture>
 
 ---

@@ -28,7 +28,7 @@ The repos here are the other half, where I get to design something from scratch 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.svg">
-  <img alt="6 public repos, 144 tests passing, 0 runtime dependencies, 100% community standards, 16 merged pull requests" src="./assets/components/stats-light.svg" width="100%">
+  <img alt="7 public repos, 185 tests passing, 0 runtime dependencies, 100% community standards, 19 merged pull requests" src="./assets/components/stats-light.svg" width="100%">
 </picture>
 
 ---
@@ -92,18 +92,25 @@ Everything in one place, with the projects shown in a 3D scene you can steer wit
 
 ## Try something of mine, right now
 
-No install, no sign-up, nothing to download. All three open and run in your browser.
+No install, no sign-up, nothing to download. All four open and run in your browser.
 
 | | |
 |---|---|
 | ▶︎ **[Play my chess engine](https://arsalanrc.github.io/chess-engine/)** | A minimax bot with alpha-beta pruning, and the engine's internal state on display beside the board |
 | ▶︎ **[See how integration-patterns works](https://arsalanrc.github.io/integration-patterns/)** | An animated walkthrough: watch a duplicate webhook get absorbed and a retry storm take down a recovering service |
 | ▶︎ **[Watch recon reconcile two exports](https://arsalanrc.github.io/recon/)** | Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four |
+| ▶︎ **[Kill a process mid-transaction](https://arsalanrc.github.io/pg-outbox/)** | Three ways to publish an event, and the two that leave the database and the broker disagreeing |
 
 ---
 
 ## Selected work
 
+<a href="https://github.com/ArsalanRC/pg-outbox">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-outbox-dark.svg">
+    <img alt="pg-outbox: commit a row and publish an event without them coming apart" src="./assets/components/card-outbox-light.svg" width="480">
+  </picture>
+</a>
 <a href="https://github.com/ArsalanRC/recon">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-recon-dark.svg">
@@ -195,7 +202,7 @@ That boundary paid for itself repeatedly. Engines are trivially testable because
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stack-dark.svg">
-  <img alt="Stack: TypeScript, Python, JavaScript, Node.js, PostgreSQL, React, Next.js shipping today; Python, SQL, Bash, Supabase, REST, Webhooks in the day job; Java, Rust, C++, C, C# next on the plan" src="./assets/components/stack-light.svg" width="100%">
+  <img alt="Stack: TypeScript, Python, Java, JavaScript, Node.js, PostgreSQL shipping today; Python, SQL, Bash, Supabase, REST, Webhooks in the day job; Rust, C++, C, C# next on the plan" src="./assets/components/stack-light.svg" width="100%">
 </picture>
 
 ---
