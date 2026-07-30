@@ -2,11 +2,11 @@
     role="img" aria-label="chess-engine: Full FIDE rules and a minimax bot with alpha-beta pruning.">
     <title>chess-engine</title>
     <rect width="480" height="190" rx="10" fill="#1A2030" stroke="#2C3448"/>
-    <rect x="0" y="0" width="4" height="190" rx="2" fill="#E8A33D"/>
+    <rect x="0" y="0" width="4" height="190" rx="2" fill="#5BC8D4"/>
     <text x="28" y="46" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="21" font-weight="800"
           fill="#E8E4DA">chess-engine</text>
     <text x="28" y="70" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11" letter-spacing="2"
-          fill="#E8A33D">TYPESCRIPT</text>
+          fill="#5BC8D4">TYPESCRIPT</text>
     <text x="28" y="106" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
              fill="#8A90A3">Full FIDE rules and a minimax bot</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
              fill="#8A90A3">with alpha-beta pruning.</text>

@@ -28,7 +28,7 @@ The repos here are the other half, where I get to design something from scratch 
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.svg">
-  <img alt="5 public repos, 75 tests passing, 0 runtime dependencies, 100% community standards, 7 merged pull requests" src="./assets/components/stats-light.svg" width="100%">
+  <img alt="6 public repos, 144 tests passing, 0 runtime dependencies, 100% community standards, 16 merged pull requests" src="./assets/components/stats-light.svg" width="100%">
 </picture>
 
 ---
@@ -98,11 +98,18 @@ No install, no sign-up, nothing to download. Both of these open and run in your 
 |---|---|
 | ▶︎ **[Play my chess engine](https://arsalanrc.github.io/chess-engine/)** | A minimax bot with alpha-beta pruning, and the engine's internal state on display beside the board |
 | ▶︎ **[See how integration-patterns works](https://arsalanrc.github.io/integration-patterns/)** | An animated walkthrough: watch a duplicate webhook get absorbed and a retry storm take down a recovering service |
+| ▶︎ **[Watch recon reconcile two exports](https://arsalanrc.github.io/recon/)** | Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four |
 
 ---
 
 ## Selected work
 
+<a href="https://github.com/ArsalanRC/recon">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-recon-dark.svg">
+    <img alt="recon: two systems disagree, which of those disagreements are actually real" src="./assets/components/card-recon-light.svg" width="480">
+  </picture>
+</a>
 <a href="https://github.com/ArsalanRC/chess-engine">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-chess-dark.svg">
@@ -188,7 +195,7 @@ That boundary paid for itself repeatedly. Engines are trivially testable because
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stack-dark.svg">
-  <img alt="Stack: TypeScript, JavaScript, Node.js, PostgreSQL, React, Next.js shipping today; Python, SQL, Bash, Supabase, REST, Webhooks in the day job; Python, Java, Rust, C++, C, C# next on the plan" src="./assets/components/stack-light.svg" width="100%">
+  <img alt="Stack: TypeScript, Python, JavaScript, Node.js, PostgreSQL, React, Next.js shipping today; Python, SQL, Bash, Supabase, REST, Webhooks in the day job; Java, Rust, C++, C, C# next on the plan" src="./assets/components/stack-light.svg" width="100%">
 </picture>
 
 ---
