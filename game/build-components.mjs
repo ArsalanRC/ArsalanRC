@@ -30,12 +30,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 
 // ------------------------------------------------------------------ stats
 
+// Counted, not estimated. Tests is the sum across the public repos
+// (47 chess-engine + 28 integration-patterns + 69 recon); merged PRs is the
+// sum over every repo on the account. Last counted 2026-07-30.
 const STATS = [
-  { n: "5",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false },
-  { n: "75",   en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true  },
+  { n: "6",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false },
+  { n: "144",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true  },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true  },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false },
-  { n: "7",    en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
+  { n: "16",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
 ];
 
 function stats(t, lang) {
@@ -63,10 +66,13 @@ function stats(t, lang) {
 
 // ------------------------------------------------------------------ stack
 
+// Python moved up to "shipping today" when recon went live on 2026-07-30. A
+// language only sits in the top row once there is something public written in
+// it, which is the whole point of the row.
 const STACK = [
-  { en: "SHIPPING TODAY", de: "IM EINSATZ", items: ["TypeScript", "JavaScript", "Node.js", "PostgreSQL", "React", "Next.js"] },
+  { en: "SHIPPING TODAY", de: "IM EINSATZ", items: ["TypeScript", "Python", "JavaScript", "Node.js", "PostgreSQL", "React", "Next.js"] },
   { en: "DAY JOB", de: "IM BERUF", items: ["Python", "SQL", "Bash", "Supabase", "REST", "Webhooks"] },
-  { en: "NEXT ON THE PLAN", de: "ALS NÄCHSTES GEPLANT", items: ["Python", "Java", "Rust", "C++", "C", "C#"], muted: true },
+  { en: "NEXT ON THE PLAN", de: "ALS NÄCHSTES GEPLANT", items: ["Java", "Rust", "C++", "C", "C#"], muted: true },
 ];
 
 function stack(t, lang) {
@@ -105,11 +111,16 @@ function stack(t, lang) {
 // ------------------------------------------------------------------ cards
 
 const CARDS = [
+  { id: "recon", title: "recon", lang: "Python",
+    blurb: ["Two systems disagree. Which of those", "disagreements are actually real."],
+    blurbDe: ["Zwei Systeme widersprechen sich. Welche", "Widersprüche davon wirklich zählen."],
+    meta: "69 tests · 0 deps · 3.10 to 3.13",
+    metaDe: "69 Tests · 0 Abhängigkeiten · 3.10 bis 3.13", accent: true },
   { id: "chess", title: "chess-engine", lang: "TypeScript",
     blurb: ["Full FIDE rules and a minimax bot", "with alpha-beta pruning."],
     blurbDe: ["Alle FIDE-Regeln und ein Minimax-Bot", "mit Alpha-Beta-Pruning."],
     meta: "47 tests · 0 deps · playable",
-    metaDe: "47 Tests · 0 Abhängigkeiten · spielbar", accent: true },
+    metaDe: "47 Tests · 0 Abhängigkeiten · spielbar", accent: false },
   { id: "patterns", title: "integration-patterns", lang: "TypeScript",
     blurb: ["Idempotency and retry with full jitter,", "each with the failure it prevents."],
     blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je mit dem Fehler, den sie verhindern."],

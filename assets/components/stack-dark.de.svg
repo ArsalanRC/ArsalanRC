@@ -12,30 +12,36 @@
                 fill="#E8E4DA">TypeScript</text>
         </g>
         <g transform="translate(149 50)">
+          <rect width="81.19999999999999" height="30" rx="15" fill="#1A2030"
+                stroke="#2C3448" stroke-dasharray="0"/>
+          <text x="40.599999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
+                fill="#E8E4DA">Python</text>
+        </g>
+        <g transform="translate(239.2 50)">
           <rect width="118" height="30" rx="15" fill="#1A2030"
                 stroke="#2C3448" stroke-dasharray="0"/>
           <text x="59" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#E8E4DA">JavaScript</text>
         </g>
-        <g transform="translate(276 50)">
+        <g transform="translate(366.2 50)">
           <rect width="90.39999999999999" height="30" rx="15" fill="#1A2030"
                 stroke="#2C3448" stroke-dasharray="0"/>
           <text x="45.199999999999996" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#E8E4DA">Node.js</text>
         </g>
-        <g transform="translate(375.4 50)">
+        <g transform="translate(465.59999999999997 50)">
           <rect width="118" height="30" rx="15" fill="#1A2030"
                 stroke="#2C3448" stroke-dasharray="0"/>
           <text x="59" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#E8E4DA">PostgreSQL</text>
         </g>
-        <g transform="translate(502.4 50)">
+        <g transform="translate(592.5999999999999 50)">
           <rect width="72" height="30" rx="15" fill="#1A2030"
                 stroke="#2C3448" stroke-dasharray="0"/>
           <text x="36" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#E8E4DA">React</text>
         </g>
-        <g transform="translate(583.4 50)">
+        <g transform="translate(673.5999999999999 50)">
           <rect width="90.39999999999999" height="30" rx="15" fill="#1A2030"
                 stroke="#2C3448" stroke-dasharray="0"/>
           <text x="45.199999999999996" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
@@ -84,36 +90,30 @@
             fill="#8A90A3">ALS NÄCHSTES GEPLANT</text>
       
         <g transform="translate(22 234)">
-          <rect width="81.19999999999999" height="30" rx="15" fill="none"
-                stroke="#2C3448" stroke-dasharray="4 3"/>
-          <text x="40.599999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
-                fill="#8A90A3">Python</text>
-        </g>
-        <g transform="translate(112.19999999999999 234)">
           <rect width="62.8" height="30" rx="15" fill="none"
                 stroke="#2C3448" stroke-dasharray="4 3"/>
           <text x="31.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#8A90A3">Java</text>
         </g>
-        <g transform="translate(184 234)">
+        <g transform="translate(93.8 234)">
           <rect width="62.8" height="30" rx="15" fill="none"
                 stroke="#2C3448" stroke-dasharray="4 3"/>
           <text x="31.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#8A90A3">Rust</text>
         </g>
-        <g transform="translate(255.8 234)">
+        <g transform="translate(165.6 234)">
           <rect width="53.599999999999994" height="30" rx="15" fill="none"
                 stroke="#2C3448" stroke-dasharray="4 3"/>
           <text x="26.799999999999997" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#8A90A3">C++</text>
         </g>
-        <g transform="translate(318.4 234)">
+        <g transform="translate(228.2 234)">
           <rect width="35.2" height="30" rx="15" fill="none"
                 stroke="#2C3448" stroke-dasharray="4 3"/>
           <text x="17.6" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"
                 fill="#8A90A3">C</text>
         </g>
-        <g transform="translate(362.59999999999997 234)">
+        <g transform="translate(272.4 234)">
           <rect width="44.4" height="30" rx="15" fill="none"
                 stroke="#2C3448" stroke-dasharray="4 3"/>
           <text x="22.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="13"

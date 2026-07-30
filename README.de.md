@@ -28,7 +28,7 @@ Die Repos hier sind die andere Hälfte. Dort darf ich etwas von Grund auf entwer
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.de.svg">
-  <img alt="5 öffentliche Repos, 75 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 7 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
+  <img alt="6 öffentliche Repos, 144 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 16 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
 </picture>
 
 ---
@@ -89,11 +89,18 @@ Keine Installation, keine Anmeldung, nichts herunterzuladen. Beides läuft direk
 |---|---|
 | ▶︎ **[Gegen meine Schach-Engine spielen](https://arsalanrc.github.io/chess-engine/)** | Ein Minimax-Bot mit Alpha-Beta-Pruning, und daneben die Innenansicht der Engine in Echtzeit |
 | ▶︎ **[integration-patterns erklärt](https://arsalanrc.github.io/integration-patterns/)** | Animiert Schritt für Schritt: ein doppelter Webhook wird abgefangen, ein Retry-Sturm wirft einen Dienst um |
+| ▶︎ **[recon beim Abgleich zusehen](https://arsalanrc.github.io/recon/)** | Sechs Zeilen und ein Schalter für die Toleranzen. Dieselben Zeilen, sechs Funde oder vier |
 
 ---
 
 ## Ausgewählte Projekte
 
+<a href="https://github.com/ArsalanRC/recon">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-recon-dark.de.svg">
+    <img alt="recon: zwei Systeme widersprechen sich, welche Widersprüche davon wirklich zählen" src="./assets/components/card-recon-light.de.svg" width="480">
+  </picture>
+</a>
 <a href="https://github.com/ArsalanRC/chess-engine">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-chess-dark.de.svg">
@@ -179,7 +186,7 @@ Diese Grenze hat sich immer wieder ausgezahlt. Engines sind trivial testbar, wei
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stack-dark.de.svg">
-  <img alt="Stack: TypeScript, JavaScript, Node.js, PostgreSQL, React, Next.js im Einsatz; Python, SQL, Bash, Supabase, REST, Webhooks im Beruf; Python, Java, Rust, C++, C, C# als Nächstes geplant" src="./assets/components/stack-light.de.svg" width="100%">
+  <img alt="Stack: TypeScript, Python, JavaScript, Node.js, PostgreSQL, React, Next.js im Einsatz; Python, SQL, Bash, Supabase, REST, Webhooks im Beruf; Java, Rust, C++, C, C# als Nächstes geplant" src="./assets/components/stack-light.de.svg" width="100%">
 </picture>
 
 ---
