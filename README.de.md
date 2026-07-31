@@ -28,7 +28,7 @@ Die Repos hier sind die andere Hälfte. Dort darf ich etwas von Grund auf entwer
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/components/stats-dark.de.svg">
-  <img alt="8 öffentliche Repos, 263 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 24 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
+  <img alt="8 öffentliche Repos, 263 Tests grün, 0 Abhängigkeiten, 100% Community Standard, 27 gemergte Pull Requests" src="./assets/components/stats-light.de.svg" width="100%">
 </picture>
 
 ---
