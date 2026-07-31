@@ -3,23 +3,23 @@
     <title>Acht Repositories, alle im Betrieb</title>
     
     <defs>
-      <linearGradient id="ramp-s83" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1294" x2="0" y2="1764">
+      <linearGradient id="ramp-s92" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1294" x2="0" y2="2040">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s83" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s92" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s83"><rect width="1000" height="160"/></clipPath>
-      <radialGradient id="sun-s83" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1416.32" r="1681.9">
+      <clipPath id="clip-s92"><rect width="1000" height="160"/></clipPath>
+      <radialGradient id="sun-s92" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1427.3600000000001" r="1833.7">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="160" fill="url(#ramp-s83)"/><rect width="1000" height="160" fill="url(#sun-s83)"/>
-    <text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <rect width="1000" height="160" fill="url(#ramp-s92)"/><rect width="1000" height="160" fill="url(#sun-s92)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s92)" clip-path="url(#clip-s92)"><ellipse cx="880" cy="22.930000000000064" rx="140" ry="22"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">AUSGEWÄHLTE ARBEITEN</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Acht Repositories, alle im Betrieb</text>
   </svg>

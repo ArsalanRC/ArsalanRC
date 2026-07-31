@@ -3,22 +3,22 @@
     <title></title>
     
     <defs>
-      <linearGradient id="ramp-s135" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-340" x2="0" y2="2718">
+      <linearGradient id="ramp-s156" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-340" x2="0" y2="2994">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s135" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s156" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s135"><rect width="1000" height="286"/></clipPath>
-      <radialGradient id="sun-s135" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-462.32" r="1681.9">
+      <clipPath id="clip-s156"><rect width="1000" height="286"/></clipPath>
+      <radialGradient id="sun-s156" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-473.36" r="1833.7">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="286" fill="url(#ramp-s135)"/><rect width="1000" height="286" fill="url(#sun-s135)"/>
+    <rect width="1000" height="286" fill="url(#ramp-s156)"/><rect width="1000" height="286" fill="url(#sun-s156)"/>
     <text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
           <tspan font-weight="700" fill="#15202B">Softwarearchitekt und Full-Stack-Engineer.</tspan> Aktuell Software Development Manager, das heißt, mir gehören die Systeme</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">und die Roadmap, dazu ein ordentlicher Teil der Commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"

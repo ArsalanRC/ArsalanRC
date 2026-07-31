@@ -3,23 +3,23 @@
     <title>integration-patterns</title>
     
     <defs>
-      <linearGradient id="ramp-s90" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1834" x2="0" y2="1224">
+      <linearGradient id="ramp-s102" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1834" x2="0" y2="1500">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s90" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s102" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s90"><rect width="480" height="190"/></clipPath>
-      <radialGradient id="sun-s90" gradientUnits="userSpaceOnUse"
-                      cx="393.59999999999997" cy="-1956.32" r="1681.9">
+      <clipPath id="clip-s102"><rect width="480" height="190"/></clipPath>
+      <radialGradient id="sun-s102" gradientUnits="userSpaceOnUse"
+                      cx="393.59999999999997" cy="-1967.3600000000001" r="1833.7">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="480" height="190" fill="url(#ramp-s90)"/><rect width="480" height="190" fill="url(#sun-s90)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s90)" clip-path="url(#clip-s90)"><ellipse cx="57.599999999999994" cy="31.37999999999988" rx="120" ry="20"/></g>
+    <rect width="480" height="190" fill="url(#ramp-s102)"/><rect width="480" height="190" fill="url(#sun-s102)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s102)" clip-path="url(#clip-s102)"><ellipse cx="57.599999999999994" cy="199.74" rx="120" ry="20"/></g>
     
     <rect x="14" y="14" width="452" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
