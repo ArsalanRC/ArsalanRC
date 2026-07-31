@@ -1,87 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="Arsalan Khadim, software architect and full-stack engineer">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340"
+  role="img" aria-label="Arsalan Khadim, software architect and full-stack engineer">
   <title>Arsalan Khadim, software architect and full-stack engineer</title>
 
-  <!--
-    Hand-built rather than pulled from a stats widget, for two reasons: nothing
-    here can rate-limit or go offline, and nobody else's profile has it.
-
-    Animation is plain CSS inside the SVG. GitHub renders this as an <img>,
-    which blocks scripts but still runs CSS keyframes, so the motion survives.
-    Motion is disabled under prefers-reduced-motion further down.
-  -->
-
   <defs>
+    <linearGradient id="ramp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+      <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.82" cy="-0.18" r="1.1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-60%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <clipPath id="frame"><rect width="1280" height="340" rx="14"/></clipPath>
     <style>
-      .bg      { fill: #12151F; }
-      .grid    { fill: #232A3A; }
-      .name    { fill: #E8E4DA; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 700; letter-spacing: -1.5px; }
-      .role    { fill: #9BA1B4; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 400; letter-spacing: 3.5px; }
-      .tag     { fill: #6E7488; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-weight: 400; letter-spacing: 2px; }
-      .wire    { stroke: #2C3448; stroke-width: 2; }
-      .edge    { stroke: #2C3448; stroke-width: 1.5; }
-      .node    { fill: #12151F; stroke: #3A4459; stroke-width: 2; }
-      .node-on { fill: #E8A33D; stroke: none; }
-      .amber   { fill: #E8A33D; }
-      .cyan    { fill: #5BC8D4; }
-      .rule    { stroke: #E8A33D; stroke-width: 3; stroke-linecap: round; }
-
-      /* The cursor block, because the display face is monospace and it earns it.
-         This is the only motion left: everything else is static by choice.
-         Drifting particles read as filler regardless of how well they are made. */
+      /* The caret. The only motion, and it earns it because the name is set
+         in mono and reads as something being typed. Everything else is still
+         on purpose: drifting particles read as filler however well made. */
       .caret { animation: blink 1.15s steps(1) infinite; }
       @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-
-      @media (prefers-reduced-motion: reduce) {
-        .caret { animation: none; }
-      }
+      @media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
     </style>
   </defs>
 
-  <rect class="bg" width="1280" height="340" rx="10"/>
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="340" fill="url(#ramp)"/>
+    <rect width="1280" height="340" fill="url(#sun)"/>
 
-  <!-- Faint plotting grid: technical paper, not decoration for its own sake -->
-  <g class="grid" opacity="0.5">
-    <g id="dots">
-      <circle cx="40" cy="40" r="1"/><circle cx="80" cy="40" r="1"/><circle cx="120" cy="40" r="1"/>
-      <circle cx="40" cy="80" r="1"/><circle cx="80" cy="80" r="1"/><circle cx="120" cy="80" r="1"/>
+    <!-- Clouds, the same two-depth idea as the site, blurred ellipses. -->
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft)">
+      <ellipse cx="180" cy="248" rx="150" ry="26"/>
+      <ellipse cx="250" cy="232" rx="90"  ry="22"/>
+      <ellipse cx="1080" cy="92" rx="130" ry="24"/>
+      <ellipse cx="1010" cy="80" rx="80"  ry="19"/>
     </g>
-    <use href="#dots" x="120"/><use href="#dots" x="240"/><use href="#dots" x="360"/>
-    <use href="#dots" x="480"/><use href="#dots" x="600"/><use href="#dots" x="720"/>
-    <use href="#dots" x="840"/><use href="#dots" x="960"/><use href="#dots" x="1080"/>
-    <use href="#dots" y="120"/><use href="#dots" x="120" y="120"/><use href="#dots" x="240" y="120"/>
-    <use href="#dots" x="960" y="120"/><use href="#dots" x="1080" y="120"/>
-    <use href="#dots" y="240"/><use href="#dots" x="120" y="240"/><use href="#dots" x="240" y="240"/>
-    <use href="#dots" x="840" y="240"/><use href="#dots" x="960" y="240"/><use href="#dots" x="1080" y="240"/>
-  </g>
 
-  <!-- Accent rule -->
-  <line class="rule" x1="72" y1="96" x2="132" y2="96"/>
+    <!-- A glass pane holding the name block, so the header uses the same
+         surface language as every card below it. -->
+    <rect x="56" y="72" width="700" height="196" rx="16"
+          fill="#FFFFFF" fill-opacity="0.07"
+          stroke="#EAF1F7" stroke-opacity="0.14"/>
+    <path d="M72 72.75 H740" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.5"/>
 
-  <text class="name" x="72" y="168" font-size="76">Arsalan Khadim</text>
-  <rect class="amber caret" x="716" y="140" width="16" height="34" rx="2"/>
+    <rect x="88" y="104" width="46" height="4" rx="2" fill="#FF6A3D"/>
 
-  <text class="role" x="76" y="212" font-size="19">SOFTWARE ARCHITECT · FULL-STACK ENGINEER</text>
-  <text class="tag"  x="76" y="248" font-size="15">TypeScript · Python · PostgreSQL · Systems integration</text>
+    <text x="88" y="168" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="58" font-weight="800"
+          letter-spacing="-2" fill="#EAF1F7">Arsalan Khadim</text>
+    <rect class="caret" x="528" y="128" width="13" height="46" fill="#FF6A3D"/>
 
-  <!-- The wire runs from the name into the systems on the right, because that
-       is literally the job. Static: it is a diagram, not a screensaver. -->
-  <line class="wire" x1="76" y1="292" x2="900" y2="292"/>
-  <rect class="amber" x="76" y="288" width="34" height="7" rx="3.5"/>
+    <text x="90" y="204" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="14" letter-spacing="3.4"
+          fill="#9FB6C6">SOFTWARE ARCHITECT &#183; FULL-STACK ENGINEER</text>
+    <text x="90" y="234" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5" letter-spacing="1.6"
+          fill="#6C879A">Interface to integration &#183; TypeScript &#183; Python &#183; Java</text>
 
-  <!-- Three systems. Two lit, one not, which is what a real integration looks
-       like on any given afternoon. -->
-  <g transform="translate(930, 78)">
-    <line class="edge" x1="30"  y1="60"  x2="200" y2="24"/>
-    <line class="edge" x1="30"  y1="60"  x2="150" y2="170"/>
-    <line class="edge" x1="200" y1="24"  x2="150" y2="170"/>
-    <line class="edge" x1="-30" y1="214" x2="30" y2="60"/>
-
-    <circle class="node" cx="30" cy="60" r="18"/>
-    <circle class="node-on" cx="30" cy="60" r="8"/>
-
-    <circle class="node" cx="200" cy="24" r="18"/>
-
-    <circle class="node" cx="150" cy="170" r="18"/>
-    <circle class="node-on" cx="150" cy="170" r="8"/>
+    <!-- The wire and nodes, kept from the first header: a small system diagram,
+         which is the subject of the whole profile. -->
+    <g stroke="#EAF1F7" stroke-opacity="0.28" fill="none" stroke-width="1.5">
+      <path d="M812 250 L960 250 L1040 150 L1170 118"/>
+      <path d="M1040 150 L1128 236"/>
+    </g>
+    <g>
+      <circle cx="1040" cy="150" r="15" fill="#FFFFFF" fill-opacity="0.07"
+              stroke="#EAF1F7" stroke-opacity="0.3" stroke-width="2"/>
+      <circle cx="1040" cy="150" r="6" fill="#FF6A3D"/>
+      <circle cx="1170" cy="118" r="15" fill="#FFFFFF" fill-opacity="0.07"
+              stroke="#EAF1F7" stroke-opacity="0.3" stroke-width="2"/>
+      <circle cx="1128" cy="236" r="15" fill="#FFFFFF" fill-opacity="0.07"
+              stroke="#EAF1F7" stroke-opacity="0.3" stroke-width="2"/>
+      <circle cx="1128" cy="236" r="6" fill="#4FA6F0"/>
+    </g>
+    <rect x="812" y="246" width="34" height="7" rx="3.5" fill="#FF6A3D"/>
   </g>
 </svg>
