@@ -8,14 +8,19 @@
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
+      <filter id="soft-s84" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s84"><rect width="1000" height="488"/></clipPath>
       <radialGradient id="sun-s84" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-2146.32" r="1681.9">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="488" fill="url(#ramp-s84)"/><rect width="1000" height="488" fill="url(#sun-s84)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-      font-weight="700" letter-spacing="2.4" fill="#FF6A3D">HALTUNG</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+    <rect width="1000" height="488" fill="url(#ramp-s84)"/><rect width="1000" height="488" fill="url(#sun-s84)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s84)" clip-path="url(#clip-s84)"><ellipse cx="720" cy="422.4000000000001" rx="160" ry="24"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      font-weight="700" letter-spacing="2.4" fill="#FFFFFF">HALTUNG</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Wie ich an Bauen herangehe</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
           <tspan font-weight="700" fill="#EAF1F7">Grenzen vor Features.</tspan> Der Schnitt zwischen den Schichten ist die eine Entscheidung, die sich später nicht billig</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">zurücknehmen lässt. Alles andere ist verhandelbar.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">

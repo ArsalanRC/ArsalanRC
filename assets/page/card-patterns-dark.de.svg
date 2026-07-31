@@ -8,6 +8,10 @@
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
+      <filter id="soft-s90" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s90"><rect width="480" height="190"/></clipPath>
       <radialGradient id="sun-s90" gradientUnits="userSpaceOnUse"
                       cx="393.59999999999997" cy="-1956.32" r="1681.9">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
@@ -15,6 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="480" height="190" fill="url(#ramp-s90)"/><rect width="480" height="190" fill="url(#sun-s90)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s90)" clip-path="url(#clip-s90)"><ellipse cx="57.599999999999994" cy="31.37999999999988" rx="120" ry="20"/></g>
     
     <rect x="14" y="14" width="452" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
@@ -29,7 +34,7 @@
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#EAF1F7">integration-patterns</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="#4FA6F0">TYPESCRIPT</text>
+          letter-spacing="2" fill="#9FB6C6">TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">Idempotenz und Retry mit Full Jitter,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">je mit dem Fehler, den sie verhindern.</text>

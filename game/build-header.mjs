@@ -10,6 +10,7 @@
  * prefers-reduced-motion at the bottom.
  */
 import { writeFileSync } from "node:fs";
+import { CLOUDS } from "./build-components.mjs";
 
 const MONO = 'ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace';
 const SANS = 'system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif';
@@ -66,13 +67,17 @@ export function header(t, { offsetY = 0, pageH = H } = {}) {
     <rect width="${W}" height="${H}" fill="url(#ramp)"/>
     <rect width="${W}" height="${H}" fill="url(#sun)"/>
 
-    <!-- Clouds, the same two-depth idea as the site, blurred ellipses. -->
+    <!-- The same page-space clouds every other panel draws. Positioned by page
+         fraction, not panel fraction, so a cloud that straddles the bottom edge
+         continues into the panel below instead of stopping at the seam. -->
     <g fill="#FFFFFF" opacity="${t.cloud}" filter="url(#soft)">
-      <ellipse cx="180" cy="248" rx="150" ry="26"/>
-      <ellipse cx="250" cy="232" rx="90"  ry="22"/>
-      <ellipse cx="1080" cy="92" rx="130" ry="24"/>
-      <ellipse cx="1010" cy="80" rx="80"  ry="19"/>
+      ${CLOUDS.map((c) => {
+        const cy = c.cy * pageH - offsetY;
+        if (cy + c.ry + 60 < 0 || cy - c.ry - 60 > H) return "";
+        return `<ellipse cx="${c.cx * W}" cy="${cy}" rx="${c.rx}" ry="${c.ry}"/>`;
+      }).join("")}
     </g>
+
 
     <!-- A glass pane holding the name block, so the header uses the same
          surface language as every card below it. -->

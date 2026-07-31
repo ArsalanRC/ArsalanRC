@@ -8,6 +8,10 @@
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
+      <filter id="soft-s50" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s50"><rect width="1000" height="84"/></clipPath>
       <radialGradient id="sun-s50" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-1212.32" r="1681.9">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
@@ -15,6 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="1000" height="84" fill="url(#ramp-s50)"/><rect width="1000" height="84" fill="url(#sun-s50)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s50)" clip-path="url(#clip-s50)"><ellipse cx="880" cy="117.91000000000008" rx="140" ry="22"/></g>
     
     <rect x="28" y="8" width="944" height="68" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"

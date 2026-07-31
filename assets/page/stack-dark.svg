@@ -8,6 +8,10 @@
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
+      <filter id="soft-s62" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s62"><rect width="1000" height="272"/></clipPath>
       <radialGradient id="sun-s62" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-2634.32" r="1681.9">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
@@ -15,8 +19,9 @@
       </radialGradient>
     </defs>
     <rect width="1000" height="272" fill="url(#ramp-s62)"/><rect width="1000" height="272" fill="url(#sun-s62)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s62)" clip-path="url(#clip-s62)"><ellipse cx="720" cy="-65.59999999999991" rx="160" ry="24"/></g>
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-            letter-spacing="2.4" fill="#FF6A3D">SHIPPING TODAY</text>
+            letter-spacing="2.4" fill="#FFFFFF">SHIPPING TODAY</text>
         <g transform="translate(22 40)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
@@ -66,7 +71,7 @@
                 fill="#EAF1F7">PostgreSQL</text>
         </g>
       <text x="22" y="98" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-            letter-spacing="2.4" fill="#FF6A3D">DAY JOB</text>
+            letter-spacing="2.4" fill="#FFFFFF">DAY JOB</text>
         <g transform="translate(22 112)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
