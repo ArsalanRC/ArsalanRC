@@ -3,22 +3,22 @@
     <title>integration-patterns ansehen</title>
     
     <defs>
-      <linearGradient id="ramp-s79" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1022" x2="0" y2="2036">
+      <linearGradient id="ramp-s88" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1022" x2="0" y2="2312">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s79" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s88" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s79"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s79" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1144.32" r="1681.9">
+      <clipPath id="clip-s88"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s88" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1155.3600000000001" r="1833.7">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s79)"/><rect width="1000" height="84" fill="url(#sun-s79)"/>
+    <rect width="1000" height="84" fill="url(#ramp-s88)"/><rect width="1000" height="84" fill="url(#sun-s88)"/>
     
     
     <rect x="28" y="8" width="944" height="68" rx="12"

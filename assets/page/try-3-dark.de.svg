@@ -3,23 +3,23 @@
     <title>Einen Prozess mitten in der Transaktion abschießen</title>
     
     <defs>
-      <linearGradient id="ramp-s81" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1158" x2="0" y2="1900">
+      <linearGradient id="ramp-s90" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1158" x2="0" y2="2176">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s81" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s90" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s81"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s81" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1280.32" r="1681.9">
+      <clipPath id="clip-s90"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s90" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1291.3600000000001" r="1833.7">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s81)"/><rect width="1000" height="84" fill="url(#sun-s81)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s81)" clip-path="url(#clip-s81)"><ellipse cx="880" cy="49.91000000000008" rx="140" ry="22"/></g>
+    <rect width="1000" height="84" fill="url(#ramp-s90)"/><rect width="1000" height="84" fill="url(#sun-s90)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s90)" clip-path="url(#clip-s90)"><ellipse cx="880" cy="158.93000000000006" rx="140" ry="22"/></g>
     
     <rect x="28" y="8" width="944" height="68" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"

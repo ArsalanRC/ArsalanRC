@@ -3,23 +3,23 @@
     <title>Stack</title>
     
     <defs>
-      <linearGradient id="ramp-s92" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-2512" x2="0" y2="546">
+      <linearGradient id="ramp-s104" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2512" x2="0" y2="822">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s92" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s104" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s92"><rect width="1000" height="272"/></clipPath>
-      <radialGradient id="sun-s92" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2634.32" r="1681.9">
+      <clipPath id="clip-s104"><rect width="1000" height="272"/></clipPath>
+      <radialGradient id="sun-s104" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2645.36" r="1833.7">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="272" fill="url(#ramp-s92)"/><rect width="1000" height="272" fill="url(#sun-s92)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s92)" clip-path="url(#clip-s92)"><ellipse cx="720" cy="-65.59999999999991" rx="160" ry="24"/></g>
+    <rect width="1000" height="272" fill="url(#ramp-s104)"/><rect width="1000" height="272" fill="url(#sun-s104)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s104)" clip-path="url(#clip-s104)"><ellipse cx="720" cy="155.20000000000027" rx="160" ry="24"/></g>
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
             letter-spacing="2.4" fill="#FFFFFF">IM EINSATZ</text>
         <g transform="translate(22 40)">
