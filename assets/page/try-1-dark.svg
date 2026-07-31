@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 68" width="1000" height="68"
+    role="img" aria-label="See how integration-patterns works: Watch a duplicate webhook get absorbed and a retry storm take down a recovering service">
+    <title>See how integration-patterns works</title>
+    
+    <defs>
+      <linearGradient id="ramp-s49" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1022" x2="0" y2="2036">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s49" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1144.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="68" rx="0" fill="url(#ramp-s49)"/>
+    <rect width="1000" height="68" rx="0" fill="url(#sun-s49)"/>
+    
+    <rect x="28" y="8" width="944" height="52" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M40 8.75 H960" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+    <text x="44" y="35" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#FF6A3D">&#9654;</text>
+    <text x="66" y="35" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#EAF1F7">See how integration-patterns works</text>
+    <text x="66" y="54" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+          fill="#6C879A">Watch a duplicate webhook get absorbed and a retry storm take down a recovering service</text>
+  </svg>

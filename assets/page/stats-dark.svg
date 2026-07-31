@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 168" width="1000" height="168"
+    role="img" aria-label="8 public repos, 263 tests passing, 0 runtime deps, 100% community std, 27 merged prs">
+    <title>Profile statistics</title>
+    
+    <defs>
+      <linearGradient id="ramp-s46" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-626" x2="0" y2="2432">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s46" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-748.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="168" rx="0" fill="url(#ramp-s46)"/>
+    <rect width="1000" height="168" rx="0" fill="url(#sun-s46)"/>
+    <g transform="translate(0 18)">
+      <g transform="translate(18 0)">
+        
+    <rect x="0" y="0" width="183.2" height="132" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M12 0.75 H171.2" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+        <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">8</text>
+        <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
+              font-size="10.5" letter-spacing="2.2" fill="#6C879A">PUBLIC REPOS</text>
+      </g>
+      <g transform="translate(213.2 0)">
+        
+    <rect x="0" y="0" width="183.2" height="132" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M12 0.75 H171.2" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+        <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#FF6A3D">263</text>
+        <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
+              font-size="10.5" letter-spacing="2.2" fill="#6C879A">TESTS PASSING</text>
+      </g>
+      <g transform="translate(408.4 0)">
+        
+    <rect x="0" y="0" width="183.2" height="132" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M12 0.75 H171.2" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+        <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#FF6A3D">0</text>
+        <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
+              font-size="10.5" letter-spacing="2.2" fill="#6C879A">RUNTIME DEPS</text>
+      </g>
+      <g transform="translate(603.5999999999999 0)">
+        
+    <rect x="0" y="0" width="183.2" height="132" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M12 0.75 H171.2" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+        <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">100%</text>
+        <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
+              font-size="10.5" letter-spacing="2.2" fill="#6C879A">COMMUNITY STD</text>
+      </g>
+      <g transform="translate(798.8 0)">
+        
+    <rect x="0" y="0" width="183.2" height="132" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M12 0.75 H171.2" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+        <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">27</text>
+        <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
+              font-size="10.5" letter-spacing="2.2" fill="#6C879A">MERGED PRS</text>
+      </g></g>
+  </svg>

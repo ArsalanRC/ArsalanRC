@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
+    role="img" aria-label="recon: Two systems disagree. Which of those disagreements are actually real.">
+    <title>recon</title>
+    
+    <defs>
+      <linearGradient id="ramp-s58" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1644" x2="0" y2="1414">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s58" gradientUnits="userSpaceOnUse"
+                      cx="393.59999999999997" cy="-1766.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="480" height="190" rx="0" fill="url(#ramp-s58)"/>
+    <rect width="480" height="190" rx="0" fill="url(#sun-s58)"/>
+    
+    <rect x="14" y="14" width="452" height="162" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M26 14.75 H454" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+    <rect x="14" y="14" width="3.5" height="162" rx="1.75" fill="#4FA6F0"/>
+    <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
+          letter-spacing="-0.6" fill="#EAF1F7">recon</text>
+    <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2"
+          fill="#4FA6F0">PYTHON</text>
+    <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">Two systems disagree. Which of those</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">disagreements are actually real.</text>
+    <line x1="36" y1="152" x2="444" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+          fill="#6C879A">86 tests · 0 deps · streams from Postgres</text>
+  </svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 286" width="1000" height="286"
+    role="img" aria-label="">
+    <title></title>
+    
+    <defs>
+      <linearGradient id="ramp-s45" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-340" x2="0" y2="2718">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s45" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-462.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="286" rx="0" fill="url(#ramp-s45)"/>
+    <rect width="1000" height="286" rx="0" fill="url(#sun-s45)"/><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
+          <tspan font-weight="700" fill="#EAF1F7">Software architect and full-stack engineer.</tspan> Currently Software Development Manager, which means I own the systems and</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">the roadmap along with a fair share of the commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">Most of my working life goes on the unglamorous half of software: making systems that were never designed to talk to</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">each other exchange data reliably, every day, without anyone noticing. Warehouse management, ERP integrations,</text><text x="44" y="158" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">logistics APIs. The kind of code where a silent failure costs someone a shipment.</text><text x="44" y="215" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">The repos here are the other half, where I get to design something from scratch and take the architecture seriously.</text>
+  </svg>

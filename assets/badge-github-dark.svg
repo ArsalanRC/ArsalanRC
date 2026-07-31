@@ -1,6 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" width="150" height="40" role="img" aria-label="GitHub">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 40" width="132" height="40" role="img" aria-label="GitHub">
   <title>GitHub</title>
-  <rect width="150" height="40" rx="8" fill="#12151F" stroke="#2C3448"/>
-  <g transform="translate(14, 8) scale(1)" fill="#E8E4DA"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></g>
-  <text x="50" y="26" fill="#E8E4DA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="500" letter-spacing="0.5">GitHub</text>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E1A26"/><stop offset="1" stop-color="#132433"/>
+    </linearGradient>
+  </defs>
+  <rect width="132" height="40" rx="999" fill="url(#g)"/>
+  <rect width="132" height="40" rx="999" fill="#FFFFFF" fill-opacity="0.08"
+        stroke="#EAF1F7" stroke-opacity="0.16"/>
+  <path d="M14 1 H118" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.4"/>
+  <g transform="translate(15 8)" fill="#EAF1F7"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></g>
+  <text x="49" y="26" fill="#EAF1F7" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="14.5"
+        font-weight="700" letter-spacing="0.3">GitHub</text>
 </svg>

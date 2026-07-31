@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 488" width="1000" height="488"
+    role="img" aria-label="Wie ich an Bauen herangehe">
+    <title>Wie ich an Bauen herangehe</title>
+    
+    <defs>
+      <linearGradient id="ramp-s84" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2024" x2="0" y2="1034">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s84" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2146.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="488" rx="0" fill="url(#ramp-s84)"/>
+    <rect width="1000" height="488" rx="0" fill="url(#sun-s84)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      letter-spacing="2.4" fill="#FF6A3D">HALTUNG</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+      font-weight="800" letter-spacing="-1" fill="#EAF1F7">Wie ich an Bauen herangehe</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
+          <tspan font-weight="700" fill="#EAF1F7">Grenzen vor Features.</tspan> Der Schnitt zwischen den Schichten ist die eine Entscheidung, die sich später nicht billig</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">zurücknehmen lässt. Alles andere ist verhandelbar.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
+          <tspan font-weight="700" fill="#EAF1F7">Reinheit, wo sie zählt.</tspan> Fachlogik ohne Framework-Abhängigkeit lässt sich wirklich testen, wiederverwenden und</text><text x="44" y="253" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">durchdenken. Seiteneffekte an den Rand schieben und die Mitte ehrlich halten.</text><text x="44" y="310" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
+          <tspan font-weight="700" fill="#EAF1F7">Sicher by default, nicht durch Review.</tspan> RLS aktiv, bevor die Tabelle Zeilen hat, und durchgängig Deny-by-default. Eine</text><text x="44" y="335" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">Berechtigung, die nie vergeben wurde, kann nicht die undichte Stelle sein.</text><text x="44" y="392" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
+          <tspan font-weight="700" fill="#EAF1F7">Aufschreiben.</tspan> Jedes Projekt von mir trägt Architekturdokumentation und Konventionen, die ein neuer Mensch, oder ein</text><text x="44" y="417" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">LLM, kalt lesen und binnen einer Stunde nutzen kann.</text>
+  </svg>

@@ -44,21 +44,52 @@ const THEME = {
    sun glow top right, a cool wash bottom left, and a vertical ramp. Each SVG
    gets its own copy with a unique id so two of them on one page cannot collide. */
 let skyId = 0;
-function sky(t, w, h, rx = 0) {
+
+/* The whole README is one sky, sliced across panels.
+ *
+ * Each panel draws the slice of a single page-tall gradient that belongs at its
+ * own offset, using userSpaceOnUse coordinates in page space rather than 0..1
+ * in panel space. Without this every panel restarts the gradient at its top and
+ * the strip reads as a stack of separate cards; with it the seams disappear,
+ * which is the whole point of the exercise.
+ *
+ * PAGE_H is the running total of every panel height. It has to be right or the
+ * gradient banding shifts, so build-readme.mjs computes it rather than guessing. */
+function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0 } = {}) {
   const id = `s${++skyId}`;
   return `
     <defs>
-      <linearGradient id="ramp-${id}" x1="0" y1="0" x2="0" y2="1">
+      <linearGradient id="ramp-${id}" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="${-offsetY}" x2="0" y2="${pageH - offsetY}">
         <stop offset="0" stop-color="${t.sky[0]}"/><stop offset="0.42" stop-color="${t.sky[1]}"/>
         <stop offset="0.78" stop-color="${t.sky[2]}"/><stop offset="1" stop-color="${t.sky[3]}"/>
       </linearGradient>
-      <radialGradient id="sun-${id}" cx="0.82" cy="-0.18" r="1.1">
+      <radialGradient id="sun-${id}" gradientUnits="userSpaceOnUse"
+                      cx="${w * 0.82}" cy="${-offsetY + pageH * -0.04}" r="${pageH * 0.55}">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="${t.glow}"/>
-        <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="${w}" height="${h}" rx="${rx}" fill="url(#ramp-${id})"/>
     <rect width="${w}" height="${h}" rx="${rx}" fill="url(#sun-${id})"/>`;
+}
+
+/* Word wrap for panel prose. Approximate metrics rather than real ones: the
+   SVGs use a system stack whose exact face is unknown at build time, so the
+   width per character is measured empirically for this size and kept
+   conservative. Lines that come out slightly short are invisible; lines that
+   overflow the panel are not. */
+function wrapText(text, maxWidth, perChar) {
+  const words = String(text).split(/\s+/);
+  const lines = [];
+  let line = "";
+  for (const word of words) {
+    const next = line ? `${line} ${word}` : word;
+    if (next.length * perChar > maxWidth && line) { lines.push(line); line = word; }
+    else line = next;
+  }
+  if (line) lines.push(line);
+  return lines;
 }
 
 /* A glass panel: translucent fill, hairline edge, and a highlight along the top
@@ -97,7 +128,7 @@ const STATS = [
   { n: "27",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
 ];
 
-function stats(t, lang) {
+function stats(t, lang, o = {}) {
   const W = 1000, H = 132, gap = 12, pad = 18;
   const tw = (W - pad * 2 - gap * (STATS.length - 1)) / STATS.length;
 
@@ -117,7 +148,7 @@ function stats(t, lang) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H + pad * 2}" width="${W}" height="${H + pad * 2}"
     role="img" aria-label="${STATS.map((s) => `${s.n} ${s[lang].toLowerCase()}`).join(", ")}">
     <title>Profile statistics</title>
-    ${sky(t, W, H + pad * 2)}
+    ${sky(t, W, H + pad * 2, o)}
     <g transform="translate(0 ${pad})">${tiles}</g>
   </svg>\n`;
 }
@@ -128,43 +159,55 @@ function stats(t, lang) {
 // live the same day. A language only sits in the top row once there is
 // something public written in it, which is the whole point of the row.
 const STACK = [
-  { en: "SHIPPING TODAY", de: "IM EINSATZ", items: ["TypeScript", "Python", "Java", "JavaScript", "Node.js", "PostgreSQL"] },
-  { en: "DAY JOB", de: "IM BERUF", items: ["Python", "SQL", "Bash", "Supabase", "REST", "Webhooks"] },
-  { en: "NEXT ON THE PLAN", de: "ALS NÄCHSTES GEPLANT", items: ["Rust", "C++", "C", "C#"], muted: true },
+  { en: "SHIPPING TODAY", de: "IM EINSATZ",
+    items: ["TypeScript", "Python", "Java", "JavaScript", "Node.js", "PostgreSQL"] },
+  { en: "DAY JOB", de: "IM BERUF",
+    items: ["TypeScript", "JavaScript", "Next.js", "Nuxt", "Node.js", "React", "Tailwind", "CSS",
+            "Python", "SQL", "PostgreSQL", "Supabase", "REST", "Webhooks", "Bash"] },
+  { en: "NEXT ON THE PLAN", de: "ALS NÄCHSTES GEPLANT",
+    items: ["Rust", "C++", "C", "C#"], muted: true },
 ];
 
-function stack(t, lang) {
-  const W = 1000, padX = 22, rowH = 92;
-  const H = STACK.length * rowH + 16;
+function stack(t, lang, o = {}) {
+  /* Pills wrap. The day-job row carries fifteen of them now, because the real
+     answer to "what do you work in" is long, and a row that silently ran off
+     the right edge would be worse than an honest three lines. Layout is
+     computed first so the SVG height matches what was actually laid out. */
+  const W = 1000, padX = 22, lineH = 40, headH = 30, gapY = 18;
 
-  const rows = STACK.map((row, ri) => {
-    const y = ri * rowH + 34;
+  let y = 26;
+  const parts = [];
+
+  for (const row of STACK) {
+    parts.push(`
+      <text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5" letter-spacing="2.4"
+            fill="${row.muted ? t.faint : t.accent}">${esc(row[lang])}</text>`);
+    y += 14;
+
     let x = padX;
-    const pills = row.items.map((label) => {
-      const w = label.length * 9.2 + 26;
-      const pill = `
-        <g transform="translate(${x} ${y + 16})">
+    for (const label of row.items) {
+      const w = label.length * 8.6 + 26;
+      if (x + w > W - padX) { x = padX; y += lineH; }
+      parts.push(`
+        <g transform="translate(${x} ${y})">
           <rect width="${w}" height="30" rx="15"
                 fill="${row.muted ? "none" : t.glass}" fill-opacity="${row.muted ? 0 : t.glassOpacity}"
                 stroke="${t.line}" stroke-opacity="${t.lineOpacity}"
                 stroke-dasharray="${row.muted ? "4 3" : "0"}"/>
           <text x="${w / 2}" y="20" text-anchor="middle" font-family='${MONO}' font-size="12.5"
                 fill="${row.muted ? t.faint : t.text}">${esc(label)}</text>
-        </g>`;
-      x += w + 9;
-      return pill;
-    }).join("");
+        </g>`);
+      x += w + 8;
+    }
+    y += lineH + gapY;
+  }
 
-    return `
-      <text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5" letter-spacing="2.4"
-            fill="${row.muted ? t.dim : t.accent}">${esc(row[lang])}</text>
-      ${pills}`;
-  }).join("");
+  const H = y - gapY + 8;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="Technology stack">
     <title>Stack</title>
-    ${sky(t, W, H)}${rows}
+    ${sky(t, W, H, o)}${parts.join("")}
   </svg>\n`;
 }
 
@@ -203,13 +246,13 @@ const CARDS = [
     metaDe: "940 Tests · 23 Sprachen · privat", accent: false },
 ];
 
-function card(t, c, lang) {
+function card(t, c, lang, o = {}) {
   const W = 480, H = 190;
   const accent = c.accent ? t.accent : t.accent2;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(c.title)}: ${esc((lang === 'de' ? c.blurbDe : c.blurb).join(" "))}">
     <title>${esc(c.title)}</title>
-    ${sky(t, W, H)}
+    ${sky(t, W, H, o)}
     ${glass(t, 14, 14, W - 28, H - 28, 12)}
     <rect x="14" y="14" width="3.5" height="${H - 28}" rx="1.75" fill="${accent}"/>
     <text x="36" y="52" font-family='${SANS}' font-size="22" font-weight="800"
@@ -224,6 +267,80 @@ function card(t, c, lang) {
           fill="${t.faint}">${esc(lang === 'de' ? c.metaDe : c.meta)}</text>
   </svg>\n`;
 }
+
+// ----------------------------------------------------------------- prose
+
+/* A full-width prose panel. This is what turns the README from a strip of
+   images with markdown between them into one continuous page: the copy that
+   used to be markdown is rendered into the sky like everything else.
+   Every panel gets real alt text on the <img>, which is what keeps it
+   readable to a screen reader once the text is no longer text. */
+export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
+  const W = 1000, padX = 44;
+  const maxW = W - padX * 2;
+
+  let y = 0;
+  const parts = [];
+
+  if (eyebrow) {
+    y += 58;
+    parts.push(`<text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5"
+      letter-spacing="2.4" fill="${t.accent}">${esc(eyebrow)}</text>`);
+  }
+  if (title) {
+    y += 46;
+    parts.push(`<text x="${padX}" y="${y}" font-family='${SANS}' font-size="34"
+      font-weight="800" letter-spacing="-1" fill="${t.text}">${esc(title)}</text>`);
+    y += 16;
+  }
+
+  for (const para of paras) {
+    y += 26;
+    const lead = para.lead ? `${para.lead} ` : "";
+    const lines = wrapText(lead + para.text, maxW, 7.7);
+    for (const [i, line] of lines.entries()) {
+      /* The lead phrase is bold and sits inline, so the first line is drawn as
+         two runs rather than one. */
+      if (i === 0 && para.lead) {
+        parts.push(`<text x="${padX}" y="${y}" font-family='${SANS}' font-size="15.5" fill="${t.dim}">
+          <tspan font-weight="700" fill="${t.text}">${esc(para.lead)}</tspan>${esc(line.slice(para.lead.length))}</text>`);
+      } else {
+        parts.push(`<text x="${padX}" y="${y}" font-family='${SANS}' font-size="15.5"
+          fill="${t.dim}">${esc(line)}</text>`);
+      }
+      y += 25;
+    }
+    y += 6;
+  }
+
+  const H = Math.round(y + 40);
+  return { svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
+    role="img" aria-label="${esc(title || eyebrow || "")}">
+    <title>${esc(title || eyebrow || "")}</title>
+    ${sky(t, W, H, o)}${parts.join("")}
+  </svg>\n`, H };
+}
+
+/* One clickable row for the try-it-now list. Each is its own image inside its
+   own <a>, which is how the page keeps working links while being made of
+   pictures. */
+export function tryRow(t, { label, desc }, o = {}) {
+  const W = 1000, H = 68, padX = 44;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
+    role="img" aria-label="${esc(label)}: ${esc(desc)}">
+    <title>${esc(label)}</title>
+    ${sky(t, W, H, o)}
+    ${glass(t, padX - 16, 8, W - (padX - 16) * 2, H - 16, 12)}
+    <text x="${padX}" y="${H / 2 + 1}" font-family='${SANS}' font-size="16" font-weight="700"
+          fill="${t.accent}">&#9654;</text>
+    <text x="${padX + 22}" y="${H / 2 + 1}" font-family='${SANS}' font-size="16" font-weight="700"
+          fill="${t.text}">${esc(label)}</text>
+    <text x="${padX + 22}" y="${H / 2 + 20}" font-family='${SANS}' font-size="13"
+          fill="${t.faint}">${esc(desc)}</text>
+  </svg>\n`;
+}
+
+export { THEME, sky, glass, stats, stack, card, CARDS, STATS };
 
 // ------------------------------------------------------------------ write
 
