@@ -3,22 +3,22 @@
     <title>Watch recon reconcile two exports</title>
     
     <defs>
-      <linearGradient id="ramp-s125" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1090" x2="0" y2="2244">
+      <linearGradient id="ramp-s94" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1015.625" x2="0" y2="2244">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s125" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s94" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s125"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s125" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1223.3600000000001" r="1833.7">
+      <clipPath id="clip-s94"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s94" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1146.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s125)"/><rect width="1000" height="84" fill="url(#sun-s125)"/>
+    <rect width="1000" height="84" fill="url(#ramp-s94)"/><rect width="1000" height="84" fill="url(#sun-s94)"/>
     
     
     <rect x="28" y="8" width="944" height="68" rx="12"

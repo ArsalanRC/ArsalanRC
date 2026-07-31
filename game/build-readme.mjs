@@ -28,7 +28,7 @@
 
 import { writeFileSync } from "node:fs";
 import { THEME, prose, tryRow, linkTile, stats, statsAlt, stack, card, CARDS } from "./build-components.mjs";
-import { header, HEADER_THEME } from "./build-header.mjs";
+import { header, HEADER_THEME, HEADER_H } from "./build-header.mjs";
 
 const OUT = new URL("../assets/page/", import.meta.url);
 import { mkdirSync } from "node:fs";
@@ -135,7 +135,12 @@ const COPY = {
 
 /* --------------------------------------------------------------- assembly -- */
 
-const HEADER_H = 340;
+/* Page width in the shared coordinate system. Every full-width panel is this
+   wide; the cards are half of it and say so via offsetX. HEADER_H is imported
+   rather than written down: it used to be a literal 340 here while the header
+   actually occupied 266 page pixels, which put every panel below it 74px out
+   of step with the gradient. */
+const PAGE_W = 1000;
 
 /* Two passes. The first measures every panel so PAGE_H is the real total; the
    second renders with each panel's true offset into that total. Estimating the
@@ -190,10 +195,55 @@ function layout(t, lang) {
            stackOffset: measured[stackIdx].offsetY - sH };
 }
 
+/* The bands of the page that a glass tile covers, in page coordinates.
+ *
+ * Only game/audit-clouds.mjs consumes this. It is here rather than there
+ * because the offsets come out of layout(), and a copy of them living in
+ * another file is a copy that goes stale the first time a panel changes
+ * height, which is exactly the failure the audit exists to catch. */
+export function pageMap() {
+  const t = THEME.light;
+  const { measured, pageH, cardStart, CARD_H, sH, stackOffset } = layout(t, "en");
+  const at = (id) => measured.find((m) => m.id === id);
+  const bands = [];
+
+  /* The header's glass name pane, in art units scaled into page units. The one
+     tile on the page that does not run the full width of its panel, so it is
+     also the one that needs an x range: the clouds top right sit beside it. */
+  const hs = 1000 / 1280;
+  bands.push({ id: "header pane", from: 72 * hs, to: 268 * hs,
+               fromX: 56 * hs, toX: 756 * hs });
+
+  const s = at("stats");
+  bands.push({ id: "stats tiles", from: s.offsetY + 18, to: s.offsetY + 150 });
+
+  for (const m of measured.filter((x) => x.id.startsWith("try-"))) {
+    bands.push({ id: m.id, from: m.offsetY + 8, to: m.offsetY + 76 });
+  }
+
+  for (let row = 0; row < Math.ceil(CARDS.length / 2); row++) {
+    const top = cardStart + row * CARD_H;
+    bands.push({ id: `card row ${row + 1}`, from: top + 14, to: top + CARD_H - 14 });
+  }
+
+  // Pills run the height of the stack panel, so all of it is taken.
+  bands.push({ id: "stack pills", from: stackOffset, to: stackOffset + sH });
+
+  for (const m of measured.filter((x) => x.id.startsWith("link-"))) {
+    bands.push({ id: m.id, from: m.offsetY + 10, to: m.offsetY + m.H - 10 });
+  }
+
+  return { pageH, bands };
+}
+
 let n = 0;
 const write = (name, svg) => { writeFileSync(new URL(name, OUT), svg); n++; };
 
-for (const [themeName, t] of Object.entries(THEME)) {
+/* Only builds when run directly, so audit-clouds.mjs can import pageMap()
+   without triggering a full rebuild as a side effect of the import. */
+const isMain = import.meta.url === `file://${process.argv[1]}`;
+
+if (isMain) for (const [themeName, t] of Object.entries(THEME)) {
   for (const lang of ["en", "de"]) {
     const sfx = lang === "en" ? "" : ".de";
     const { measured, pageH, cardStart, CARD_H, stackOffset } = layout(t, lang);
@@ -203,11 +253,15 @@ for (const [themeName, t] of Object.entries(THEME)) {
       write(`${m.id}-${themeName}${sfx}.svg`, svg);
     }
 
-    // Cards, two per row, each carrying its own slice of the page gradient.
+    /* Cards, two per row, each carrying its own slice of the page sky. Odd
+       index means the right column, so it starts half a page across. */
     CARDS.forEach((c, i) => {
       const row = Math.floor(i / 2);
       write(`card-${c.id}-${themeName}${sfx}.svg`,
-            card(t, c, lang, { offsetY: cardStart + row * CARD_H, pageH }));
+            card(t, c, lang, {
+              offsetY: cardStart + row * CARD_H, pageH,
+              offsetX: (i % 2) * (PAGE_W / 2), pageW: PAGE_W,
+            }));
     });
 
     write(`stack-${themeName}${sfx}.svg`, stack(t, lang, { offsetY: stackOffset, pageH }));
@@ -300,7 +354,8 @@ ${parts.join("")}
 `;
 }
 
-writeFileSync(new URL("../README.md", import.meta.url), markdown("en"));
-writeFileSync(new URL("../README.de.md", import.meta.url), markdown("de"));
-
-console.log(`wrote ${n} page panels to assets/page/, plus README.md and README.de.md`);
+if (isMain) {
+  writeFileSync(new URL("../README.md", import.meta.url), markdown("en"));
+  writeFileSync(new URL("../README.de.md", import.meta.url), markdown("de"));
+  console.log(`wrote ${n} page panels to assets/page/, plus README.md and README.de.md`);
+}

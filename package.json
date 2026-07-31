@@ -6,7 +6,8 @@
   "scripts": {
     "assets": "node game/build-assets.mjs",
     "play": "node game/play.mjs",
-    "build": "node game/build-header.mjs && node game/build-badges.mjs && node game/build-readme.mjs"
+    "build": "node game/build-components.mjs && node game/build-header.mjs && node game/build-badges.mjs && node game/build-readme.mjs && node game/audit-clouds.mjs",
+    "audit": "node game/audit-clouds.mjs"
   },
   "dependencies": {
     "@arsalanrc/chess-engine": "github:ArsalanRC/chess-engine"

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
     role="img" aria-label="pg-outbox: Commit a row and publish an event without them coming apart.">
     <title>pg-outbox</title>
     
@@ -11,25 +11,25 @@
       <filter id="soft-s4" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s4"><rect width="480" height="190"/></clipPath>
+      <clipPath id="clip-s4"><rect width="500" height="190"/></clipPath>
       <radialGradient id="sun-s4" gradientUnits="userSpaceOnUse"
-                      cx="393.59999999999997" cy="-7.6000000000000005" r="104.50000000000001">
+                      cx="410" cy="-7.6000000000000005" r="104.50000000000001">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="480" height="190" fill="url(#ramp-s4)"/><rect width="480" height="190" fill="url(#sun-s4)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s4)" clip-path="url(#clip-s4)"><ellipse cx="67.2" cy="10.45" rx="150" ry="26"/><ellipse cx="96" cy="9.120000000000001" rx="90" ry="21"/><ellipse cx="398.4" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="374.40000000000003" cy="4.18" rx="80" ry="18"/><ellipse cx="144" cy="44.65" rx="170" ry="24"/><ellipse cx="422.4" cy="75.05" rx="140" ry="22"/><ellipse cx="57.599999999999994" cy="115.89999999999999" rx="120" ry="20"/><ellipse cx="345.59999999999997" cy="152" rx="160" ry="24"/></g>
+    <rect width="500" height="190" fill="url(#ramp-s4)"/><rect width="500" height="190" fill="url(#sun-s4)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s4)" clip-path="url(#clip-s4)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="46.341" rx="170" ry="22"/><ellipse cx="440" cy="76.36099999999999" rx="140" ry="18"/><ellipse cx="60" cy="122.43599999999999" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
     
-    <rect x="14" y="14" width="452" height="162" rx="12"
+    <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#FFFFFF" stroke-opacity="0.13"/>
-    <path d="M26 14.75 H454" stroke="#FFFFFF"
+    <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
     <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
          past the curve at the top and bottom, which reads as a misaligned edge
          rather than as an accent. -->
-    <clipPath id="cardclip-outbox"><rect x="14" y="14" width="452" height="162" rx="12"/></clipPath>
+    <clipPath id="cardclip-outbox"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
     <rect x="14" y="14" width="4" height="162" fill="#FF6A3D" clip-path="url(#cardclip-outbox)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#EAF1F7">pg-outbox</text>
@@ -38,7 +38,7 @@
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">Commit a row and publish an event</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">without them coming apart.</text>
-    <line x1="36" y1="152" x2="444" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           fill="#6C879A">41 tests · 0 deps · Java 17 and 21</text>
   </svg>

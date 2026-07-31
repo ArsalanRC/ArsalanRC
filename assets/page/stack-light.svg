@@ -3,23 +3,23 @@
     <title>Stack</title>
     
     <defs>
-      <linearGradient id="ramp-s140" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-2512" x2="0" y2="822">
+      <linearGradient id="ramp-s109" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2437.625" x2="0" y2="822">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s140" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s109" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s140"><rect width="1000" height="272"/></clipPath>
-      <radialGradient id="sun-s140" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2645.36" r="1833.7">
+      <clipPath id="clip-s109"><rect width="1000" height="272"/></clipPath>
+      <radialGradient id="sun-s109" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2568.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="272" fill="url(#ramp-s140)"/><rect width="1000" height="272" fill="url(#sun-s140)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s140)" clip-path="url(#clip-s140)"><ellipse cx="720" cy="155.20000000000027" rx="160" ry="24"/></g>
+    <rect width="1000" height="272" fill="url(#ramp-s109)"/><rect width="1000" height="272" fill="url(#sun-s109)"/>
+    
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
             letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">SHIPPING TODAY</text>
         <g transform="translate(22 40)">

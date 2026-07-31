@@ -1,35 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
     role="img" aria-label="integration-patterns: Idempotency and retry with full jitter, each with the failure it prevents.">
     <title>integration-patterns</title>
     
     <defs>
-      <linearGradient id="ramp-s66" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1834" x2="0" y2="1500">
+      <linearGradient id="ramp-s34" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1759.625" x2="0" y2="1500">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s66" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s34" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s66"><rect width="480" height="190"/></clipPath>
-      <radialGradient id="sun-s66" gradientUnits="userSpaceOnUse"
-                      cx="393.59999999999997" cy="-1967.3600000000001" r="1833.7">
+      <clipPath id="clip-s34"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s34" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1890.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="480" height="190" fill="url(#ramp-s66)"/><rect width="480" height="190" fill="url(#sun-s66)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s66)" clip-path="url(#clip-s66)"><ellipse cx="57.599999999999994" cy="199.74" rx="120" ry="20"/></g>
+    <rect width="500" height="190" fill="url(#ramp-s34)"/><rect width="500" height="190" fill="url(#sun-s34)"/>
     
-    <rect x="14" y="14" width="452" height="162" rx="12"
+    
+    <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#FFFFFF" stroke-opacity="0.13"/>
-    <path d="M26 14.75 H454" stroke="#FFFFFF"
+    <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
     <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
          past the curve at the top and bottom, which reads as a misaligned edge
          rather than as an accent. -->
-    <clipPath id="cardclip-patterns"><rect x="14" y="14" width="452" height="162" rx="12"/></clipPath>
+    <clipPath id="cardclip-patterns"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
     <rect x="14" y="14" width="4" height="162" fill="#4FA6F0" clip-path="url(#cardclip-patterns)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#EAF1F7">integration-patterns</text>
@@ -38,7 +38,7 @@
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">Idempotency and retry with full jitter,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">each with the failure it prevents.</text>
-    <line x1="36" y1="152" x2="444" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           fill="#6C879A">28 tests · Postgres · animated explainer</text>
   </svg>
