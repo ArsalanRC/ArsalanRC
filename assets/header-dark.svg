@@ -1,25 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 265.625" width="1000" height="265.625"
   role="img" aria-label="Arsalan Khadim, software architect and full-stack engineer">
   <title>Arsalan Khadim, software architect and full-stack engineer</title>
 
   <defs>
-    <linearGradient id="ramp" gradientUnits="userSpaceOnUse"
-                    x1="0" y1="0" x2="0" y2="3334">
-      <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
-      <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
-    </linearGradient>
-    <radialGradient id="sun" gradientUnits="userSpaceOnUse"
-                    cx="1049.6" cy="-133.36" r="1833.7">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
-      <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="soft" x="-30%" y="-60%" width="160%" height="260%">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
     <!-- Top corners only. Rounding the bottom too would cut the sky away where
          the next panel butts up square, and the page background would show
          through as two notches. -->
-    <clipPath id="frame"><path d="M0 14 A14 14 0 0 1 14 0 H1266 A14 14 0 0 1 1280 14 V340 H0 Z"/></clipPath>
+    <clipPath id="frame"><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z"/></clipPath>
     <style>
       /* The caret. The only motion, and it earns it because the name is set
          in mono and reads as something being typed. Everything else is still
@@ -30,17 +17,32 @@
     </style>
   </defs>
 
-  <g clip-path="url(#frame)">
-    <rect width="1280" height="340" fill="url(#ramp)"/>
-    <rect width="1280" height="340" fill="url(#sun)"/>
+  <!-- Panel zero of the page sky, drawn by the same function as every panel
+       below it: same gradient, same glow, same clouds, same rounding. -->
+  
+    <defs>
+      <linearGradient id="ramp-s37" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="0" x2="0" y2="3259.625">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <filter id="soft-s37" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s37"><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z"/></clipPath>
+      <radialGradient id="sun-s37" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-130.385" r="1792.79375">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z" fill="url(#ramp-s37)"/><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z" fill="url(#sun-s37)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s37)" clip-path="url(#clip-s37)"><ellipse cx="830" cy="84.75025" rx="130" ry="24"/><ellipse cx="780" cy="71.71175" rx="80" ry="18"/><ellipse cx="140" cy="299.8855" rx="150" ry="26"/><ellipse cx="200" cy="294.9960625" rx="90" ry="21"/></g>
 
-    <!-- The same page-space clouds every other panel draws. Positioned by page
-         fraction, not panel fraction, so a cloud that straddles the bottom edge
-         continues into the panel below instead of stopping at the seam. -->
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft)">
-      <ellipse cx="179.20000000000002" cy="183.37" rx="150" ry="26"/><ellipse cx="256" cy="160.032" rx="90" ry="21"/><ellipse cx="1062.3999999999999" cy="86.684" rx="130" ry="24"/><ellipse cx="998.4000000000001" cy="73.348" rx="80" ry="18"/>
-    </g>
-
+  <!-- Clip and scale are separate elements on purpose. A clip-path on the same
+       element as a transform is resolved in that element's own space, so the
+       two nested keeps the frame in page units and the art in its own. -->
+  <g clip-path="url(#frame)"><g transform="scale(0.78125)">
 
     <!-- A glass pane holding the name block, so the header uses the same
          surface language as every card below it. -->
@@ -77,5 +79,5 @@
       <circle cx="1128" cy="236" r="6" fill="#4FA6F0"/>
     </g>
     <rect x="812" y="246" width="34" height="7" rx="3.5" fill="#FF6A3D"/>
-  </g>
+  </g></g>
 </svg>

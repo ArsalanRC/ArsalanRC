@@ -1,35 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
     role="img" aria-label="Game Arena: 28 Spiele, eine Codebasis, eine Regel: Spiellogik fasst React nie an.">
     <title>Game Arena</title>
     
     <defs>
-      <linearGradient id="ramp-s175" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1834" x2="0" y2="1500">
+      <linearGradient id="ramp-s145" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1759.625" x2="0" y2="1500">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s175" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s145" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s175"><rect width="480" height="190"/></clipPath>
-      <radialGradient id="sun-s175" gradientUnits="userSpaceOnUse"
-                      cx="393.59999999999997" cy="-1967.3600000000001" r="1833.7">
+      <clipPath id="clip-s145"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s145" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-1890.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="480" height="190" fill="url(#ramp-s175)"/><rect width="480" height="190" fill="url(#sun-s175)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s175)" clip-path="url(#clip-s175)"><ellipse cx="57.599999999999994" cy="199.74" rx="120" ry="20"/></g>
+    <rect width="500" height="190" fill="url(#ramp-s145)"/><rect width="500" height="190" fill="url(#sun-s145)"/>
     
-    <rect x="14" y="14" width="452" height="162" rx="12"
+    
+    <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
           stroke="#15202B" stroke-opacity="0.13"/>
-    <path d="M26 14.75 H454" stroke="#FFFFFF"
+    <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
          past the curve at the top and bottom, which reads as a misaligned edge
          rather than as an accent. -->
-    <clipPath id="cardclip-arena"><rect x="14" y="14" width="452" height="162" rx="12"/></clipPath>
+    <clipPath id="cardclip-arena"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
     <rect x="14" y="14" width="4" height="162" fill="#2B8FEA" clip-path="url(#cardclip-arena)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#15202B">Game Arena</text>
@@ -38,7 +38,7 @@
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#4B6274">28 Spiele, eine Codebasis, eine Regel:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#4B6274">Spiellogik fasst React nie an.</text>
-    <line x1="36" y1="152" x2="444" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
+    <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           fill="#8FA9BC">940 Tests · 23 Sprachen · privat</text>
   </svg>

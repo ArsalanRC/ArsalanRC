@@ -10,7 +10,7 @@
  * prefers-reduced-motion at the bottom.
  */
 import { writeFileSync } from "node:fs";
-import { CLOUDS } from "./build-components.mjs";
+import { sky } from "./build-components.mjs";
 
 const MONO = 'ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace';
 const SANS = 'system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif';
@@ -24,10 +24,28 @@ const THEME = {
            faint: "#6C879A", accent: "#FF6A3D", select: "#4FA6F0", cloud: 0.12 },
 };
 
-const W = 1280, H = 340;
+/* The art was drawn on a 1280-wide canvas and every other panel is 1000 wide.
+ *
+ * Both render at width="100%", so 1280 header units and 1000 panel units were
+ * the same number of screen pixels and the header was silently at 0.78 scale.
+ * Everything positional then disagreed with the page: its clouds were 28% too
+ * small and in the wrong place, its share of the sun glow was computed against
+ * the wrong width, and build-readme.mjs booked it as 340px of page when it
+ * occupies 266, which shifted the gradient under every panel below it. That
+ * was the step visible across the header join.
+ *
+ * Rather than retype twenty coordinates, the canvas keeps its own units and the
+ * art is scaled into page space by S. The sky is drawn in page units, so the
+ * header now uses the same sky() as everything else and cannot drift from it
+ * again. Rendered output is pixel-identical: 1280:340 and 1000:265.625 are the
+ * same aspect ratio. */
+const ART_W = 1280, ART_H = 340;
+const W = 1000;
+const S = W / ART_W;
+const H = ART_H * S;
 
 /* offsetY/pageH put the header on the same page-tall gradient as every panel
-   below it. Without them the header runs the whole ramp inside its own 340px
+   below it. Without them the header runs the whole ramp inside its own height
    and meets the next panel at a different tone, which shows as a step across
    the join even when the geometry is perfect. */
 export function header(t, { offsetY = 0, pageH = H } = {}) {
@@ -36,19 +54,6 @@ export function header(t, { offsetY = 0, pageH = H } = {}) {
   <title>Arsalan Khadim, software architect and full-stack engineer</title>
 
   <defs>
-    <linearGradient id="ramp" gradientUnits="userSpaceOnUse"
-                    x1="0" y1="${-offsetY}" x2="0" y2="${pageH - offsetY}">
-      <stop offset="0" stop-color="${t.sky[0]}"/><stop offset="0.42" stop-color="${t.sky[1]}"/>
-      <stop offset="0.78" stop-color="${t.sky[2]}"/><stop offset="1" stop-color="${t.sky[3]}"/>
-    </linearGradient>
-    <radialGradient id="sun" gradientUnits="userSpaceOnUse"
-                    cx="${W * 0.82}" cy="${-offsetY + pageH * -0.04}" r="${pageH * 0.55}">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="${t.glow}"/>
-      <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="soft" x="-30%" y="-60%" width="160%" height="260%">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
     <!-- Top corners only. Rounding the bottom too would cut the sky away where
          the next panel butts up square, and the page background would show
          through as two notches. -->
@@ -63,21 +68,14 @@ export function header(t, { offsetY = 0, pageH = H } = {}) {
     </style>
   </defs>
 
-  <g clip-path="url(#frame)">
-    <rect width="${W}" height="${H}" fill="url(#ramp)"/>
-    <rect width="${W}" height="${H}" fill="url(#sun)"/>
+  <!-- Panel zero of the page sky, drawn by the same function as every panel
+       below it: same gradient, same glow, same clouds, same rounding. -->
+  ${sky(t, W, H, { offsetY, pageH, rx: 14, round: "top" })}
 
-    <!-- The same page-space clouds every other panel draws. Positioned by page
-         fraction, not panel fraction, so a cloud that straddles the bottom edge
-         continues into the panel below instead of stopping at the seam. -->
-    <g fill="#FFFFFF" opacity="${t.cloud}" filter="url(#soft)">
-      ${CLOUDS.map((c) => {
-        const cy = c.cy * pageH - offsetY;
-        if (cy + c.ry + 60 < 0 || cy - c.ry - 60 > H) return "";
-        return `<ellipse cx="${c.cx * W}" cy="${cy}" rx="${c.rx}" ry="${c.ry}"/>`;
-      }).join("")}
-    </g>
-
+  <!-- Clip and scale are separate elements on purpose. A clip-path on the same
+       element as a transform is resolved in that element's own space, so the
+       two nested keeps the frame in page units and the art in its own. -->
+  <g clip-path="url(#frame)"><g transform="scale(${S})">
 
     <!-- A glass pane holding the name block, so the header uses the same
          surface language as every card below it. -->
@@ -114,7 +112,7 @@ export function header(t, { offsetY = 0, pageH = H } = {}) {
       <circle cx="1128" cy="236" r="6" fill="${t.select}"/>
     </g>
     <rect x="812" y="246" width="34" height="7" rx="3.5" fill="${t.accent}"/>
-  </g>
+  </g></g>
 </svg>
 `;
 }

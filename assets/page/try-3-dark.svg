@@ -3,23 +3,23 @@
     <title>Kill a process mid-transaction</title>
     
     <defs>
-      <linearGradient id="ramp-s54" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1158" x2="0" y2="2176">
+      <linearGradient id="ramp-s22" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1083.625" x2="0" y2="2176">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s54" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s22" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s54"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s54" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1291.3600000000001" r="1833.7">
+      <clipPath id="clip-s22"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s22" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1214.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s54)"/><rect width="1000" height="84" fill="url(#sun-s54)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s54)" clip-path="url(#clip-s54)"><ellipse cx="880" cy="158.93000000000006" rx="140" ry="22"/></g>
+    <rect width="1000" height="84" fill="url(#ramp-s22)"/><rect width="1000" height="84" fill="url(#sun-s22)"/>
+    
     
     <rect x="28" y="8" width="944" height="68" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"

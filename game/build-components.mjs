@@ -31,6 +31,12 @@ const THEME = {
     glass: "#FFFFFF", glassOpacity: 0.055, line: "#FFFFFF", lineOpacity: 0.13,
     text: "#EAF1F7", dim: "#9FB6C6", faint: "#6C879A",
     accent: "#FF6A3D", accent2: "#4FA6F0", glow: 0.28,
+    /* Cloud opacity. This key was missing until 2026-07-31, which put
+       opacity="undefined" on every panel: an invalid value is dropped, so the
+       panels drew their clouds at full white while the header, which had the
+       key, drew them at 0.12. On the dark sky that is the difference between
+       atmosphere and a searchlight, and it made every header seam obvious. */
+    cloud: 0.12,
     /* Eyebrow labels are not the accent colour.
        Coral on blue at 10.5px with wide tracking vibrates: the two are close to
        complementary, so the edges shimmer and it is genuinely unpleasant to
@@ -43,6 +49,7 @@ const THEME = {
     glass: "#FFFFFF", glassOpacity: 0.68, line: "#15202B", lineOpacity: 0.13,
     text: "#15202B", dim: "#4B6274", faint: "#8FA9BC",
     accent: "#E8552B", accent2: "#2B8FEA", glow: 0.72,
+    cloud: 0.85,
     label: "#FFFFFF", labelShadow: true,
   },
 };
@@ -50,17 +57,37 @@ const THEME = {
 /* The sky, as three stacked gradient layers, matching the CSS on the site: a
    sun glow top right, a cool wash bottom left, and a vertical ramp. Each SVG
    gets its own copy with a unique id so two of them on one page cannot collide. */
-/* Positions are fractions of page height, so the same set works whatever the
-   page ends up being. Kept sparse and high: this is atmosphere, not weather. */
+/* Positions are fractions of the page, so the same set works whatever the page
+   ends up being. Kept sparse and high: this is atmosphere, not weather.
+ *
+ * A cloud has to sit in a band of open sky, clear of the glass tiles, and the
+ * band has to hold the blur as well as the shape. Blur reaches about 3 x
+ * stdDeviation, so the vertical room a cloud needs is ry + CLOUD_BLEED, not ry.
+ *
+ * This is not a style preference, it is the fix for three visible defects. A
+ * cloud whose body lands behind a glass tile shows through the tile dimmed and
+ * then emerges at full strength the moment the tile ends, and a tile that runs
+ * the width of its panel turns that into a hard horizontal line exactly on the
+ * seam. Three of the eight clouds did that: one behind the try rows, one behind
+ * a project card, one behind the stack rows. They read as the page being cut
+ * into strips, which is the one thing this whole build exists to avoid.
+ *
+ * Open bands on the current page, from the panel map (see build-readme.mjs):
+ * header 0-340, intro 340-626, try 794-954, work 1374-1534, how 2104-2592,
+ * foot 2864-3138. Everything else carries glass. Re-check these when a panel
+ * changes height; `node game/audit-clouds.mjs` does it for you. */
+const CLOUD_BLEED = 60;
+
 const CLOUDS = [
-  { cx: 0.14, cy: 0.055, rx: 150, ry: 26 },
-  { cx: 0.20, cy: 0.048, rx: 90,  ry: 21 },
-  { cx: 0.83, cy: 0.026, rx: 130, ry: 24 },
-  { cx: 0.78, cy: 0.022, rx: 80,  ry: 18 },
-  { cx: 0.30, cy: 0.235, rx: 170, ry: 24 },
-  { cx: 0.88, cy: 0.395, rx: 140, ry: 22 },
-  { cx: 0.12, cy: 0.61,  rx: 120, ry: 20 },
-  { cx: 0.72, cy: 0.80,  rx: 160, ry: 24 },
+  { cx: 0.83, cy: 0.0260, rx: 130, ry: 24 },  // header, right of the name pane
+  { cx: 0.78, cy: 0.0220, rx: 80,  ry: 18 },  // header, right of the name pane
+  { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
+  { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
+  { cx: 0.62, cy: 0.1400, rx: 130, ry: 22 },  // intro
+  { cx: 0.30, cy: 0.2439, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.4019, rx: 140, ry: 18 },  // work header
+  { cx: 0.12, cy: 0.6444, rx: 120, ry: 20 },  // how
+  { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
 ];
 
 let skyId = 0;
@@ -74,8 +101,16 @@ let skyId = 0;
  * which is the whole point of the exercise.
  *
  * PAGE_H is the running total of every panel height. It has to be right or the
- * gradient banding shifts, so build-readme.mjs computes it rather than guessing. */
-function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
+ * gradient banding shifts, so build-readme.mjs computes it rather than guessing.
+ *
+ * offsetX/pageW are the same idea across, and they exist for the project cards.
+ * Those are the only panels narrower than the page: two sit side by side, each
+ * rendered at width="50%". Before this they passed their own width as the page
+ * width, so a cloud at 12% of the page was drawn at 12% of a card, twice, once
+ * in each card, and neither copy lined up with the panel above or below. The
+ * sun glow had the same fault and put a second highlight in the middle of the
+ * page. Any panel that is not the full page width has to say where it sits. */
+function sky(t, w, h, { offsetY = 0, pageH = h, offsetX = 0, pageW = w, rx = 0, round = null } = {}) {
   const id = `s${++skyId}`;
 
   /* Corners are a property of the page, not of the panel.
@@ -92,10 +127,14 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
      visibly on the left, where there was. Anything that paints the sky has to
      be positioned in page space or it will betray the seam. */
   const clouds = CLOUDS.map((c) => {
+    const cx = c.cx * pageW - offsetX;
     const cy = c.cy * pageH - offsetY;
-    // Skip clouds whose blur cannot reach this panel, so panels stay small.
-    if (cy + c.ry + 60 < 0 || cy - c.ry - 60 > h) return "";
-    return `<ellipse cx="${c.cx * w}" cy="${cy}" rx="${c.rx}" ry="${c.ry}"/>`;
+    /* Skip clouds whose blur cannot reach this panel, so panels stay small.
+       The margin is the blur reach, not zero: a cloud sitting just past the
+       edge still tints the panel, and dropping it puts a line on the seam. */
+    if (cy + c.ry + CLOUD_BLEED < 0 || cy - c.ry - CLOUD_BLEED > h) return "";
+    if (cx + c.rx + CLOUD_BLEED < 0 || cx - c.rx - CLOUD_BLEED > w) return "";
+    return `<ellipse cx="${cx}" cy="${cy}" rx="${c.rx}" ry="${c.ry}"/>`;
   }).join("");
 
   const shape = round === "top"
@@ -115,7 +154,7 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
       </filter>
       <clipPath id="clip-${id}">${shape ? `<path d="${shape}"/>` : `<rect width="${w}" height="${h}"/>`}</clipPath>
       <radialGradient id="sun-${id}" gradientUnits="userSpaceOnUse"
-                      cx="${w * 0.82}" cy="${-offsetY + pageH * -0.04}" r="${pageH * 0.55}">
+                      cx="${pageW * 0.82 - offsetX}" cy="${-offsetY + pageH * -0.04}" r="${pageH * 0.55}">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="${t.glow}"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
@@ -320,8 +359,16 @@ const CARDS = [
     metaDe: "940 Tests · 23 Sprachen · privat", accent: false },
 ];
 
+/* Two cards to a row, each rendered at width="50%".
+ *
+ * W is 500, not 480, so one card unit is one page pixel: two 500-unit cards
+ * side by side are the 1000-unit page exactly. At 480 the card was drawn at
+ * 1.042 scale, which meant its slice of the page gradient was stretched by 4%
+ * against its neighbours and the card rows sat 24px lower than the layout
+ * thought they did. The caller passes offsetX so each card knows which half of
+ * the page it is; without it both columns paint the same sky. */
 function card(t, c, lang, o = {}) {
-  const W = 480, H = 190;
+  const W = 500, H = 190;
   const accent = c.accent ? t.accent : t.accent2;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(c.title)}: ${esc((lang === 'de' ? c.blurbDe : c.blurb).join(" "))}">
@@ -451,20 +498,25 @@ export function linkTile(t, { label, url, icon }, o = {}) {
   </svg>\n`;
 }
 
-export { THEME, sky, glass, stats, stack, card, CARDS, STATS, CLOUDS };
+export { THEME, sky, glass, stats, stack, card, CARDS, STATS, CLOUDS, CLOUD_BLEED };
 
 // ------------------------------------------------------------------ write
 
-let n = 0;
-for (const [name, t] of Object.entries(THEME)) {
-  for (const lang of ["en", "de"]) {
-    // English keeps the bare filename so existing links stay valid.
-    const sfx = lang === "en" ? "" : ".de";
-    writeFileSync(new URL(`stats-${name}${sfx}.svg`, OUT), stats(t, lang)); n++;
-    writeFileSync(new URL(`stack-${name}${sfx}.svg`, OUT), stack(t, lang)); n++;
-    for (const c of CARDS) {
-      writeFileSync(new URL(`card-${c.id}-${name}${sfx}.svg`, OUT), card(t, c, lang)); n++;
+/* Only writes when run directly. Other scripts import the components, and an
+   import that writes 32 files as a side effect makes a read-only tool like
+   audit-clouds.mjs dirty the working tree just by asking a question. */
+if (import.meta.url === `file://${process.argv[1]}`) {
+  let n = 0;
+  for (const [name, t] of Object.entries(THEME)) {
+    for (const lang of ["en", "de"]) {
+      // English keeps the bare filename so existing links stay valid.
+      const sfx = lang === "en" ? "" : ".de";
+      writeFileSync(new URL(`stats-${name}${sfx}.svg`, OUT), stats(t, lang)); n++;
+      writeFileSync(new URL(`stack-${name}${sfx}.svg`, OUT), stack(t, lang)); n++;
+      for (const c of CARDS) {
+        writeFileSync(new URL(`card-${c.id}-${name}${sfx}.svg`, OUT), card(t, c, lang)); n++;
+      }
     }
   }
+  console.log(`wrote ${n} component images to assets/components/`);
 }
-console.log(`wrote ${n} component images to assets/components/`);

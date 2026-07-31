@@ -19,7 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="1000" height="168" fill="url(#ramp-s17)"/><rect width="1000" height="168" fill="url(#sun-s17)"/>
-    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s17)" clip-path="url(#clip-s17)"><ellipse cx="140" cy="9.24" rx="150" ry="26"/><ellipse cx="200" cy="8.064" rx="90" ry="21"/><ellipse cx="830" cy="4.367999999999999" rx="130" ry="24"/><ellipse cx="780" cy="3.6959999999999997" rx="80" ry="18"/><ellipse cx="300" cy="39.48" rx="170" ry="24"/><ellipse cx="880" cy="66.36" rx="140" ry="22"/><ellipse cx="120" cy="102.48" rx="120" ry="20"/><ellipse cx="720" cy="134.4" rx="160" ry="24"/></g>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s17)" clip-path="url(#clip-s17)"><ellipse cx="830" cy="4.367999999999999" rx="130" ry="24"/><ellipse cx="780" cy="3.6959999999999997" rx="80" ry="18"/><ellipse cx="140" cy="15.456" rx="150" ry="26"/><ellipse cx="200" cy="15.203999999999999" rx="90" ry="21"/><ellipse cx="620" cy="23.520000000000003" rx="130" ry="22"/><ellipse cx="300" cy="40.9752" rx="170" ry="22"/><ellipse cx="880" cy="67.5192" rx="140" ry="18"/><ellipse cx="120" cy="108.25919999999999" rx="120" ry="20"/><ellipse cx="720" cy="147.1344" rx="160" ry="24"/></g>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         

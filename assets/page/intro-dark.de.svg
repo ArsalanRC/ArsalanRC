@@ -3,23 +3,23 @@
     <title></title>
     
     <defs>
-      <linearGradient id="ramp-s84" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-340" x2="0" y2="2994">
+      <linearGradient id="ramp-s53" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-265.625" x2="0" y2="2994">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s84" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s53" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s84"><rect width="1000" height="286"/></clipPath>
-      <radialGradient id="sun-s84" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-473.36" r="1833.7">
+      <clipPath id="clip-s53"><rect width="1000" height="286"/></clipPath>
+      <radialGradient id="sun-s53" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-396.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="286" fill="url(#ramp-s84)"/><rect width="1000" height="286" fill="url(#sun-s84)"/>
-    <text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
+    <rect width="1000" height="286" fill="url(#ramp-s53)"/><rect width="1000" height="286" fill="url(#sun-s53)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s53)" clip-path="url(#clip-s53)"><ellipse cx="140" cy="34.26049999999998" rx="150" ry="26"/><ellipse cx="200" cy="29.371062499999994" rx="90" ry="21"/><ellipse cx="620" cy="190.72250000000003" rx="130" ry="22"/></g><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
           <tspan font-weight="700" fill="#EAF1F7">Softwarearchitekt und Full-Stack-Engineer.</tspan> Aktuell Software Development Manager, das heißt, mir gehören die Systeme</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">und die Roadmap, dazu ein ordentlicher Teil der Commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">Der größte Teil meiner Arbeit liegt auf der unglamourösen Hälfte der Softwareentwicklung: Systeme, die nie füreinander</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"

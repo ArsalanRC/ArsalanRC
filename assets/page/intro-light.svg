@@ -3,23 +3,23 @@
     <title></title>
     
     <defs>
-      <linearGradient id="ramp-s120" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-340" x2="0" y2="2994">
+      <linearGradient id="ramp-s89" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-265.625" x2="0" y2="2994">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s120" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s89" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s120"><rect width="1000" height="286"/></clipPath>
-      <radialGradient id="sun-s120" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-473.36" r="1833.7">
+      <clipPath id="clip-s89"><rect width="1000" height="286"/></clipPath>
+      <radialGradient id="sun-s89" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-396.01" r="1792.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="286" fill="url(#ramp-s120)"/><rect width="1000" height="286" fill="url(#sun-s120)"/>
-    <text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+    <rect width="1000" height="286" fill="url(#ramp-s89)"/><rect width="1000" height="286" fill="url(#sun-s89)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s89)" clip-path="url(#clip-s89)"><ellipse cx="140" cy="34.26049999999998" rx="150" ry="26"/><ellipse cx="200" cy="29.371062499999994" rx="90" ry="21"/><ellipse cx="620" cy="190.72250000000003" rx="130" ry="22"/></g><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
           <tspan font-weight="700" fill="#15202B">Software architect and full-stack engineer.</tspan> Currently Software Development Manager, which means I own the systems and</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">the roadmap along with a fair share of the commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">Most of my working life goes on the unglamorous half of software: making systems that were never designed to talk to</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
