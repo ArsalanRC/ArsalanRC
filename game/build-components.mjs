@@ -169,7 +169,9 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // Counted, not estimated. Tests is the sum across the public repos
 // (47 chess-engine + 28 integration-patterns + 86 recon + 41 pg-outbox +
 // 61 stylo); merged PRs is the sum over every repo on the account, from
-// gh api. Last counted 2026-07-31.
+// gh api. Tests re-counted 2026-07-31 by running all five suites; recon needs
+// psycopg and a live server or its 17 Postgres tests skip as a module and the
+// total reads 246. Merged PRs re-read the same day: 41 at the time of reading.
 //
 // The merged-PR tile counts itself. Updating it is a pull request, so a number
 // read from the API and committed is already one short by the time it merges,
@@ -178,13 +180,27 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // was read. Anyone reconciling this against `gh api` on a quiet day will find it
 // correct; anyone checking mid-session will find it one high, which is the right
 // way round for a number nobody should be rounding down.
+//
+// enAlt/deAlt exist because the tile labels are abbreviated to fit the tile,
+// and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
+// unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false },
-  { n: "263",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true  },
-  { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true  },
-  { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false },
-  { n: "27",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
+  { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+    enAlt: "public repositories", deAlt: "öffentliche Repositories" },
+  { n: "263",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+    enAlt: "tests passing", deAlt: "Tests grün" },
+  { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
+    enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
+  { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
+    enAlt: "community standards", deAlt: "Community-Standard" },
+  { n: "43",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+    enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
+
+/** Spoken form of the stats row, for the README alt and the SVG aria-label. */
+export const statsAlt = (lang) => STATS
+  .map((s) => `${s.n} ${s[lang === "de" ? "deAlt" : "enAlt"] ?? s[lang].toLowerCase()}`)
+  .join(", ");
 
 function stats(t, lang, o = {}) {
   const W = 1000, H = 132, gap = 12, pad = 18;
@@ -204,7 +220,7 @@ function stats(t, lang, o = {}) {
   }).join("");
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H + pad * 2}" width="${W}" height="${H + pad * 2}"
-    role="img" aria-label="${STATS.map((s) => `${s.n} ${s[lang].toLowerCase()}`).join(", ")}">
+    role="img" aria-label="${esc(statsAlt(lang))}">
     <title>Profile statistics</title>
     ${sky(t, W, H + pad * 2, o)}
     <g transform="translate(0 ${pad})">${tiles}</g>
