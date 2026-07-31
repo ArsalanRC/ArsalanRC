@@ -100,37 +100,37 @@ Keine Installation, keine Anmeldung, nichts herunterzuladen. Alle fünf laufen d
 <a href="https://github.com/ArsalanRC/stylo">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-stylo-dark.de.svg">
-    <img alt="stylo: neunzehn Messungen an einem Text, gegen ein gemessenes Korpus" src="./assets/components/card-stylo-light.de.svg" width="480">
+    <img alt="stylo: neunzehn Messungen an einem Text, gegen ein gemessenes Korpus" src="./assets/components/card-stylo-light.de.svg" width="420">
   </picture>
 </a>
 <a href="https://github.com/ArsalanRC/pg-outbox">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-outbox-dark.de.svg">
-    <img alt="pg-outbox: eine Zeile committen und ein Event senden, ohne dass beides zerfällt" src="./assets/components/card-outbox-light.de.svg" width="480">
+    <img alt="pg-outbox: eine Zeile committen und ein Event senden, ohne dass beides zerfällt" src="./assets/components/card-outbox-light.de.svg" width="420">
   </picture>
 </a>
 <a href="https://github.com/ArsalanRC/recon">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-recon-dark.de.svg">
-    <img alt="recon: zwei Systeme widersprechen sich, welche Widersprüche davon wirklich zählen" src="./assets/components/card-recon-light.de.svg" width="480">
+    <img alt="recon: zwei Systeme widersprechen sich, welche Widersprüche davon wirklich zählen" src="./assets/components/card-recon-light.de.svg" width="420">
   </picture>
 </a>
 <a href="https://github.com/ArsalanRC/chess-engine">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-chess-dark.de.svg">
-    <img alt="chess-engine: alle FIDE-Regeln und ein Minimax-Bot mit Alpha-Beta-Pruning" src="./assets/components/card-chess-light.de.svg" width="480">
+    <img alt="chess-engine: alle FIDE-Regeln und ein Minimax-Bot mit Alpha-Beta-Pruning" src="./assets/components/card-chess-light.de.svg" width="420">
   </picture>
 </a>
 <a href="https://github.com/ArsalanRC/integration-patterns">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-patterns-dark.de.svg">
-    <img alt="integration-patterns: Idempotenz und Retry mit Full Jitter" src="./assets/components/card-patterns-light.de.svg" width="480">
+    <img alt="integration-patterns: Idempotenz und Retry mit Full Jitter" src="./assets/components/card-patterns-light.de.svg" width="420">
   </picture>
 </a>
 <a href="#game-arena">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/components/card-arena-dark.de.svg">
-    <img alt="Game Arena: 28 Spiele, eine Codebasis, Spiellogik fasst React nie an" src="./assets/components/card-arena-light.de.svg" width="480">
+    <img alt="Game Arena: 28 Spiele, eine Codebasis, Spiellogik fasst React nie an" src="./assets/components/card-arena-light.de.svg" width="420">
   </picture>
 </a>
 
