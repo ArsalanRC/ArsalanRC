@@ -31,14 +31,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // ------------------------------------------------------------------ stats
 
 // Counted, not estimated. Tests is the sum across the public repos
-// (47 chess-engine + 28 integration-patterns + 69 recon); merged PRs is the
-// sum over every repo on the account. Last counted 2026-07-30.
+// (47 chess-engine + 28 integration-patterns + 86 recon + 41 pg-outbox +
+// 61 stylo); merged PRs is the sum over every repo on the account, from
+// gh api. Last counted 2026-07-31.
 const STATS = [
-  { n: "7",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false },
-  { n: "185",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true  },
+  { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false },
+  { n: "263",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true  },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true  },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false },
-  { n: "19",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
+  { n: "24",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
 ];
 
 function stats(t, lang) {
@@ -111,6 +112,11 @@ function stack(t, lang) {
 // ------------------------------------------------------------------ cards
 
 const CARDS = [
+  { id: "stylo", title: "stylo", lang: "TypeScript",
+    blurb: ["Nineteen measurements of a text,", "against a measured human corpus."],
+    blurbDe: ["Neunzehn Messungen an einem Text,", "gegen ein gemessenes Korpus."],
+    meta: "61 tests · 0 deps · no verdict, ever",
+    metaDe: "61 Tests · 0 Abhängigkeiten · nie ein Urteil", accent: true },
   { id: "outbox", title: "pg-outbox", lang: "Java · Postgres",
     blurb: ["Commit a row and publish an event", "without them coming apart."],
     blurbDe: ["Eine Zeile committen und ein Event", "senden, ohne dass beides zerfällt."],
@@ -119,8 +125,8 @@ const CARDS = [
   { id: "recon", title: "recon", lang: "Python",
     blurb: ["Two systems disagree. Which of those", "disagreements are actually real."],
     blurbDe: ["Zwei Systeme widersprechen sich. Welche", "Widersprüche davon wirklich zählen."],
-    meta: "69 tests · 0 deps · 3.10 to 3.13",
-    metaDe: "69 Tests · 0 Abhängigkeiten · 3.10 bis 3.13", accent: false },
+    meta: "86 tests · 0 deps · streams from Postgres",
+    metaDe: "86 Tests · 0 Abhängigkeiten · streamt aus Postgres", accent: false },
   { id: "chess", title: "chess-engine", lang: "TypeScript",
     blurb: ["Full FIDE rules and a minimax bot", "with alpha-beta pruning."],
     blurbDe: ["Alle FIDE-Regeln und ein Minimax-Bot", "mit Alpha-Beta-Pruning."],

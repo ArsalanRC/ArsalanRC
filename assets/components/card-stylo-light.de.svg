@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
-    role="img" aria-label="recon: Two systems disagree. Which of those disagreements are actually real.">
-    <title>recon</title>
+    role="img" aria-label="stylo: Neunzehn Messungen an einem Text, gegen ein gemessenes Korpus.">
+    <title>stylo</title>
     <rect width="480" height="190" rx="10" fill="#FFFFFF" stroke="#D8D0BE"/>
-    <rect x="0" y="0" width="4" height="190" rx="2" fill="#146273"/>
+    <rect x="0" y="0" width="4" height="190" rx="2" fill="#9A6410"/>
     <text x="28" y="46" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="21" font-weight="800"
-          fill="#1B2130">recon</text>
+          fill="#1B2130">stylo</text>
     <text x="28" y="70" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11" letter-spacing="2"
-          fill="#146273">PYTHON</text>
+          fill="#9A6410">TYPESCRIPT</text>
     <text x="28" y="106" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
-             fill="#6B6A62">Two systems disagree. Which of those</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
-             fill="#6B6A62">disagreements are actually real.</text>
+             fill="#6B6A62">Neunzehn Messungen an einem Text,</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
+             fill="#6B6A62">gegen ein gemessenes Korpus.</text>
     <line x1="28" y1="150" x2="452" y2="150" stroke="#D8D0BE"/>
     <text x="28" y="170" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11.5"
-          fill="#6B6A62">86 tests · 0 deps · streams from Postgres</text>
+          fill="#6B6A62">61 Tests · 0 Abhängigkeiten · nie ein Urteil</text>
   </svg>

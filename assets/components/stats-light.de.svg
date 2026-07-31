@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 132" width="1000" height="132"
-    role="img" aria-label="7 öffentliche repos, 185 tests grün, 0 abhängigkeiten, 100% community standard, 19 gemergte prs">
+    role="img" aria-label="8 öffentliche repos, 263 tests grün, 0 abhängigkeiten, 100% community standard, 24 gemergte prs">
     <title>Profile statistics</title>
       <g transform="translate(0 0)">
         <rect width="190.4" height="132" rx="8" fill="#FFFFFF" stroke="#D8D0BE"/>
         <text x="95.2" y="72" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
-              font-size="42" font-weight="800" fill="#1B2130">7</text>
+              font-size="42" font-weight="800" fill="#1B2130">8</text>
         <text x="95.2" y="100" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="11" letter-spacing="2.2" fill="#6B6A62">ÖFFENTLICHE REPOS</text>
       </g>
       <g transform="translate(202.4 0)">
         <rect width="190.4" height="132" rx="8" fill="#FFFFFF" stroke="#D8D0BE"/>
         <text x="95.2" y="72" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
-              font-size="42" font-weight="800" fill="#9A6410">185</text>
+              font-size="42" font-weight="800" fill="#9A6410">263</text>
         <text x="95.2" y="100" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="11" letter-spacing="2.2" fill="#6B6A62">TESTS GRÜN</text>
       </g>
@@ -32,7 +32,7 @@
       <g transform="translate(809.6 0)">
         <rect width="190.4" height="132" rx="8" fill="#FFFFFF" stroke="#D8D0BE"/>
         <text x="95.2" y="72" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
-              font-size="42" font-weight="800" fill="#1B2130">19</text>
+              font-size="42" font-weight="800" fill="#1B2130">24</text>
         <text x="95.2" y="100" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="11" letter-spacing="2.2" fill="#6B6A62">GEMERGTE PRS</text>
       </g>

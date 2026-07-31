@@ -12,5 +12,5 @@
              fill="#8A90A3">disagreements are actually real.</text>
     <line x1="28" y1="150" x2="452" y2="150" stroke="#2C3448"/>
     <text x="28" y="170" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11.5"
-          fill="#8A90A3">69 tests · 0 deps · 3.10 to 3.13</text>
+          fill="#8A90A3">86 tests · 0 deps · streams from Postgres</text>
   </svg>

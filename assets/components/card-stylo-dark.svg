@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 190" width="480" height="190"
-    role="img" aria-label="recon: Zwei Systeme widersprechen sich. Welche Widersprüche davon wirklich zählen.">
-    <title>recon</title>
+    role="img" aria-label="stylo: Nineteen measurements of a text, against a measured human corpus.">
+    <title>stylo</title>
     <rect width="480" height="190" rx="10" fill="#1A2030" stroke="#2C3448"/>
-    <rect x="0" y="0" width="4" height="190" rx="2" fill="#5BC8D4"/>
+    <rect x="0" y="0" width="4" height="190" rx="2" fill="#E8A33D"/>
     <text x="28" y="46" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="21" font-weight="800"
-          fill="#E8E4DA">recon</text>
+          fill="#E8E4DA">stylo</text>
     <text x="28" y="70" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11" letter-spacing="2"
-          fill="#5BC8D4">PYTHON</text>
+          fill="#E8A33D">TYPESCRIPT</text>
     <text x="28" y="106" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
-             fill="#8A90A3">Zwei Systeme widersprechen sich. Welche</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
-             fill="#8A90A3">Widersprüche davon wirklich zählen.</text>
+             fill="#8A90A3">Nineteen measurements of a text,</text><text x="28" y="128" font-family='"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif' font-size="14.5"
+             fill="#8A90A3">against a measured human corpus.</text>
     <line x1="28" y1="150" x2="452" y2="150" stroke="#2C3448"/>
     <text x="28" y="170" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="11.5"
-          fill="#8A90A3">86 Tests · 0 Abhängigkeiten · streamt aus Postgres</text>
+          fill="#8A90A3">61 tests · 0 deps · no verdict, ever</text>
   </svg>
