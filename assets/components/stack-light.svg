@@ -8,6 +8,10 @@
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
+      <filter id="soft-s18" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s18"><rect width="1000" height="272"/></clipPath>
       <radialGradient id="sun-s18" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-10.88" r="149.60000000000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
@@ -15,8 +19,9 @@
       </radialGradient>
     </defs>
     <rect width="1000" height="272" fill="url(#ramp-s18)"/><rect width="1000" height="272" fill="url(#sun-s18)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s18)" clip-path="url(#clip-s18)"><ellipse cx="140" cy="14.96" rx="150" ry="26"/><ellipse cx="200" cy="13.056000000000001" rx="90" ry="21"/><ellipse cx="830" cy="7.072" rx="130" ry="24"/><ellipse cx="780" cy="5.984" rx="80" ry="18"/><ellipse cx="300" cy="63.919999999999995" rx="170" ry="24"/><ellipse cx="880" cy="107.44" rx="140" ry="22"/><ellipse cx="120" cy="165.92" rx="120" ry="20"/><ellipse cx="720" cy="217.60000000000002" rx="160" ry="24"/></g>
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-            letter-spacing="2.4" fill="#E8552B">SHIPPING TODAY</text>
+            letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">SHIPPING TODAY</text>
         <g transform="translate(22 40)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"
@@ -66,7 +71,7 @@
                 fill="#15202B">PostgreSQL</text>
         </g>
       <text x="22" y="98" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-            letter-spacing="2.4" fill="#E8552B">DAY JOB</text>
+            letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">DAY JOB</text>
         <g transform="translate(22 112)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"

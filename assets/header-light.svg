@@ -34,13 +34,13 @@
     <rect width="1280" height="340" fill="url(#ramp)"/>
     <rect width="1280" height="340" fill="url(#sun)"/>
 
-    <!-- Clouds, the same two-depth idea as the site, blurred ellipses. -->
+    <!-- The same page-space clouds every other panel draws. Positioned by page
+         fraction, not panel fraction, so a cloud that straddles the bottom edge
+         continues into the panel below instead of stopping at the seam. -->
     <g fill="#FFFFFF" opacity="0.85" filter="url(#soft)">
-      <ellipse cx="180" cy="248" rx="150" ry="26"/>
-      <ellipse cx="250" cy="232" rx="90"  ry="22"/>
-      <ellipse cx="1080" cy="92" rx="130" ry="24"/>
-      <ellipse cx="1010" cy="80" rx="80"  ry="19"/>
+      <ellipse cx="179.20000000000002" cy="168.19" rx="150" ry="26"/><ellipse cx="256" cy="146.784" rx="90" ry="21"/><ellipse cx="1062.3999999999999" cy="79.508" rx="130" ry="24"/><ellipse cx="998.4000000000001" cy="67.276" rx="80" ry="18"/>
     </g>
+
 
     <!-- A glass pane holding the name block, so the header uses the same
          surface language as every card below it. -->

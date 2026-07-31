@@ -8,6 +8,10 @@
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
+      <filter id="soft-s14" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s14"><rect width="480" height="190"/></clipPath>
       <radialGradient id="sun-s14" gradientUnits="userSpaceOnUse"
                       cx="393.59999999999997" cy="-7.6000000000000005" r="104.50000000000001">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
@@ -15,6 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="480" height="190" fill="url(#ramp-s14)"/><rect width="480" height="190" fill="url(#sun-s14)"/>
+    <g fill="#FFFFFF" opacity="undefined" filter="url(#soft-s14)" clip-path="url(#clip-s14)"><ellipse cx="67.2" cy="10.45" rx="150" ry="26"/><ellipse cx="96" cy="9.120000000000001" rx="90" ry="21"/><ellipse cx="398.4" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="374.40000000000003" cy="4.18" rx="80" ry="18"/><ellipse cx="144" cy="44.65" rx="170" ry="24"/><ellipse cx="422.4" cy="75.05" rx="140" ry="22"/><ellipse cx="57.599999999999994" cy="115.89999999999999" rx="120" ry="20"/><ellipse cx="345.59999999999997" cy="152" rx="160" ry="24"/></g>
     
     <rect x="14" y="14" width="452" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
@@ -29,7 +34,7 @@
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#EAF1F7">chess-engine</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="#4FA6F0">TYPESCRIPT</text>
+          letter-spacing="2" fill="#9FB6C6">TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">Alle FIDE-Regeln und ein Minimax-Bot</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">mit Alpha-Beta-Pruning.</text>

@@ -8,14 +8,19 @@
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
+      <filter id="soft-s55" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s55"><path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z"/></clipPath>
       <radialGradient id="sun-s55" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-2906.32" r="1681.9">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z" fill="url(#ramp-s55)"/><path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z" fill="url(#sun-s55)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-      font-weight="700" letter-spacing="2.4" fill="#FF6A3D">ELSEWHERE</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+    <path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z" fill="url(#ramp-s55)"/><path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z" fill="url(#sun-s55)"/>
+    <text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      font-weight="700" letter-spacing="2.4" fill="#FFFFFF">ELSEWHERE</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Get in touch</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">LinkedIn is the contact route, and the portfolio at arsalanrc.github.io has the same work with the demos embedded.</text><text x="44" y="203" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">Built by hand, no template. The design system behind this page and the portfolio is the same one.</text>

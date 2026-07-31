@@ -31,18 +31,38 @@ const THEME = {
     glass: "#FFFFFF", glassOpacity: 0.055, line: "#FFFFFF", lineOpacity: 0.13,
     text: "#EAF1F7", dim: "#9FB6C6", faint: "#6C879A",
     accent: "#FF6A3D", accent2: "#4FA6F0", glow: 0.28,
+    /* Eyebrow labels are not the accent colour.
+       Coral on blue at 10.5px with wide tracking vibrates: the two are close to
+       complementary, so the edges shimmer and it is genuinely unpleasant to
+       read. White carries the same emphasis without the buzz. On the light sky
+       it needs a shadow, because white on pale blue is about 2:1 on its own. */
+    label: "#FFFFFF", labelShadow: false,
   },
   light: {
     sky: ["#4E9BD9", "#6FB2E6", "#97CBEF", "#B9DEF6"],
     glass: "#FFFFFF", glassOpacity: 0.68, line: "#15202B", lineOpacity: 0.13,
     text: "#15202B", dim: "#4B6274", faint: "#8FA9BC",
     accent: "#E8552B", accent2: "#2B8FEA", glow: 0.72,
+    label: "#FFFFFF", labelShadow: true,
   },
 };
 
 /* The sky, as three stacked gradient layers, matching the CSS on the site: a
    sun glow top right, a cool wash bottom left, and a vertical ramp. Each SVG
    gets its own copy with a unique id so two of them on one page cannot collide. */
+/* Positions are fractions of page height, so the same set works whatever the
+   page ends up being. Kept sparse and high: this is atmosphere, not weather. */
+const CLOUDS = [
+  { cx: 0.14, cy: 0.055, rx: 150, ry: 26 },
+  { cx: 0.20, cy: 0.048, rx: 90,  ry: 21 },
+  { cx: 0.83, cy: 0.026, rx: 130, ry: 24 },
+  { cx: 0.78, cy: 0.022, rx: 80,  ry: 18 },
+  { cx: 0.30, cy: 0.235, rx: 170, ry: 24 },
+  { cx: 0.88, cy: 0.395, rx: 140, ry: 22 },
+  { cx: 0.12, cy: 0.61,  rx: 120, ry: 20 },
+  { cx: 0.72, cy: 0.80,  rx: 160, ry: 24 },
+];
+
 let skyId = 0;
 
 /* The whole README is one sky, sliced across panels.
@@ -65,6 +85,19 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
    * right on its own and wrong in a stack: its bottom corners cut the sky away
    * and the page background shows through as two notches against the square
    * top edge of whatever sits below it. */
+  /* Clouds live in page coordinates too, for the same reason the gradient does.
+     They were previously drawn only inside the header, which brightened its
+     bottom-left corner while the panel below it started as plain sky. The join
+     matched perfectly on the right, where there was no cloud, and stepped
+     visibly on the left, where there was. Anything that paints the sky has to
+     be positioned in page space or it will betray the seam. */
+  const clouds = CLOUDS.map((c) => {
+    const cy = c.cy * pageH - offsetY;
+    // Skip clouds whose blur cannot reach this panel, so panels stay small.
+    if (cy + c.ry + 60 < 0 || cy - c.ry - 60 > h) return "";
+    return `<ellipse cx="${c.cx * w}" cy="${cy}" rx="${c.rx}" ry="${c.ry}"/>`;
+  }).join("");
+
   const shape = round === "top"
     ? `M0 ${rx} A${rx} ${rx} 0 0 1 ${rx} 0 H${w - rx} A${rx} ${rx} 0 0 1 ${w} ${rx} V${h} H0 Z`
     : round === "bottom"
@@ -77,6 +110,10 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
         <stop offset="0" stop-color="${t.sky[0]}"/><stop offset="0.42" stop-color="${t.sky[1]}"/>
         <stop offset="0.78" stop-color="${t.sky[2]}"/><stop offset="1" stop-color="${t.sky[3]}"/>
       </linearGradient>
+      <filter id="soft-${id}" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-${id}">${shape ? `<path d="${shape}"/>` : `<rect width="${w}" height="${h}"/>`}</clipPath>
       <radialGradient id="sun-${id}" gradientUnits="userSpaceOnUse"
                       cx="${w * 0.82}" cy="${-offsetY + pageH * -0.04}" r="${pageH * 0.55}">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="${t.glow}"/>
@@ -85,7 +122,8 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
     </defs>
     ${shape
       ? `<path d="${shape}" fill="url(#ramp-${id})"/><path d="${shape}" fill="url(#sun-${id})"/>`
-      : `<rect width="${w}" height="${h}" fill="url(#ramp-${id})"/><rect width="${w}" height="${h}" fill="url(#sun-${id})"/>`}`;
+      : `<rect width="${w}" height="${h}" fill="url(#ramp-${id})"/><rect width="${w}" height="${h}" fill="url(#sun-${id})"/>`}
+    ${clouds ? `<g fill="#FFFFFF" opacity="${t.cloud}" filter="url(#soft-${id})" clip-path="url(#clip-${id})">${clouds}</g>` : ""}`;
 }
 
 /* Word wrap for panel prose. Approximate metrics rather than real ones: the
@@ -93,6 +131,12 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
    width per character is measured empirically for this size and kept
    conservative. Lines that come out slightly short are invisible; lines that
    overflow the panel are not. */
+function labelFill(t) {
+  return t.labelShadow
+    ? `fill="${t.label}" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5"`
+    : `fill="${t.label}"`;
+}
+
 function wrapText(text, maxWidth, perChar) {
   const words = String(text).split(/\s+/);
   const lines = [];
@@ -195,7 +239,7 @@ function stack(t, lang, o = {}) {
   for (const row of STACK) {
     parts.push(`
       <text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5" font-weight="700"
-            letter-spacing="2.4" fill="${row.muted ? t.faint : t.accent}">${esc(row[lang])}</text>`);
+            letter-spacing="2.4" ${row.muted ? `fill="${t.faint}"` : labelFill(t)}>${esc(row[lang])}</text>`);
     y += 14;
 
     let x = padX;
@@ -276,7 +320,7 @@ function card(t, c, lang, o = {}) {
     <text x="36" y="52" font-family='${SANS}' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="${t.text}">${esc(c.title)}</text>
     <text x="36" y="74" font-family='${MONO}' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="${accent}">${esc(c.lang.toUpperCase())}</text>
+          letter-spacing="2" fill="${t.dim}">${esc(c.lang.toUpperCase())}</text>
     ${(lang === 'de' ? c.blurbDe : c.blurb).map((line, i) =>
       `<text x="36" y="${108 + i * 21}" font-family='${SANS}' font-size="14"
              fill="${t.dim}">${esc(line)}</text>`).join("")}
@@ -303,7 +347,7 @@ export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
   if (eyebrow) {
     y += 58;
     parts.push(`<text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5"
-      font-weight="700" letter-spacing="2.4" fill="${t.accent}">${esc(eyebrow)}</text>`);
+      font-weight="700" letter-spacing="2.4" ${labelFill(t)}>${esc(eyebrow)}</text>`);
   }
   if (title) {
     y += 46;
@@ -358,7 +402,7 @@ export function tryRow(t, { label, desc }, o = {}) {
   </svg>\n`;
 }
 
-export { THEME, sky, glass, stats, stack, card, CARDS, STATS };
+export { THEME, sky, glass, stats, stack, card, CARDS, STATS, CLOUDS };
 
 // ------------------------------------------------------------------ write
 
