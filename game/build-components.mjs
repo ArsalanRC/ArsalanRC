@@ -55,8 +55,21 @@ let skyId = 0;
  *
  * PAGE_H is the running total of every panel height. It has to be right or the
  * gradient banding shifts, so build-readme.mjs computes it rather than guessing. */
-function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0 } = {}) {
+function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0, round = null } = {}) {
   const id = `s${++skyId}`;
+
+  /* Corners are a property of the page, not of the panel.
+   *
+   * Only the first panel rounds its top and only the last rounds its bottom;
+   * everything between is square. A panel that rounds all four corners looks
+   * right on its own and wrong in a stack: its bottom corners cut the sky away
+   * and the page background shows through as two notches against the square
+   * top edge of whatever sits below it. */
+  const shape = round === "top"
+    ? `M0 ${rx} A${rx} ${rx} 0 0 1 ${rx} 0 H${w - rx} A${rx} ${rx} 0 0 1 ${w} ${rx} V${h} H0 Z`
+    : round === "bottom"
+    ? `M0 0 H${w} V${h - rx} A${rx} ${rx} 0 0 1 ${w - rx} ${h} H${rx} A${rx} ${rx} 0 0 1 0 ${h - rx} Z`
+    : null;
   return `
     <defs>
       <linearGradient id="ramp-${id}" gradientUnits="userSpaceOnUse"
@@ -70,8 +83,9 @@ function sky(t, w, h, { offsetY = 0, pageH = h, rx = 0 } = {}) {
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="${w}" height="${h}" rx="${rx}" fill="url(#ramp-${id})"/>
-    <rect width="${w}" height="${h}" rx="${rx}" fill="url(#sun-${id})"/>`;
+    ${shape
+      ? `<path d="${shape}" fill="url(#ramp-${id})"/><path d="${shape}" fill="url(#sun-${id})"/>`
+      : `<rect width="${w}" height="${h}" fill="url(#ramp-${id})"/><rect width="${w}" height="${h}" fill="url(#sun-${id})"/>`}`;
 }
 
 /* Word wrap for panel prose. Approximate metrics rather than real ones: the
@@ -180,8 +194,8 @@ function stack(t, lang, o = {}) {
 
   for (const row of STACK) {
     parts.push(`
-      <text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5" letter-spacing="2.4"
-            fill="${row.muted ? t.faint : t.accent}">${esc(row[lang])}</text>`);
+      <text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5" font-weight="700"
+            letter-spacing="2.4" fill="${row.muted ? t.faint : t.accent}">${esc(row[lang])}</text>`);
     y += 14;
 
     let x = padX;
@@ -254,11 +268,15 @@ function card(t, c, lang, o = {}) {
     <title>${esc(c.title)}</title>
     ${sky(t, W, H, o)}
     ${glass(t, 14, 14, W - 28, H - 28, 12)}
-    <rect x="14" y="14" width="3.5" height="${H - 28}" rx="1.75" fill="${accent}"/>
+    <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
+         past the curve at the top and bottom, which reads as a misaligned edge
+         rather than as an accent. -->
+    <clipPath id="cardclip-${c.id}"><rect x="14" y="14" width="${W - 28}" height="${H - 28}" rx="12"/></clipPath>
+    <rect x="14" y="14" width="4" height="${H - 28}" fill="${accent}" clip-path="url(#cardclip-${c.id})"/>
     <text x="36" y="52" font-family='${SANS}' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="${t.text}">${esc(c.title)}</text>
-    <text x="36" y="74" font-family='${MONO}' font-size="10.5" letter-spacing="2"
-          fill="${accent}">${esc(c.lang.toUpperCase())}</text>
+    <text x="36" y="74" font-family='${MONO}' font-size="10.5" font-weight="700"
+          letter-spacing="2" fill="${accent}">${esc(c.lang.toUpperCase())}</text>
     ${(lang === 'de' ? c.blurbDe : c.blurb).map((line, i) =>
       `<text x="36" y="${108 + i * 21}" font-family='${SANS}' font-size="14"
              fill="${t.dim}">${esc(line)}</text>`).join("")}
@@ -285,7 +303,7 @@ export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
   if (eyebrow) {
     y += 58;
     parts.push(`<text x="${padX}" y="${y}" font-family='${MONO}' font-size="10.5"
-      letter-spacing="2.4" fill="${t.accent}">${esc(eyebrow)}</text>`);
+      font-weight="700" letter-spacing="2.4" fill="${t.accent}">${esc(eyebrow)}</text>`);
   }
   if (title) {
     y += 46;
@@ -325,17 +343,17 @@ export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
    own <a>, which is how the page keeps working links while being made of
    pictures. */
 export function tryRow(t, { label, desc }, o = {}) {
-  const W = 1000, H = 68, padX = 44;
+  const W = 1000, H = 84, padX = 44;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(label)}: ${esc(desc)}">
     <title>${esc(label)}</title>
     ${sky(t, W, H, o)}
     ${glass(t, padX - 16, 8, W - (padX - 16) * 2, H - 16, 12)}
-    <text x="${padX}" y="${H / 2 + 1}" font-family='${SANS}' font-size="16" font-weight="700"
+    <text x="${padX}" y="${H / 2 - 2}" font-family='${SANS}' font-size="16" font-weight="700"
           fill="${t.accent}">&#9654;</text>
-    <text x="${padX + 22}" y="${H / 2 + 1}" font-family='${SANS}' font-size="16" font-weight="700"
+    <text x="${padX + 22}" y="${H / 2 - 2}" font-family='${SANS}' font-size="16" font-weight="700"
           fill="${t.text}">${esc(label)}</text>
-    <text x="${padX + 22}" y="${H / 2 + 20}" font-family='${SANS}' font-size="13"
+    <text x="${padX + 22}" y="${H / 2 + 19}" font-family='${SANS}' font-size="13"
           fill="${t.faint}">${esc(desc)}</text>
   </svg>\n`;
 }

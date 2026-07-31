@@ -14,10 +14,9 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="272" rx="0" fill="url(#ramp-s122)"/>
-    <rect width="1000" height="272" rx="0" fill="url(#sun-s122)"/>
-      <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
-            fill="#E8552B">SHIPPING TODAY</text>
+    <rect width="1000" height="272" fill="url(#ramp-s122)"/><rect width="1000" height="272" fill="url(#sun-s122)"/>
+      <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
+            letter-spacing="2.4" fill="#E8552B">SHIPPING TODAY</text>
         <g transform="translate(22 40)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"
@@ -66,8 +65,8 @@
           <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#15202B">PostgreSQL</text>
         </g>
-      <text x="22" y="98" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
-            fill="#E8552B">DAY JOB</text>
+      <text x="22" y="98" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
+            letter-spacing="2.4" fill="#E8552B">DAY JOB</text>
         <g transform="translate(22 112)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"
@@ -188,8 +187,8 @@
           <text x="30.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#15202B">Bash</text>
         </g>
-      <text x="22" y="210" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
-            fill="#8FA9BC">NEXT ON THE PLAN</text>
+      <text x="22" y="210" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
+            letter-spacing="2.4" fill="#8FA9BC">NEXT ON THE PLAN</text>
         <g transform="translate(22 224)">
           <rect width="60.4" height="30" rx="15"
                 fill="none" fill-opacity="0"

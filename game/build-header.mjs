@@ -25,24 +25,33 @@ const THEME = {
 
 const W = 1280, H = 340;
 
-function header(t) {
+/* offsetY/pageH put the header on the same page-tall gradient as every panel
+   below it. Without them the header runs the whole ramp inside its own 340px
+   and meets the next panel at a different tone, which shows as a step across
+   the join even when the geometry is perfect. */
+export function header(t, { offsetY = 0, pageH = H } = {}) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
   role="img" aria-label="Arsalan Khadim, software architect and full-stack engineer">
   <title>Arsalan Khadim, software architect and full-stack engineer</title>
 
   <defs>
-    <linearGradient id="ramp" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="ramp" gradientUnits="userSpaceOnUse"
+                    x1="0" y1="${-offsetY}" x2="0" y2="${pageH - offsetY}">
       <stop offset="0" stop-color="${t.sky[0]}"/><stop offset="0.42" stop-color="${t.sky[1]}"/>
       <stop offset="0.78" stop-color="${t.sky[2]}"/><stop offset="1" stop-color="${t.sky[3]}"/>
     </linearGradient>
-    <radialGradient id="sun" cx="0.82" cy="-0.18" r="1.1">
+    <radialGradient id="sun" gradientUnits="userSpaceOnUse"
+                    cx="${W * 0.82}" cy="${-offsetY + pageH * -0.04}" r="${pageH * 0.55}">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="${t.glow}"/>
-      <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft" x="-30%" y="-60%" width="160%" height="260%">
       <feGaussianBlur stdDeviation="16"/>
     </filter>
-    <clipPath id="frame"><rect width="${W}" height="${H}" rx="14"/></clipPath>
+    <!-- Top corners only. Rounding the bottom too would cut the sky away where
+         the next panel butts up square, and the page background would show
+         through as two notches. -->
+    <clipPath id="frame"><path d="M0 14 A14 14 0 0 1 14 0 H${W - 14} A14 14 0 0 1 ${W} 14 V${H} H0 Z"/></clipPath>
     <style>
       /* The caret. The only motion, and it earns it because the name is set
          in mono and reads as something being typed. Everything else is still
@@ -105,7 +114,13 @@ function header(t) {
 `;
 }
 
-for (const [name, t] of Object.entries(THEME)) {
-  writeFileSync(new URL(`../assets/header-${name}.svg`, import.meta.url), header(t));
+export { THEME as HEADER_THEME, H as HEADER_H, W as HEADER_W };
+
+/* Only writes standalone output when run directly. build-readme.mjs imports
+   header() instead, because only it knows the true page height. */
+if (import.meta.url === `file://${process.argv[1]}`) {
+  for (const [name, t] of Object.entries(THEME)) {
+    writeFileSync(new URL(`../assets/header-${name}.svg`, import.meta.url), header(t));
+  }
+  console.log("wrote header-light.svg and header-dark.svg (standalone, no page context)");
 }
-console.log("wrote header-light.svg and header-dark.svg");

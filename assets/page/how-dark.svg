@@ -14,9 +14,8 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="488" rx="0" fill="url(#ramp-s54)"/>
-    <rect width="1000" height="488" rx="0" fill="url(#sun-s54)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-      letter-spacing="2.4" fill="#FF6A3D">APPROACH</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+    <rect width="1000" height="488" fill="url(#ramp-s54)"/><rect width="1000" height="488" fill="url(#sun-s54)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      font-weight="700" letter-spacing="2.4" fill="#FF6A3D">APPROACH</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">How I think about building</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
           <tspan font-weight="700" fill="#EAF1F7">Boundaries before features.</tspan> The layer split is the one decision you cannot cheaply undo later, so it deserves the</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">time. Everything else is negotiable.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">

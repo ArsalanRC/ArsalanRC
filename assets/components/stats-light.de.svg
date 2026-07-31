@@ -14,8 +14,7 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="168" rx="0" fill="url(#ramp-s25)"/>
-    <rect width="1000" height="168" rx="0" fill="url(#sun-s25)"/>
+    <rect width="1000" height="168" fill="url(#ramp-s25)"/><rect width="1000" height="168" fill="url(#sun-s25)"/>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         

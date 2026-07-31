@@ -14,8 +14,7 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="286" rx="0" fill="url(#ramp-s135)"/>
-    <rect width="1000" height="286" rx="0" fill="url(#sun-s135)"/><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+    <rect width="1000" height="286" fill="url(#ramp-s135)"/><rect width="1000" height="286" fill="url(#sun-s135)"/><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
           <tspan font-weight="700" fill="#15202B">Softwarearchitekt und Full-Stack-Engineer.</tspan> Aktuell Software Development Manager, das heißt, mir gehören die Systeme</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">und die Roadmap, dazu ein ordentlicher Teil der Commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">Der größte Teil meiner Arbeit liegt auf der unglamourösen Hälfte der Softwareentwicklung: Systeme, die nie füreinander</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
