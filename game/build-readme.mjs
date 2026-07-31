@@ -218,14 +218,26 @@ function markdown(lang) {
   const c = COPY[lang];
   const L = LINKS[lang];
 
+  /* align="top" is load-bearing, not decoration.
+   *
+   * GitHub renders README images as display:inline with vertical-align:baseline,
+   * so every panel sits on a text baseline and the descender space under it
+   * shows through as a white line. Measured on the live profile: 5.5px at every
+   * seam, on a page whose entire point is not having any.
+   *
+   * display:block would fix it and cannot be set, because GitHub strips <style>
+   * and style attributes. The presentational align attribute is on GitHub's
+   * sanitizer allowlist for <img> and browsers still map align="top" to
+   * vertical-align:top, which takes the gap to 0. Verified in the browser
+   * against the live page before committing. Do not remove it. */
   const pic = (name, alt, width = 'width="100%"', href = null) => {
     const img = `<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/page/${name}-dark${sfx}.svg">` +
-      `<img alt="${alt.replace(/"/g, "&quot;")}" src="./assets/page/${name}-light${sfx}.svg" ${width}></picture>`;
+      `<img alt="${alt.replace(/"/g, "&quot;")}" src="./assets/page/${name}-light${sfx}.svg" ${width} align="top"></picture>`;
     return href ? `<a href="${href}">${img}</a>` : img;
   };
 
   const head = `<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">` +
-    `<img alt="Arsalan Khadim, software architect and full-stack engineer" src="./assets/header-light.svg" width="100%"></picture>`;
+    `<img alt="Arsalan Khadim, software architect and full-stack engineer" src="./assets/header-light.svg" width="100%" align="top"></picture>`;
 
   const introAlt = c.intro.paras.map((x) => `${x.lead ? x.lead + " " : ""}${x.text}`).join(" ");
   const howAlt = `${c.howTitle}. ` + c.how.map((x) => `${x.lead} ${x.text}`).join(" ");
