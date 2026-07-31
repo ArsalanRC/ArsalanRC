@@ -3,13 +3,15 @@
     <title>Game Arena</title>
     
     <defs>
-      <linearGradient id="ramp-s24" x1="0" y1="0" x2="0" y2="1">
+      <linearGradient id="ramp-s24" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="0" x2="0" y2="190">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <radialGradient id="sun-s24" cx="0.82" cy="-0.18" r="1.1">
+      <radialGradient id="sun-s24" gradientUnits="userSpaceOnUse"
+                      cx="393.59999999999997" cy="-7.6000000000000005" r="104.50000000000001">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
-        <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="480" height="190" rx="0" fill="url(#ramp-s24)"/>

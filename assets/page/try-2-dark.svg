@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 68" width="1000" height="68"
+    role="img" aria-label="Watch recon reconcile two exports: Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four">
+    <title>Watch recon reconcile two exports</title>
+    
+    <defs>
+      <linearGradient id="ramp-s50" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1090" x2="0" y2="1968">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s50" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1212.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="68" rx="0" fill="url(#ramp-s50)"/>
+    <rect width="1000" height="68" rx="0" fill="url(#sun-s50)"/>
+    
+    <rect x="28" y="8" width="944" height="52" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M40 8.75 H960" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+    <text x="44" y="35" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#FF6A3D">&#9654;</text>
+    <text x="66" y="35" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#EAF1F7">Watch recon reconcile two exports</text>
+    <text x="66" y="54" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+          fill="#6C879A">Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four</text>
+  </svg>

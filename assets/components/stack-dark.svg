@@ -1,154 +1,225 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 292" width="1000" height="292"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 272" width="1000" height="272"
     role="img" aria-label="Technology stack">
     <title>Stack</title>
     
     <defs>
-      <linearGradient id="ramp-s2" x1="0" y1="0" x2="0" y2="1">
+      <linearGradient id="ramp-s2" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="0" x2="0" y2="272">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <radialGradient id="sun-s2" cx="0.82" cy="-0.18" r="1.1">
+      <radialGradient id="sun-s2" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-10.88" r="149.60000000000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
-        <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="292" rx="0" fill="url(#ramp-s2)"/>
-    <rect width="1000" height="292" rx="0" fill="url(#sun-s2)"/>
-      <text x="22" y="34" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
+    <rect width="1000" height="272" rx="0" fill="url(#ramp-s2)"/>
+    <rect width="1000" height="272" rx="0" fill="url(#sun-s2)"/>
+      <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
             fill="#FF6A3D">SHIPPING TODAY</text>
-      
-        <g transform="translate(22 50)">
-          <rect width="118" height="30" rx="15"
+        <g transform="translate(22 40)">
+          <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="59" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">TypeScript</text>
         </g>
-        <g transform="translate(149 50)">
-          <rect width="81.19999999999999" height="30" rx="15"
+        <g transform="translate(142 40)">
+          <rect width="77.6" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="40.599999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="38.8" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">Python</text>
         </g>
-        <g transform="translate(239.2 50)">
-          <rect width="62.8" height="30" rx="15"
+        <g transform="translate(227.6 40)">
+          <rect width="60.4" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="31.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="30.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">Java</text>
         </g>
-        <g transform="translate(311 50)">
-          <rect width="118" height="30" rx="15"
+        <g transform="translate(296 40)">
+          <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="59" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">JavaScript</text>
         </g>
-        <g transform="translate(438 50)">
-          <rect width="90.39999999999999" height="30" rx="15"
+        <g transform="translate(416 40)">
+          <rect width="86.19999999999999" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="45.199999999999996" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="43.099999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">Node.js</text>
         </g>
-        <g transform="translate(537.4 50)">
-          <rect width="118" height="30" rx="15"
+        <g transform="translate(510.2 40)">
+          <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="59" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">PostgreSQL</text>
         </g>
-      <text x="22" y="126" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
+      <text x="22" y="98" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
             fill="#FF6A3D">DAY JOB</text>
-      
-        <g transform="translate(22 142)">
-          <rect width="81.19999999999999" height="30" rx="15"
+        <g transform="translate(22 112)">
+          <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="40.599999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">TypeScript</text>
+        </g>
+        <g transform="translate(142 112)">
+          <rect width="112" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">JavaScript</text>
+        </g>
+        <g transform="translate(262 112)">
+          <rect width="86.19999999999999" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="43.099999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">Next.js</text>
+        </g>
+        <g transform="translate(356.2 112)">
+          <rect width="60.4" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="30.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">Nuxt</text>
+        </g>
+        <g transform="translate(424.6 112)">
+          <rect width="86.19999999999999" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="43.099999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">Node.js</text>
+        </g>
+        <g transform="translate(518.8 112)">
+          <rect width="69" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="34.5" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">React</text>
+        </g>
+        <g transform="translate(595.8 112)">
+          <rect width="94.8" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="47.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">Tailwind</text>
+        </g>
+        <g transform="translate(698.5999999999999 112)">
+          <rect width="51.8" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="25.9" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">CSS</text>
+        </g>
+        <g transform="translate(758.3999999999999 112)">
+          <rect width="77.6" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="38.8" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">Python</text>
         </g>
-        <g transform="translate(112.19999999999999 142)">
-          <rect width="53.599999999999994" height="30" rx="15"
+        <g transform="translate(843.9999999999999 112)">
+          <rect width="51.8" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="26.799999999999997" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="25.9" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">SQL</text>
         </g>
-        <g transform="translate(174.79999999999998 142)">
-          <rect width="62.8" height="30" rx="15"
+        <g transform="translate(22 152)">
+          <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="31.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
-                fill="#EAF1F7">Bash</text>
+          <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">PostgreSQL</text>
         </g>
-        <g transform="translate(246.59999999999997 142)">
-          <rect width="99.6" height="30" rx="15"
+        <g transform="translate(142 152)">
+          <rect width="94.8" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="49.8" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="47.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">Supabase</text>
         </g>
-        <g transform="translate(355.19999999999993 142)">
-          <rect width="62.8" height="30" rx="15"
+        <g transform="translate(244.8 152)">
+          <rect width="60.4" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="31.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="30.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">REST</text>
         </g>
-        <g transform="translate(426.99999999999994 142)">
-          <rect width="99.6" height="30" rx="15"
+        <g transform="translate(313.20000000000005 152)">
+          <rect width="94.8" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.055"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="0"/>
-          <text x="49.8" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="47.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#EAF1F7">Webhooks</text>
         </g>
-      <text x="22" y="218" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
-            fill="#9FB6C6">NEXT ON THE PLAN</text>
-      
-        <g transform="translate(22 234)">
-          <rect width="62.8" height="30" rx="15"
+        <g transform="translate(416.00000000000006 152)">
+          <rect width="60.4" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.055"
+                stroke="#FFFFFF" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="30.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#EAF1F7">Bash</text>
+        </g>
+      <text x="22" y="210" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2.4"
+            fill="#6C879A">NEXT ON THE PLAN</text>
+        <g transform="translate(22 224)">
+          <rect width="60.4" height="30" rx="15"
                 fill="none" fill-opacity="0"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="4 3"/>
-          <text x="31.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="30.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#6C879A">Rust</text>
         </g>
-        <g transform="translate(93.8 234)">
-          <rect width="53.599999999999994" height="30" rx="15"
+        <g transform="translate(90.4 224)">
+          <rect width="51.8" height="30" rx="15"
                 fill="none" fill-opacity="0"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="4 3"/>
-          <text x="26.799999999999997" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="25.9" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#6C879A">C++</text>
         </g>
-        <g transform="translate(156.39999999999998 234)">
-          <rect width="35.2" height="30" rx="15"
+        <g transform="translate(150.2 224)">
+          <rect width="34.6" height="30" rx="15"
                 fill="none" fill-opacity="0"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="4 3"/>
-          <text x="17.6" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="17.3" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#6C879A">C</text>
         </g>
-        <g transform="translate(200.59999999999997 234)">
-          <rect width="44.4" height="30" rx="15"
+        <g transform="translate(192.79999999999998 224)">
+          <rect width="43.2" height="30" rx="15"
                 fill="none" fill-opacity="0"
                 stroke="#FFFFFF" stroke-opacity="0.13"
                 stroke-dasharray="4 3"/>
-          <text x="22.2" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+          <text x="21.6" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#6C879A">C#</text>
         </g>
   </svg>

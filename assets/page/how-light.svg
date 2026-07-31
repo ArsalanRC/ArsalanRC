@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 488" width="1000" height="488"
+    role="img" aria-label="How I think about building">
+    <title>How I think about building</title>
+    
+    <defs>
+      <linearGradient id="ramp-s114" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2024" x2="0" y2="1034">
+        <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
+        <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
+      </linearGradient>
+      <radialGradient id="sun-s114" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2146.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="488" rx="0" fill="url(#ramp-s114)"/>
+    <rect width="1000" height="488" rx="0" fill="url(#sun-s114)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      letter-spacing="2.4" fill="#E8552B">APPROACH</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+      font-weight="800" letter-spacing="-1" fill="#15202B">How I think about building</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Boundaries before features.</tspan> The layer split is the one decision you cannot cheaply undo later, so it deserves the</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">time. Everything else is negotiable.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Purity where it counts.</tspan> Business logic that depends on no framework can actually be tested, reused and reasoned about.</text><text x="44" y="253" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">Push side effects out to the edges and keep the middle honest.</text><text x="44" y="310" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Secure by default, not by review.</tspan> RLS enabled before the table has rows, and deny-by-default policies throughout. A</text><text x="44" y="335" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">permission you never granted cannot be the one that leaks.</text><text x="44" y="392" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Write it down.</tspan> Every project I own carries architecture docs and conventions that a new engineer, or an LLM, can read</text><text x="44" y="417" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">cold and be useful within the hour.</text>
+  </svg>

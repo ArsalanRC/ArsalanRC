@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 274" width="1000" height="274"
+    role="img" aria-label="Kontakt">
+    <title>Kontakt</title>
+    
+    <defs>
+      <linearGradient id="ramp-s85" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2784" x2="0" y2="274">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <radialGradient id="sun-s85" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2906.32" r="1681.9">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="274" rx="0" fill="url(#ramp-s85)"/>
+    <rect width="1000" height="274" rx="0" fill="url(#sun-s85)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      letter-spacing="2.4" fill="#FF6A3D">ANDERSWO</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+      font-weight="800" letter-spacing="-1" fill="#EAF1F7">Kontakt</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">LinkedIn ist der Weg, und das Portfolio auf arsalanrc.github.io zeigt dieselbe Arbeit mit eingebetteten Demos.</text><text x="44" y="203" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#9FB6C6">Von Hand gebaut, keine Vorlage. Hinter dieser Seite und dem Portfolio steht dasselbe Designsystem.</text>
+  </svg>
