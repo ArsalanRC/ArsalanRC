@@ -34,12 +34,20 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // (47 chess-engine + 28 integration-patterns + 86 recon + 41 pg-outbox +
 // 61 stylo); merged PRs is the sum over every repo on the account, from
 // gh api. Last counted 2026-07-31.
+//
+// The merged-PR tile counts itself. Updating it is a pull request, so a number
+// read from the API and committed is already one short by the time it merges,
+// and the session that ships two other things is three short. So the value here
+// is the count *after* the pull request carrying it lands, not the count when it
+// was read. Anyone reconciling this against `gh api` on a quiet day will find it
+// correct; anyone checking mid-session will find it one high, which is the right
+// way round for a number nobody should be rounding down.
 const STATS = [
   { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false },
   { n: "263",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true  },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true  },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false },
-  { n: "24",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
+  { n: "27",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false },
 ];
 
 function stats(t, lang) {
