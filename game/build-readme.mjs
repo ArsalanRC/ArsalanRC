@@ -27,7 +27,7 @@
  */
 
 import { writeFileSync } from "node:fs";
-import { THEME, prose, tryRow, linkTile, stats, stack, card, CARDS } from "./build-components.mjs";
+import { THEME, prose, tryRow, linkTile, stats, statsAlt, stack, card, CARDS } from "./build-components.mjs";
 import { header, HEADER_THEME } from "./build-header.mjs";
 
 const OUT = new URL("../assets/page/", import.meta.url);
@@ -272,7 +272,9 @@ function markdown(lang) {
   const parts = [
     head,
     pic("intro", introAlt),
-    pic("stats", "8 public repositories, 263 tests passing, 0 runtime dependencies, 100% community standards, 27 merged pull requests"),
+    /* Derived, never retyped. The alt and the tiles drifted apart once already:
+       the alt still said 27 merged pull requests when the count was 41. */
+    pic("stats", statsAlt(lang)),
     pic("try", `${c.tryEyebrow}. ${c.tryTitle}`),
     ...c.rows.map((r, i) => pic(`try-${i}`, `${r.label}: ${r.desc}`, 'width="100%"', r.href)),
     pic("work", `${c.workEyebrow}. ${c.workTitle}`),
