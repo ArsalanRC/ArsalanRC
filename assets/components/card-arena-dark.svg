@@ -14,19 +14,22 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="480" height="190" rx="0" fill="url(#ramp-s8)"/>
-    <rect width="480" height="190" rx="0" fill="url(#sun-s8)"/>
+    <rect width="480" height="190" fill="url(#ramp-s8)"/><rect width="480" height="190" fill="url(#sun-s8)"/>
     
     <rect x="14" y="14" width="452" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#FFFFFF" stroke-opacity="0.13"/>
     <path d="M26 14.75 H454" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
-    <rect x="14" y="14" width="3.5" height="162" rx="1.75" fill="#4FA6F0"/>
+    <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
+         past the curve at the top and bottom, which reads as a misaligned edge
+         rather than as an accent. -->
+    <clipPath id="cardclip-arena"><rect x="14" y="14" width="452" height="162" rx="12"/></clipPath>
+    <rect x="14" y="14" width="4" height="162" fill="#4FA6F0" clip-path="url(#cardclip-arena)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#EAF1F7">Game Arena</text>
-    <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" letter-spacing="2"
-          fill="#4FA6F0">NEXT.JS · SUPABASE</text>
+    <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
+          letter-spacing="2" fill="#4FA6F0">NEXT.JS · SUPABASE</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">28 games, one codebase, one rule:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">game logic never touches React.</text>

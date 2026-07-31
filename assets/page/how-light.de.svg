@@ -14,9 +14,8 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="488" rx="0" fill="url(#ramp-s144)"/>
-    <rect width="1000" height="488" rx="0" fill="url(#sun-s144)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-      letter-spacing="2.4" fill="#E8552B">HALTUNG</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+    <rect width="1000" height="488" fill="url(#ramp-s144)"/><rect width="1000" height="488" fill="url(#sun-s144)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      font-weight="700" letter-spacing="2.4" fill="#E8552B">HALTUNG</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#15202B">Wie ich an Bauen herangehe</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
           <tspan font-weight="700" fill="#15202B">Grenzen vor Features.</tspan> Der Schnitt zwischen den Schichten ist die eine Entscheidung, die sich später nicht billig</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">zurücknehmen lässt. Alles andere ist verhandelbar.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">

@@ -3,18 +3,23 @@
   <title>Arsalan Khadim, software architect and full-stack engineer</title>
 
   <defs>
-    <linearGradient id="ramp" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="ramp" gradientUnits="userSpaceOnUse"
+                    x1="0" y1="0" x2="0" y2="3058">
       <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
       <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
     </linearGradient>
-    <radialGradient id="sun" cx="0.82" cy="-0.18" r="1.1">
+    <radialGradient id="sun" gradientUnits="userSpaceOnUse"
+                    cx="1049.6" cy="-122.32000000000001" r="1681.9">
       <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
-      <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft" x="-30%" y="-60%" width="160%" height="260%">
       <feGaussianBlur stdDeviation="16"/>
     </filter>
-    <clipPath id="frame"><rect width="1280" height="340" rx="14"/></clipPath>
+    <!-- Top corners only. Rounding the bottom too would cut the sky away where
+         the next panel butts up square, and the page background would show
+         through as two notches. -->
+    <clipPath id="frame"><path d="M0 14 A14 14 0 0 1 14 0 H1266 A14 14 0 0 1 1280 14 V340 H0 Z"/></clipPath>
     <style>
       /* The caret. The only motion, and it earns it because the name is set
          in mono and reads as something being typed. Everything else is still

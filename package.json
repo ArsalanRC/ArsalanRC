@@ -5,7 +5,8 @@
   "description": "Tooling for the profile README, including the playable chess game.",
   "scripts": {
     "assets": "node game/build-assets.mjs",
-    "play": "node game/play.mjs"
+    "play": "node game/play.mjs",
+    "build": "node game/build-header.mjs && node game/build-badges.mjs && node game/build-readme.mjs"
   },
   "dependencies": {
     "@arsalanrc/chess-engine": "github:ArsalanRC/chess-engine"

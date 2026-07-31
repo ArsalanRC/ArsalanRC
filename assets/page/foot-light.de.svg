@@ -14,9 +14,8 @@
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="274" rx="0" fill="url(#ramp-s145)"/>
-    <rect width="1000" height="274" rx="0" fill="url(#sun-s145)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-      letter-spacing="2.4" fill="#E8552B">ANDERSWO</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
+    <path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z" fill="url(#ramp-s145)"/><path d="M0 0 H1000 V260 A14 14 0 0 1 986 274 H14 A14 14 0 0 1 0 260 Z" fill="url(#sun-s145)"/><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+      font-weight="700" letter-spacing="2.4" fill="#E8552B">ANDERSWO</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#15202B">Kontakt</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">LinkedIn ist der Weg, und das Portfolio auf arsalanrc.github.io zeigt dieselbe Arbeit mit eingebetteten Demos.</text><text x="44" y="203" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">Von Hand gebaut, keine Vorlage. Hinter dieser Seite und dem Portfolio steht dasselbe Designsystem.</text>

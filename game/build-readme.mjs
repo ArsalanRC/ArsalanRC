@@ -28,6 +28,7 @@
 
 import { writeFileSync } from "node:fs";
 import { THEME, prose, tryRow, stats, stack, card, CARDS } from "./build-components.mjs";
+import { header, HEADER_THEME } from "./build-header.mjs";
 
 const OUT = new URL("../assets/page/", import.meta.url);
 import { mkdirSync } from "node:fs";
@@ -144,7 +145,7 @@ function layout(t, lang) {
   }
   push("work", (o) => prose(t, { eyebrow: c.workEyebrow, title: c.workTitle, paras: [], lang }, o));
   push("how", (o) => prose(t, { eyebrow: c.howEyebrow, title: c.howTitle, paras: c.how, lang }, o));
-  push("foot", (o) => prose(t, { eyebrow: c.footEyebrow, title: c.footTitle, paras: c.foot, lang }, o));
+  push("foot", (o) => prose(t, { eyebrow: c.footEyebrow, title: c.footTitle, paras: c.foot, lang }, { ...o, rx: 14, round: "bottom" }));
 
   // Pass one: heights only.
   let y = HEADER_H;
@@ -194,6 +195,15 @@ for (const [themeName, t] of Object.entries(THEME)) {
     });
 
     write(`stack-${themeName}${sfx}.svg`, stack(t, lang, { offsetY: stackOffset, pageH }));
+
+    /* The header is panel zero of the same page, so it takes offset 0 and the
+       real total. Written once per theme rather than per language: it carries
+       no translated copy. */
+    if (lang === "en") {
+      writeFileSync(new URL(`../assets/header-${themeName}.svg`, import.meta.url),
+                    header(HEADER_THEME[themeName], { offsetY: 0, pageH }));
+      n++;
+    }
   }
 }
 
