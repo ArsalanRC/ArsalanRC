@@ -16,15 +16,62 @@ import { writeFileSync, mkdirSync } from "node:fs";
 const OUT = new URL("../assets/components/", import.meta.url);
 mkdirSync(OUT, { recursive: true });
 
+/* GitHub renders these as <img>, which will not load a webfont, so the SVGs
+   use system stacks that sit closest to the site's Archivo and Space Mono. The
+   palette carries the identity here; the exact typeface cannot. */
 const MONO = 'ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace';
-const SANS = '"Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif';
+const SANS = 'system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif';
 
+/* Canvas, the same system as arsalanrc.github.io. Panels are glass over sky,
+   so every component carries its own sky and the strip of them reads as one
+   continuous surface rather than as cards dropped on GitHub's white. */
 const THEME = {
-  dark:  { bg: "#12151F", panel: "#1A2030", line: "#2C3448", text: "#E8E4DA",
-           dim: "#8A90A3", accent: "#E8A33D", accent2: "#5BC8D4" },
-  light: { bg: "#F4F1E9", panel: "#FFFFFF", line: "#D8D0BE", text: "#1B2130",
-           dim: "#6B6A62", accent: "#9A6410", accent2: "#146273" },
+  dark: {
+    sky: ["#070E17", "#0B1622", "#12212F", "#1A2E3F"],
+    glass: "#FFFFFF", glassOpacity: 0.055, line: "#FFFFFF", lineOpacity: 0.13,
+    text: "#EAF1F7", dim: "#9FB6C6", faint: "#6C879A",
+    accent: "#FF6A3D", accent2: "#4FA6F0", glow: 0.28,
+  },
+  light: {
+    sky: ["#4E9BD9", "#6FB2E6", "#97CBEF", "#B9DEF6"],
+    glass: "#FFFFFF", glassOpacity: 0.68, line: "#15202B", lineOpacity: 0.13,
+    text: "#15202B", dim: "#4B6274", faint: "#8FA9BC",
+    accent: "#E8552B", accent2: "#2B8FEA", glow: 0.72,
+  },
 };
+
+/* The sky, as three stacked gradient layers, matching the CSS on the site: a
+   sun glow top right, a cool wash bottom left, and a vertical ramp. Each SVG
+   gets its own copy with a unique id so two of them on one page cannot collide. */
+let skyId = 0;
+function sky(t, w, h, rx = 0) {
+  const id = `s${++skyId}`;
+  return `
+    <defs>
+      <linearGradient id="ramp-${id}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="${t.sky[0]}"/><stop offset="0.42" stop-color="${t.sky[1]}"/>
+        <stop offset="0.78" stop-color="${t.sky[2]}"/><stop offset="1" stop-color="${t.sky[3]}"/>
+      </linearGradient>
+      <radialGradient id="sun-${id}" cx="0.82" cy="-0.18" r="1.1">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="${t.glow}"/>
+        <stop offset="0.42" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="${w}" height="${h}" rx="${rx}" fill="url(#ramp-${id})"/>
+    <rect width="${w}" height="${h}" rx="${rx}" fill="url(#sun-${id})"/>`;
+}
+
+/* A glass panel: translucent fill, hairline edge, and a highlight along the top
+   where light would catch a real pane. The third part is what stops it reading
+   as a flat translucent box. */
+function glass(t, x, y, w, h, rx = 14) {
+  return `
+    <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}"
+          fill="${t.glass}" fill-opacity="${t.glassOpacity}"
+          stroke="${t.line}" stroke-opacity="${t.lineOpacity}"/>
+    <path d="M${x + rx} ${y + 0.75} H${x + w - rx}" stroke="#FFFFFF"
+          stroke-opacity="${t.glassOpacity > 0.3 ? 0.85 : 0.14}" stroke-width="1.5"/>`;
+}
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
@@ -51,25 +98,27 @@ const STATS = [
 ];
 
 function stats(t, lang) {
-  const W = 1000, H = 132, gap = 12;
-  const tw = (W - gap * (STATS.length - 1)) / STATS.length;
+  const W = 1000, H = 132, gap = 12, pad = 18;
+  const tw = (W - pad * 2 - gap * (STATS.length - 1)) / STATS.length;
 
   const tiles = STATS.map((s, i) => {
-    const x = i * (tw + gap);
+    const x = pad + i * (tw + gap);
     const colour = s.accent ? t.accent : t.text;
     return `
       <g transform="translate(${x} 0)">
-        <rect width="${tw}" height="${H}" rx="8" fill="${t.panel}" stroke="${t.line}"/>
-        <text x="${tw / 2}" y="72" text-anchor="middle" font-family='${MONO}'
-              font-size="42" font-weight="800" fill="${colour}">${esc(s.n)}</text>
-        <text x="${tw / 2}" y="100" text-anchor="middle" font-family='${MONO}'
-              font-size="11" letter-spacing="2.2" fill="${t.dim}">${esc(s[lang])}</text>
+        ${glass(t, 0, 0, tw, H, 12)}
+        <text x="${tw / 2}" y="74" text-anchor="middle" font-family='${SANS}'
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="${colour}">${esc(s.n)}</text>
+        <text x="${tw / 2}" y="102" text-anchor="middle" font-family='${MONO}'
+              font-size="10.5" letter-spacing="2.2" fill="${t.faint}">${esc(s[lang])}</text>
       </g>`;
   }).join("");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H + pad * 2}" width="${W}" height="${H + pad * 2}"
     role="img" aria-label="${STATS.map((s) => `${s.n} ${s[lang].toLowerCase()}`).join(", ")}">
-    <title>Profile statistics</title>${tiles}
+    <title>Profile statistics</title>
+    ${sky(t, W, H + pad * 2)}
+    <g transform="translate(0 ${pad})">${tiles}</g>
   </svg>\n`;
 }
 
@@ -95,10 +144,12 @@ function stack(t, lang) {
       const w = label.length * 9.2 + 26;
       const pill = `
         <g transform="translate(${x} ${y + 16})">
-          <rect width="${w}" height="30" rx="15" fill="${row.muted ? "none" : t.panel}"
-                stroke="${row.muted ? t.line : t.line}" stroke-dasharray="${row.muted ? "4 3" : "0"}"/>
-          <text x="${w / 2}" y="20" text-anchor="middle" font-family='${MONO}' font-size="13"
-                fill="${row.muted ? t.dim : t.text}">${esc(label)}</text>
+          <rect width="${w}" height="30" rx="15"
+                fill="${row.muted ? "none" : t.glass}" fill-opacity="${row.muted ? 0 : t.glassOpacity}"
+                stroke="${t.line}" stroke-opacity="${t.lineOpacity}"
+                stroke-dasharray="${row.muted ? "4 3" : "0"}"/>
+          <text x="${w / 2}" y="20" text-anchor="middle" font-family='${MONO}' font-size="12.5"
+                fill="${row.muted ? t.faint : t.text}">${esc(label)}</text>
         </g>`;
       x += w + 9;
       return pill;
@@ -113,7 +164,7 @@ function stack(t, lang) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="Technology stack">
     <title>Stack</title>
-    <rect width="${W}" height="${H}" rx="8" fill="${t.bg}" stroke="${t.line}"/>${rows}
+    ${sky(t, W, H)}${rows}
   </svg>\n`;
 }
 
@@ -158,18 +209,19 @@ function card(t, c, lang) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(c.title)}: ${esc((lang === 'de' ? c.blurbDe : c.blurb).join(" "))}">
     <title>${esc(c.title)}</title>
-    <rect width="${W}" height="${H}" rx="10" fill="${t.panel}" stroke="${t.line}"/>
-    <rect x="0" y="0" width="4" height="${H}" rx="2" fill="${accent}"/>
-    <text x="28" y="46" font-family='${MONO}' font-size="21" font-weight="800"
-          fill="${t.text}">${esc(c.title)}</text>
-    <text x="28" y="70" font-family='${MONO}' font-size="11" letter-spacing="2"
+    ${sky(t, W, H)}
+    ${glass(t, 14, 14, W - 28, H - 28, 12)}
+    <rect x="14" y="14" width="3.5" height="${H - 28}" rx="1.75" fill="${accent}"/>
+    <text x="36" y="52" font-family='${SANS}' font-size="22" font-weight="800"
+          letter-spacing="-0.6" fill="${t.text}">${esc(c.title)}</text>
+    <text x="36" y="74" font-family='${MONO}' font-size="10.5" letter-spacing="2"
           fill="${accent}">${esc(c.lang.toUpperCase())}</text>
     ${(lang === 'de' ? c.blurbDe : c.blurb).map((line, i) =>
-      `<text x="28" y="${106 + i * 22}" font-family='${SANS}' font-size="14.5"
+      `<text x="36" y="${108 + i * 21}" font-family='${SANS}' font-size="14"
              fill="${t.dim}">${esc(line)}</text>`).join("")}
-    <line x1="28" y1="150" x2="${W - 28}" y2="150" stroke="${t.line}"/>
-    <text x="28" y="170" font-family='${MONO}' font-size="11.5"
-          fill="${t.dim}">${esc(lang === 'de' ? c.metaDe : c.meta)}</text>
+    <line x1="36" y1="152" x2="${W - 36}" y2="152" stroke="${t.line}" stroke-opacity="${t.lineOpacity}"/>
+    <text x="36" y="171" font-family='${MONO}' font-size="10.5"
+          fill="${t.faint}">${esc(lang === 'de' ? c.metaDe : c.meta)}</text>
   </svg>\n`;
 }
 
