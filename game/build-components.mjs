@@ -206,8 +206,8 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // ------------------------------------------------------------------ stats
 
 // Counted, not estimated. Tests is the sum across the public repos
-// (47 chess-engine + 41 integration-patterns + 86 recon + 57 pg-outbox +
-// 61 stylo = 292). Re-counted 2026-08-10: pg-outbox gained the retention sweep
+// (49 chess-engine + 41 integration-patterns + 86 recon + 57 pg-outbox +
+// 61 stylo = 294). Re-counted 2026-08-10: pg-outbox gained the retention sweep
 // and went 41 to 57, integration-patterns gained the dead-letter queue and went
 // 28 to 41. recon needs psycopg and a reachable server, or its 17 Postgres tests
 // skip at module level and the total silently reads 275.
@@ -219,7 +219,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // It comes back two higher, because it counts the two archived tutorial repos
 // that are private now and are not work anybody should be credited for. That
 // query was recorded here as the source once and quietly inflated the tile.
-// 58 on 2026-08-10, before this change.
+// 61 on 2026-08-10, before this change.
 //
 // The merged-PR tile counts itself. Updating it is a pull request, so a number
 // read from the API and committed is already one short by the time it merges,
@@ -235,13 +235,13 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const STATS = [
   { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "292",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "294",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "60",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "63",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -354,8 +354,8 @@ const CARDS = [
   { id: "chess", title: "chess-engine", lang: "TypeScript",
     blurb: ["Full FIDE rules and a minimax bot", "with alpha-beta pruning."],
     blurbDe: ["Alle FIDE-Regeln und ein Minimax-Bot", "mit Alpha-Beta-Pruning."],
-    meta: "47 tests · 0 deps · playable",
-    metaDe: "47 Tests · 0 Abhängigkeiten · spielbar", accent: false },
+    meta: "49 tests · 0 deps · playable",
+    metaDe: "49 Tests · 0 Abhängigkeiten · spielbar", accent: false },
   { id: "patterns", title: "integration-patterns", lang: "TypeScript",
     blurb: ["Idempotency and retry with full jitter,", "each shown next to what it prevents."],
     blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je neben dem Fehler, den sie verhindern."],

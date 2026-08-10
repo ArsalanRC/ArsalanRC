@@ -40,5 +40,5 @@
              fill="#4B6274">with alpha-beta pruning.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#8FA9BC">47 tests · 0 deps · playable</text>
+          fill="#8FA9BC">49 tests · 0 deps · playable</text>
   </svg>
