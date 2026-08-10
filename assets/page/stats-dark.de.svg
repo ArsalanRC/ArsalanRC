@@ -4,7 +4,7 @@
     
     <defs>
       <linearGradient id="ramp-s54" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-551.625" x2="0" y2="2708">
+                      x1="0" y1="-576.625" x2="0" y2="2733">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
@@ -13,13 +13,13 @@
       </filter>
       <clipPath id="clip-s54"><rect width="1000" height="168"/></clipPath>
       <radialGradient id="sun-s54" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-682.01" r="1792.79375">
+                      cx="820" cy="-709.01" r="1820.29375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1000" height="168" fill="url(#ramp-s54)"/><rect width="1000" height="168" fill="url(#sun-s54)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s54)" clip-path="url(#clip-s54)"><ellipse cx="300" cy="243.3975375" rx="170" ry="22"/></g>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s54)" clip-path="url(#clip-s54)"><ellipse cx="300" cy="237.54274999999996" rx="170" ry="22"/></g>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         

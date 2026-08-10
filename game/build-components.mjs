@@ -84,8 +84,8 @@ const CLOUDS = [
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1400, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2439, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.4019, rx: 140, ry: 18 },  // work header
+  { cx: 0.30, cy: 0.2460, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.4028, rx: 140, ry: 18 },  // work header
   { cx: 0.12, cy: 0.6444, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
 ];
@@ -328,8 +328,8 @@ function stack(t, lang, o = {}) {
 
 const CARDS = [
   { id: "stylo", title: "stylo", lang: "TypeScript",
-    blurb: ["Nineteen measurements of a text,", "against a measured human corpus."],
-    blurbDe: ["Neunzehn Messungen an einem Text,", "gegen ein gemessenes Korpus."],
+    blurb: ["Nineteen measurements of a text,", "each against real human writing."],
+    blurbDe: ["Neunzehn Messungen an einem Text,", "jede gegen echte menschliche Prosa."],
     meta: "61 tests · 0 deps · no verdict, ever",
     metaDe: "61 Tests · 0 Abhängigkeiten · nie ein Urteil", accent: true },
   { id: "outbox", title: "pg-outbox", lang: "Java · Postgres",
@@ -338,8 +338,8 @@ const CARDS = [
     meta: "41 tests · 0 deps · Java 17 and 21",
     metaDe: "41 Tests · 0 Abhängigkeiten · Java 17 und 21", accent: true },
   { id: "recon", title: "recon", lang: "Python",
-    blurb: ["Two systems disagree. Which of those", "disagreements are actually real."],
-    blurbDe: ["Zwei Systeme widersprechen sich. Welche", "Widersprüche davon wirklich zählen."],
+    blurb: ["Two systems disagree. Telling the real", "differences from the formatting."],
+    blurbDe: ["Zwei Systeme widersprechen sich. Echte", "Abweichungen von Formatierung trennen."],
     meta: "86 tests · 0 deps · streams from Postgres",
     metaDe: "86 Tests · 0 Abhängigkeiten · streamt aus Postgres", accent: false },
   { id: "chess", title: "chess-engine", lang: "TypeScript",
@@ -348,8 +348,8 @@ const CARDS = [
     meta: "47 tests · 0 deps · playable",
     metaDe: "47 Tests · 0 Abhängigkeiten · spielbar", accent: false },
   { id: "patterns", title: "integration-patterns", lang: "TypeScript",
-    blurb: ["Idempotency and retry with full jitter,", "each with the failure it prevents."],
-    blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je mit dem Fehler, den sie verhindern."],
+    blurb: ["Idempotency and retry with full jitter,", "each shown next to what it prevents."],
+    blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je neben dem Fehler, den sie verhindern."],
     meta: "28 tests · Postgres · animated explainer",
     metaDe: "28 Tests · Postgres · animiert erklärt", accent: false },
   { id: "arena", title: "Game Arena", lang: "Next.js · Supabase",

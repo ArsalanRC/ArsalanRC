@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="stylo: Neunzehn Messungen an einem Text, gegen ein gemessenes Korpus.">
+    role="img" aria-label="stylo: Neunzehn Messungen an einem Text, jede gegen echte menschliche Prosa.">
     <title>stylo</title>
     
     <defs>
@@ -19,7 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="500" height="190" fill="url(#ramp-s11)"/><rect width="500" height="190" fill="url(#sun-s11)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s11)" clip-path="url(#clip-s11)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="46.341" rx="170" ry="22"/><ellipse cx="440" cy="76.36099999999999" rx="140" ry="18"/><ellipse cx="60" cy="122.43599999999999" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s11)" clip-path="url(#clip-s11)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="46.74" rx="170" ry="22"/><ellipse cx="440" cy="76.532" rx="140" ry="18"/><ellipse cx="60" cy="122.43599999999999" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
     
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
@@ -37,7 +37,7 @@
           letter-spacing="2" fill="#9FB6C6">TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#9FB6C6">Neunzehn Messungen an einem Text,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">gegen ein gemessenes Korpus.</text>
+             fill="#9FB6C6">jede gegen echte menschliche Prosa.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           fill="#6C879A">61 Tests · 0 Abhängigkeiten · nie ein Urteil</text>

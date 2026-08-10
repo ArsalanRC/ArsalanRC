@@ -4,7 +4,7 @@
     
     <defs>
       <linearGradient id="ramp-s98" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1949.625" x2="0" y2="1310">
+                      x1="0" y1="-1974.625" x2="0" y2="1335">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
@@ -13,21 +13,21 @@
       </filter>
       <clipPath id="clip-s98"><rect width="1000" height="488"/></clipPath>
       <radialGradient id="sun-s98" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2080.01" r="1792.79375">
+                      cx="820" cy="-2107.01" r="1820.29375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1000" height="488" fill="url(#ramp-s98)"/><rect width="1000" height="488" fill="url(#sun-s98)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s98)" clip-path="url(#clip-s98)"><ellipse cx="120" cy="150.87734999999975" rx="120" ry="20"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s98)" clip-path="url(#clip-s98)"><ellipse cx="120" cy="158.09735" rx="120" ry="20"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">APPROACH</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#15202B">How I think about building</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
-          <tspan font-weight="700" fill="#15202B">Boundaries before features.</tspan> The layer split is the one decision you cannot cheaply undo later, so it deserves the</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">time. Everything else is negotiable.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
-          <tspan font-weight="700" fill="#15202B">Purity where it counts.</tspan> Business logic that depends on no framework can actually be tested, reused and reasoned about.</text><text x="44" y="253" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">Push side effects out to the edges and keep the middle honest.</text><text x="44" y="310" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
-          <tspan font-weight="700" fill="#15202B">Secure by default, not by review.</tspan> RLS enabled before the table has rows, and deny-by-default policies throughout. A</text><text x="44" y="335" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">permission you never granted cannot be the one that leaks.</text><text x="44" y="392" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
-          <tspan font-weight="700" fill="#15202B">Write it down.</tspan> Every project I own carries architecture docs and conventions that a new engineer, or an LLM, can read</text><text x="44" y="417" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">cold and be useful within the hour.</text>
+          <tspan font-weight="700" fill="#15202B">Draw the boundaries first.</tspan> Where the layers divide is the one decision that is expensive to change once code sits on</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">top of it. Everything else can be rewritten in an afternoon, so this is the part that gets the time.</text><text x="44" y="228" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Keep the core free of the framework.</tspan> Business logic that does not import anything can be tested without a browser, a</text><text x="44" y="253" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">server or a database. Push the side effects out to the edges and the middle stays simple enough to reason about.</text><text x="44" y="310" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Secure before there is data.</tspan> Row-level security is switched on before the table has a single row, and every policy</text><text x="44" y="335" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">denies by default. A permission you never granted is not one that can leak.</text><text x="44" y="392" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+          <tspan font-weight="700" fill="#15202B">Write it down.</tspan> Every project I own has its architecture and conventions documented, so that somebody new, or a</text><text x="44" y="417" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">language model, can read it without context and do useful work within the hour.</text>
   </svg>
