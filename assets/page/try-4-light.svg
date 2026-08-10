@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 84" width="1000" height="84"
-    role="img" aria-label="Measure your own writing: Nineteen features of a text, each against a human corpus. It will not tell you who wrote it, and it says why">
+    role="img" aria-label="Measure your own writing: Nineteen features of a text, each against a human corpus. It will not say who wrote it, and it tells you why">
     <title>Measure your own writing</title>
     
     <defs>
@@ -31,5 +31,5 @@
     <text x="66" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#15202B">Measure your own writing</text>
     <text x="66" y="61" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-          fill="#8FA9BC">Nineteen features of a text, each against a human corpus. It will not tell you who wrote it, and it says why</text>
+          fill="#8FA9BC">Nineteen features of a text, each against a human corpus. It will not say who wrote it, and it tells you why</text>
   </svg>
