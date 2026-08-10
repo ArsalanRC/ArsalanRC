@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="recon: Zwei Systeme widersprechen sich. Welche Widersprüche davon wirklich zählen.">
+    role="img" aria-label="recon: Zwei Systeme widersprechen sich. Echte Abweichungen von Formatierung trennen.">
     <title>recon</title>
     
     <defs>
       <linearGradient id="ramp-s142" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1569.625" x2="0" y2="1690">
+                      x1="0" y1="-1594.625" x2="0" y2="1715">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
@@ -13,7 +13,7 @@
       </filter>
       <clipPath id="clip-s142"><rect width="500" height="190"/></clipPath>
       <radialGradient id="sun-s142" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1700.01" r="1792.79375">
+                      cx="820" cy="-1727.01" r="1820.29375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
@@ -36,8 +36,8 @@
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#4B6274">PYTHON</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#4B6274">Zwei Systeme widersprechen sich. Welche</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#4B6274">Widersprüche davon wirklich zählen.</text>
+             fill="#4B6274">Zwei Systeme widersprechen sich. Echte</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#4B6274">Abweichungen von Formatierung trennen.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           fill="#8FA9BC">86 Tests · 0 Abhängigkeiten · streamt aus Postgres</text>

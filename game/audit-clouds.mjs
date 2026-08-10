@@ -25,6 +25,45 @@ let bad = 0;
 
 const PAGE_W = 1000;
 
+/* The open bands, computed once so a failure can suggest where to move to.
+   Every edit to the page copy changes panel heights and therefore moves every
+   cloud, so the useful thing on failure is not "this is wrong" but the number
+   to paste in. */
+function openBands() {
+  const out = [];
+  let cursor = 0;
+  for (const b of [...bands].sort((x, y) => x.from - y.from)) {
+    /* Bands that do not span the full width do not close the page across it. */
+    if (b.fromX !== undefined || b.toX !== undefined) continue;
+    if (b.from > cursor) out.push([cursor, b.from]);
+    cursor = Math.max(cursor, b.to);
+  }
+  if (cursor < pageH) out.push([cursor, pageH]);
+  return out;
+}
+
+const OPEN = openBands();
+
+/** The nearest open band that can hold this cloud, and the cy fraction to use. */
+function suggest(c, cy) {
+  const half = c.ry + CLOUD_BLEED;
+  const fits = OPEN.filter(([f, t]) => t - f >= half * 2);
+  if (!fits.length) return null;
+  /* Nearest by distance from where it sits now, so a cloud keeps its place on
+     the page instead of jumping to the other end of it. */
+  const best = fits.reduce((a, b) => {
+    const d = (x) => Math.max(x[0] - cy, cy - x[1], 0);
+    return d(b) < d(a) ? b : a;
+  });
+  /* Keep a margin rather than clamping flush to the edge of the band. A cloud
+     parked exactly on the boundary passes today and fails on the next word
+     added to the copy above it, which is a slow way to do this twice. */
+  const spare = (best[1] - best[0]) - half * 2;
+  const pad = half + Math.min(20, spare * 0.25);
+  const target = Math.min(Math.max(cy, best[0] + pad), best[1] - pad);
+  return { y: target, frac: +(target / pageH).toFixed(4), band: best };
+}
+
 for (const [i, c] of CLOUDS.entries()) {
   const cy = c.cy * pageH;
   const top = cy - c.ry - CLOUD_BLEED;
@@ -45,8 +84,17 @@ for (const [i, c] of CLOUDS.entries()) {
     bad++;
     console.error(
       `cloud ${i} at cy=${c.cy} spans ${top.toFixed(0)}-${bottom.toFixed(0)} ` +
-      `and runs into ${hits.map((b) => `${b.id} (${b.from}-${b.to})`).join(", ")}`,
+      `and runs into ${hits.map((b) => `${b.id} (${b.from.toFixed(0)}-${b.to.toFixed(0)})`).join(", ")}`,
     );
+    const s = suggest(c, cy);
+    if (s) {
+      console.error(
+        `  fix: cy: ${s.frac}   (y ${s.y.toFixed(0)}, ` +
+        `inside open band ${s.band[0].toFixed(0)}-${s.band[1].toFixed(0)})`,
+      );
+    } else {
+      console.error(`  no open band is tall enough for ry ${c.ry} plus ${CLOUD_BLEED} of blur`);
+    }
   }
 }
 

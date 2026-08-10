@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="recon: Two systems disagree. Which of those disagreements are actually real.">
+    role="img" aria-label="recon: Two systems disagree. Telling the real differences from the formatting.">
     <title>recon</title>
     
     <defs>
       <linearGradient id="ramp-s32" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1569.625" x2="0" y2="1690">
+                      x1="0" y1="-1594.625" x2="0" y2="1715">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
@@ -13,7 +13,7 @@
       </filter>
       <clipPath id="clip-s32"><rect width="500" height="190"/></clipPath>
       <radialGradient id="sun-s32" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1700.01" r="1792.79375">
+                      cx="820" cy="-1727.01" r="1820.29375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
@@ -36,8 +36,8 @@
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#9FB6C6">PYTHON</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">Two systems disagree. Which of those</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">disagreements are actually real.</text>
+             fill="#9FB6C6">Two systems disagree. Telling the real</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">differences from the formatting.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           fill="#6C879A">86 tests · 0 deps · streams from Postgres</text>

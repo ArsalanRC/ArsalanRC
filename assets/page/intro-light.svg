@@ -1,29 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 286" width="1000" height="286"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 311" width="1000" height="311"
     role="img" aria-label="">
     <title></title>
     
     <defs>
       <linearGradient id="ramp-s89" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-265.625" x2="0" y2="2994">
+                      x1="0" y1="-265.625" x2="0" y2="3044">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
       <filter id="soft-s89" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s89"><rect width="1000" height="286"/></clipPath>
+      <clipPath id="clip-s89"><rect width="1000" height="311"/></clipPath>
       <radialGradient id="sun-s89" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-396.01" r="1792.79375">
+                      cx="820" cy="-398.01" r="1820.29375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="286" fill="url(#ramp-s89)"/><rect width="1000" height="286" fill="url(#sun-s89)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s89)" clip-path="url(#clip-s89)"><ellipse cx="140" cy="34.26049999999998" rx="150" ry="26"/><ellipse cx="200" cy="29.371062499999994" rx="90" ry="21"/><ellipse cx="620" cy="190.72250000000003" rx="130" ry="22"/></g><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+    <rect width="1000" height="311" fill="url(#ramp-s89)"/><rect width="1000" height="311" fill="url(#sun-s89)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s89)" clip-path="url(#clip-s89)"><ellipse cx="140" cy="38.8605" rx="150" ry="26"/><ellipse cx="200" cy="33.89606249999997" rx="90" ry="21"/><ellipse cx="620" cy="197.72250000000003" rx="130" ry="22"/></g><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
           <tspan font-weight="700" fill="#15202B">Software architect and full-stack engineer.</tspan> Currently Software Development Manager, which means I own the systems and</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">the roadmap along with a fair share of the commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">Most of my working life goes on the unglamorous half of software: making systems that were never designed to talk to</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">each other exchange data reliably, every day, without anyone noticing. Warehouse management, ERP integrations,</text><text x="44" y="158" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">logistics APIs. The kind of code where a silent failure costs someone a shipment.</text><text x="44" y="215" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
-          fill="#4B6274">The repos here are the other half, where I get to design something from scratch and take the architecture seriously.</text>
+          fill="#4B6274">the roadmap as well as a fair share of the commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">Most of my working life goes on the unglamorous half of software: getting systems to exchange data reliably when they</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">were never designed to talk to each other at all. Warehouse management, ERP integrations, logistics APIs. The kind of</text><text x="44" y="158" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">code where nothing appears to go wrong and somebody's delivery quietly does not arrive.</text><text x="44" y="215" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">The repos here are the other half. Same problems, designed from scratch, with the time to get the structure right</text><text x="44" y="240" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
+          fill="#4B6274">before anything is built on top of it.</text>
   </svg>

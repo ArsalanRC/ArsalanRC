@@ -19,7 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="1000" height="272" fill="url(#ramp-s18)"/><rect width="1000" height="272" fill="url(#sun-s18)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s18)" clip-path="url(#clip-s18)"><ellipse cx="830" cy="7.072" rx="130" ry="24"/><ellipse cx="780" cy="5.984" rx="80" ry="18"/><ellipse cx="140" cy="25.024" rx="150" ry="26"/><ellipse cx="200" cy="24.616" rx="90" ry="21"/><ellipse cx="620" cy="38.080000000000005" rx="130" ry="22"/><ellipse cx="300" cy="66.3408" rx="170" ry="22"/><ellipse cx="880" cy="109.3168" rx="140" ry="18"/><ellipse cx="120" cy="175.27679999999998" rx="120" ry="20"/><ellipse cx="720" cy="238.2176" rx="160" ry="24"/></g>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s18)" clip-path="url(#clip-s18)"><ellipse cx="830" cy="7.072" rx="130" ry="24"/><ellipse cx="780" cy="5.984" rx="80" ry="18"/><ellipse cx="140" cy="25.024" rx="150" ry="26"/><ellipse cx="200" cy="24.616" rx="90" ry="21"/><ellipse cx="620" cy="38.080000000000005" rx="130" ry="22"/><ellipse cx="300" cy="66.912" rx="170" ry="22"/><ellipse cx="880" cy="109.5616" rx="140" ry="18"/><ellipse cx="120" cy="175.27679999999998" rx="120" ry="20"/><ellipse cx="720" cy="238.2176" rx="160" ry="24"/></g>
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
             letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">SHIPPING TODAY</text>
         <g transform="translate(22 40)">
