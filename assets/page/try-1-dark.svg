@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 84" width="1000" height="84"
-    role="img" aria-label="See how integration-patterns works: Send the same webhook twice and watch the second one do nothing, then watch a retry storm finish off a recovering service">
+    role="img" aria-label="See how integration-patterns works: Send the same webhook twice and watch the second one do nothing. Then watch a retry storm finish off a recovering service">
     <title>See how integration-patterns works</title>
     
     <defs>
@@ -31,5 +31,5 @@
     <text x="66" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#EAF1F7">See how integration-patterns works</text>
     <text x="66" y="61" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-          fill="#6C879A">Send the same webhook twice and watch the second one do nothing, then watch a retry storm finish off a recovering service</text>
+          fill="#6C879A">Send the same webhook twice and watch the second one do nothing. Then watch a retry storm finish off a recovering service</text>
   </svg>
