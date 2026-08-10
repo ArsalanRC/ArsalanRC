@@ -206,11 +206,19 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // ------------------------------------------------------------------ stats
 
 // Counted, not estimated. Tests is the sum across the public repos
-// (47 chess-engine + 28 integration-patterns + 86 recon + 41 pg-outbox +
-// 61 stylo); merged PRs is the sum over every repo on the account, from
-// gh api. Tests re-counted 2026-07-31 by running all five suites; recon needs
-// psycopg and a live server or its 17 Postgres tests skip as a module and the
-// total reads 246. Merged PRs re-read the same day: 41 at the time of reading.
+// (47 chess-engine + 28 integration-patterns + 86 recon + 57 pg-outbox +
+// 61 stylo = 279). Re-counted 2026-08-10, after pg-outbox gained the retention
+// sweep and went from 41 to 57. recon needs psycopg and a reachable server, or
+// its 17 Postgres tests skip at module level and the total silently reads 262.
+//
+// Merged PRs is the sum over the PUBLIC repos, read one repo at a time:
+//   gh api "repos/ArsalanRC/<repo>/pulls?state=closed&per_page=100" \
+//     -q '[.[] | select(.merged_at != null)] | length'
+// Do NOT use `search/issues?q=is:pr+is:merged+author:ArsalanRC+user:ArsalanRC`.
+// It comes back two higher, because it counts the two archived tutorial repos
+// that are private now and are not work anybody should be credited for. That
+// query was recorded here as the source once and quietly inflated the tile.
+// 46 on 2026-08-10, before this change.
 //
 // The merged-PR tile counts itself. Updating it is a pull request, so a number
 // read from the API and committed is already one short by the time it merges,
@@ -226,13 +234,13 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const STATS = [
   { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "263",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "279",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "43",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "48",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -335,8 +343,8 @@ const CARDS = [
   { id: "outbox", title: "pg-outbox", lang: "Java · Postgres",
     blurb: ["Commit a row and publish an event", "without them coming apart."],
     blurbDe: ["Eine Zeile committen und ein Event", "senden, ohne dass beides zerfällt."],
-    meta: "41 tests · 0 deps · Java 17 and 21",
-    metaDe: "41 Tests · 0 Abhängigkeiten · Java 17 und 21", accent: true },
+    meta: "57 tests · 0 deps · Java 17 and 21",
+    metaDe: "57 Tests · 0 Abhängigkeiten · Java 17 und 21", accent: true },
   { id: "recon", title: "recon", lang: "Python",
     blurb: ["Two systems disagree. Telling the real", "differences from the formatting."],
     blurbDe: ["Zwei Systeme widersprechen sich. Echte", "Abweichungen von Formatierung trennen."],
