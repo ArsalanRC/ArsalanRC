@@ -269,13 +269,13 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const STATS = [
   { n: "10",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "436",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "450",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "102",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "106",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -414,8 +414,8 @@ const CARDS = [
   { id: "rally", repo: "rally", title: "rally", lang: "TypeScript",
     blurb: ["Two browsers, one game, no server.", "Rollback netcode, peer to peer."],
     blurbDe: ["Zwei Browser, ein Spiel, kein Server.", "Rollback-Netcode, Peer-to-Peer."],
-    meta: "92 tests · 0 deps · playable",
-    metaDe: "92 Tests · 0 Abhängigkeiten · spielbar", accent: false },
+    meta: "106 tests · 0 deps · playable",
+    metaDe: "106 Tests · 0 Abhängigkeiten · spielbar", accent: false },
   { id: "arena", repo: null, title: "Game Arena", lang: "Next.js · Supabase",
     blurb: ["28 games, one codebase, one rule:", "game logic never touches React."],
     blurbDe: ["28 Spiele, eine Codebasis, eine Regel:", "Spiellogik fasst React nie an."],
