@@ -21,16 +21,16 @@
     <rect width="1000" height="104" fill="url(#ramp-s26)"/><rect width="1000" height="104" fill="url(#sun-s26)"/>
     <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s26)" clip-path="url(#clip-s26)"><ellipse cx="880" cy="178.9414374999999" rx="140" ry="18"/></g>
     
-    <rect x="28" y="10" width="944" height="84" rx="12"
+    <rect x="14" y="10" width="972" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#FFFFFF" stroke-opacity="0.13"
           />
-    <path d="M40 10.75 H960" stroke="#FFFFFF"
+    <path d="M26 10.75 H974" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
-    <text x="44" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="30" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#FF6A3D">&#9654;</text>
-    <text x="66" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="52" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#EAF1F7">Play a stranger with no server</text>
-    <text x="66" y="68" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+    <text x="52" y="67" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
              fill="#6C879A">Rollback netcode you can watch correct itself, and a handshake done by copy and paste</text>
   </svg>
