@@ -219,9 +219,10 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // It comes back two higher, because it counts the two archived tutorial repos
 // that are private now and are not work anybody should be credited for. That
 // query was recorded here as the source once and quietly inflated the tile.
-// 73 on 2026-08-11 after the glass round, before this change. Recounted twice
-// the same day: 64 at the start, then seven more as glass surfaces landed on
-// all four project pages.
+// 77 on 2026-08-11 at the end of the session, before this change. Recounted
+// three times that day: 64 at the start, 73 after the glass round, 77 after the
+// card recapture and the German card shots. A session that ships a lot needs
+// the recount at the END, not only at the beginning.
 //
 // The merged-PR tile counts itself. Updating it is a pull request, so a number
 // read from the API and committed is already one short by the time it merges,
@@ -243,7 +244,7 @@ const STATS = [
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "75",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "79",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
