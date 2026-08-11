@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 160" width="1000" height="160"
-    role="img" aria-label="Neun Repositories, und eines noch in der Werkstatt">
-    <title>Neun Repositories, und eines noch in der Werkstatt</title>
+    role="img" aria-label="Zehn Repositories, und das neueste ist spielbar">
+    <title>Zehn Repositories, und das neueste ist spielbar</title>
     
     <defs>
-      <linearGradient id="ramp-s118" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1216.625" x2="0" y2="2255">
+      <linearGradient id="ramp-s121" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1320.625" x2="0" y2="2255">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s118" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s121" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s118"><rect width="1000" height="160"/></clipPath>
-      <radialGradient id="sun-s118" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1355.49" r="1909.3937500000002">
+      <clipPath id="clip-s121"><rect width="1000" height="160"/></clipPath>
+      <radialGradient id="sun-s121" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1463.65" r="1966.5937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="160" fill="url(#ramp-s118)"/><rect width="1000" height="160" fill="url(#sun-s118)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s118)" clip-path="url(#clip-s118)"><ellipse cx="880" cy="89.05316249999987" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <rect width="1000" height="160" fill="url(#ramp-s121)"/><rect width="1000" height="160" fill="url(#sun-s121)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s121)" clip-path="url(#clip-s121)"><ellipse cx="880" cy="74.94143749999989" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">AUSGEWÄHLTE ARBEITEN</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
-      font-weight="800" letter-spacing="-1" fill="#15202B">Neun Repositories, und eines noch in der Werkstatt</text>
+      font-weight="800" letter-spacing="-1" fill="#15202B">Zehn Repositories, und das neueste ist spielbar</text>
   </svg>

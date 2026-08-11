@@ -3,36 +3,41 @@
     <title>rally</title>
     
     <defs>
-      <linearGradient id="ramp-s101" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1946.625" x2="0" y2="1525">
+      <linearGradient id="ramp-s104" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2050.625" x2="0" y2="1525">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s101" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s104" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s101"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s101" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2085.49" r="1909.3937500000002">
+      <clipPath id="clip-s104"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s104" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2193.65" r="1966.5937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s101)"/><rect width="500" height="190" fill="url(#sun-s101)"/>
+    <rect width="500" height="190" fill="url(#ramp-s104)"/><rect width="500" height="190" fill="url(#sun-s104)"/>
     
-    <defs><filter id="lift-l89" x="-25%" y="-25%" width="150%" height="170%">
+    <defs><filter id="lift-l92" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.16"/>
        </filter></defs>
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
           stroke="#2B8FEA" stroke-opacity="0.42"
-          filter="url(#lift-l89)"/>
+          filter="url(#lift-l92)"/>
     <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#15202B">rally</text>
-    
+    <!-- The one thing the page never said out loud: a card is a link
+         to source, and a try-it row is a link to something running. The row has
+         carried a play triangle since it shipped; this is its opposite number. -->
+    <text x="464" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+          font-weight="700" letter-spacing="1.4" fill="#2B8FEA"
+          fill-opacity="0.9">[ code ]</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#4B6274">TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
@@ -40,5 +45,5 @@
              fill="#4B6274">Rollback netcode, peer to peer.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#8FA9BC">24 tests · 0 deps · in progress</text>
+          fill="#8FA9BC">66 tests · 0 deps · playable</text>
   </svg>

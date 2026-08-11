@@ -21,23 +21,23 @@
        below it: same gradient, same glow, same clouds, same rounding. -->
   
     <defs>
-      <linearGradient id="ramp-s35" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="0" x2="0" y2="3471.625">
+      <linearGradient id="ramp-s36" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="0" x2="0" y2="3575.625">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s35" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s36" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s35"><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z"/></clipPath>
-      <radialGradient id="sun-s35" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-138.865" r="1909.3937500000002">
+      <clipPath id="clip-s36"><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z"/></clipPath>
+      <radialGradient id="sun-s36" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-143.025" r="1966.5937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z" fill="url(#ramp-s35)"/><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z" fill="url(#sun-s35)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s35)" clip-path="url(#clip-s35)"><ellipse cx="830" cy="90.26225" rx="130" ry="24"/><ellipse cx="780" cy="76.37575" rx="80" ry="18"/><ellipse cx="140" cy="319.3895" rx="150" ry="26"/><ellipse cx="200" cy="314.1820625" rx="90" ry="21"/></g>
+    <path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z" fill="url(#ramp-s36)"/><path d="M0 14 A14 14 0 0 1 14 0 H986 A14 14 0 0 1 1000 14 V265.625 H0 Z" fill="url(#sun-s36)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s36)" clip-path="url(#clip-s36)"><ellipse cx="830" cy="92.96625" rx="130" ry="24"/><ellipse cx="780" cy="78.66375" rx="80" ry="18"/><ellipse cx="140" cy="328.9575" rx="150" ry="26"/><ellipse cx="200" cy="323.5940625" rx="90" ry="21"/></g>
 
   <!-- Clip and scale are separate elements on purpose. A clip-path on the same
        element as a transform is resolved in that element's own space, so the

@@ -78,10 +78,11 @@ const THEME = {
  * a project card, one behind the stack rows. They read as the page being cut
  * into strips, which is the one thing this whole build exists to avoid.
  *
- * Open bands on the current page, from the panel map (see build-readme.mjs):
- * header 0-340, intro 340-626, try 794-954, work 1374-1534, how 2104-2592,
- * foot 2864-3138. Everything else carries glass. Re-check these when a panel
- * changes height; `node game/audit-clouds.mjs` does it for you. */
+ * These fractions move every time a panel changes height, so do not read the
+ * numbers here as fixed. Run `node game/audit-clouds.mjs`: it prints the open
+ * bands for the page as it currently stands and, for any cloud sitting behind
+ * glass, the corrected `cy` to paste back. Adding one try row moved three of
+ * them on 2026-08-11. */
 const CLOUD_BLEED = 60;
 
 const CLOUDS = [
@@ -90,9 +91,9 @@ const CLOUDS = [
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1400, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2358, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.3761, rx: 140, ry: 18 },  // work header
-  { cx: 0.12, cy: 0.6444, rx: 120, ry: 20 },  // how
+  { cx: 0.30, cy: 0.2312, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.3903, rx: 140, ry: 18 },  // work header
+  { cx: 0.12, cy: 0.6507, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
 ];
 
@@ -266,15 +267,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
 // unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "9",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+  { n: "10",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "344",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "410",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "83",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "94",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -410,11 +411,11 @@ const CARDS = [
     blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je neben dem Fehler, den sie verhindern."],
     meta: "41 tests · Postgres · animated explainer",
     metaDe: "41 Tests · Postgres · animiert erklärt", accent: false },
-  { id: "rally", repo: null, title: "rally", lang: "TypeScript",
+  { id: "rally", repo: "rally", title: "rally", lang: "TypeScript",
     blurb: ["Two browsers, one game, no server.", "Rollback netcode, peer to peer."],
     blurbDe: ["Zwei Browser, ein Spiel, kein Server.", "Rollback-Netcode, Peer-to-Peer."],
-    meta: "24 tests · 0 deps · in progress",
-    metaDe: "24 Tests · 0 Abhängigkeiten · in Arbeit", accent: false },
+    meta: "66 tests · 0 deps · playable",
+    metaDe: "66 Tests · 0 Abhängigkeiten · spielbar", accent: false },
   { id: "arena", repo: null, title: "Game Arena", lang: "Next.js · Supabase",
     blurb: ["28 games, one codebase, one rule:", "game logic never touches React."],
     blurbDe: ["28 Spiele, eine Codebasis, eine Regel:", "Spiellogik fasst React nie an."],
@@ -523,10 +524,13 @@ export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
  *
  * Two to a row since 2026-08-11, same as the cards. Five full-width rows made
  * the most important block on the page the longest scroll on it, and the demos
- * are the thing a recruiter is most likely to click. The count must stay even
- * for the reason the cards must: an odd one leaves half a row unpainted and the
- * page background shows through as a black rectangle. build-readme.mjs asserts
- * it.
+ * are the thing a recruiter is most likely to click.
+ *
+ * Unlike the cards, an odd count is fine here, and it has to be: the number of
+ * live demos is whatever it is, and there were seven the day rally shipped.
+ * `wide` renders the last one at the full page width rather than leaving half a
+ * row with nothing painting it, which is the exact defect the card grid hit. It
+ * reads well too, because the odd one out is the newest thing.
  *
  * Half the width means the description wraps, so it is wrapped here rather than
  * trusted to fit. TRY_ROW_LINES is the ceiling: a description that needs three
@@ -534,8 +538,8 @@ export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
 export const TRY_ROW_H = 104;
 const TRY_ROW_LINES = 2;
 
-export function tryRow(t, { label, desc }, o = {}) {
-  const W = 500, H = TRY_ROW_H, padX = 30;
+export function tryRow(t, { label, desc }, o = {}, wide = false) {
+  const W = wide ? 1000 : 500, H = TRY_ROW_H, padX = wide ? 44 : 30;
   const textX = padX + 22;
   const lines = wrapText(desc, W - textX - 28, 6.5);
   if (lines.length > TRY_ROW_LINES) {

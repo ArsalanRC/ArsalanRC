@@ -3,22 +3,22 @@
     <title>GitHub</title>
     
     <defs>
-      <linearGradient id="ramp-s123" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3379.625" x2="0" y2="92">
+      <linearGradient id="ramp-s126" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3483.625" x2="0" y2="92">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s123" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s126" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s123"><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z"/></clipPath>
-      <radialGradient id="sun-s123" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3518.49" r="1909.3937500000002">
+      <clipPath id="clip-s126"><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z"/></clipPath>
+      <radialGradient id="sun-s126" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3626.65" r="1966.5937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#ramp-s123)"/><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#sun-s123)"/>
+    <path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#ramp-s126)"/><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#sun-s126)"/>
     
     
     <rect x="28" y="10" width="944" height="72" rx="12"

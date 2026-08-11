@@ -19,7 +19,7 @@
       </radialGradient>
     </defs>
     <rect width="500" height="190" fill="url(#ramp-s13)"/><rect width="500" height="190" fill="url(#sun-s13)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s13)" clip-path="url(#clip-s13)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="44.802" rx="170" ry="22"/><ellipse cx="440" cy="71.459" rx="140" ry="18"/><ellipse cx="60" cy="122.43599999999999" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s13)" clip-path="url(#clip-s13)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="43.928" rx="170" ry="22"/><ellipse cx="440" cy="74.157" rx="140" ry="18"/><ellipse cx="60" cy="123.633" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
     <defs><filter id="lift-l19" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.4"/>
