@@ -3,22 +3,22 @@
     <title>Stack</title>
     
     <defs>
-      <linearGradient id="ramp-s34" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-2624.625" x2="0" y2="847">
+      <linearGradient id="ramp-s35" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2728.625" x2="0" y2="847">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s34" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s35" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s34"><rect width="1000" height="272"/></clipPath>
-      <radialGradient id="sun-s34" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2763.49" r="1909.3937500000002">
+      <clipPath id="clip-s35"><rect width="1000" height="272"/></clipPath>
+      <radialGradient id="sun-s35" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2871.65" r="1966.5937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="272" fill="url(#ramp-s34)"/><rect width="1000" height="272" fill="url(#sun-s34)"/>
+    <rect width="1000" height="272" fill="url(#ramp-s35)"/><rect width="1000" height="272" fill="url(#sun-s35)"/>
     
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
             letter-spacing="2.4" fill="#FFFFFF">SHIPPING TODAY</text>

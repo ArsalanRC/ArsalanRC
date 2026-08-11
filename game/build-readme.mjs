@@ -59,10 +59,10 @@ const COPY = {
     },
     tryEyebrow: "TRY SOMETHING OF MINE, RIGHT NOW",
     tryTitle: "No install, no sign-up",
-    /* Two to a row, so the count stays even and the descriptions stay short.
-       They were written for a full-width tile and ran to twenty-two words;
-       at half the width that is four lines of grey under a link nobody has
-       clicked yet. */
+    /* Two to a row, so the descriptions stay short. They were written for a
+       full-width tile and ran to twenty-two words; at half the width that is
+       four lines of grey under a link nobody has clicked yet. An odd count is
+       fine: the last row goes full width rather than leaving a hole. */
     rows: [
       { href: "https://arsalanrc.github.io/chess-engine/", label: "Play my chess engine",
         desc: "A minimax bot with alpha-beta pruning, and its position hash beside the board" },
@@ -76,9 +76,11 @@ const COPY = {
         desc: "Nineteen features of a text, each held against a human corpus" },
       { href: "https://arsalanrc.github.io/slotting/", label: "Reslot a warehouse floor",
         desc: "The picker walks one route, not many, and frequency ranking cannot see it" },
+      { href: "https://arsalanrc.github.io/rally/", label: "Play a stranger with no server",
+        desc: "Rollback netcode you can watch correct itself, and a handshake done by copy and paste" },
     ],
     workEyebrow: "SELECTED WORK",
-    workTitle: "Nine repositories, and one still in the workshop",
+    workTitle: "Ten repositories, and the newest one is playable",
     howEyebrow: "APPROACH",
     howTitle: "How I think about building",
     how: [
@@ -120,9 +122,11 @@ const COPY = {
         desc: "Neunzehn Merkmale eines Textes, jedes gegen ein menschliches Korpus" },
       { href: "https://arsalanrc.github.io/slotting/", label: "Ein Lager neu einsortieren",
         desc: "Eine Tour statt vieler Einzelwege, und Häufigkeit sieht das nicht" },
+      { href: "https://arsalanrc.github.io/rally/", label: "Ohne Server gegeneinander spielen",
+        desc: "Rollback-Netcode beim Korrigieren zusehen, Handshake per Copy and Paste" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
-    workTitle: "Neun Repositories, und eines noch in der Werkstatt",
+    workTitle: "Zehn Repositories, und das neueste ist spielbar",
     howEyebrow: "HALTUNG",
     howTitle: "Wie ich an Bauen herangehe",
     how: [
@@ -158,18 +162,6 @@ function layout(t, lang) {
   const c = COPY[lang];
   const panels = [];
   const push = (id, render) => panels.push({ id, render });
-
-  /* The try rows must be even for the same reason CARDS must: they render two
-     to a row at width="50%", and an odd count leaves half of the last row with
-     no panel painting it, so the page background shows through as a hard black
-     rectangle against the sky. That defect shipped once already, on the cards,
-     the day slotting took the count from six to seven. */
-  if (c.rows.length % 2 !== 0) {
-    throw new Error(
-      `try rows must be even: ${c.rows.length} in ${lang} leaves a hole in the ` +
-      `last row. Add or remove one, or change the layout deliberately.`
-    );
-  }
 
   push("intro", (o) => prose(t, { paras: c.intro.paras, lang }, o));
   push("stats", (o) => ({ svg: stats(t, lang, o), H: 168 }));
@@ -284,14 +276,17 @@ if (isMain) for (const [themeName, t] of Object.entries(THEME)) {
       write(`${m.id}-${themeName}${sfx}.svg`, svg);
     }
 
-    /* Try rows, two per row, same grid as the cards below them. */
+    /* Try rows, two per row, same grid as the cards below them. An odd count
+       puts the last one across the full width instead of leaving half a row
+       unpainted. */
     rows.forEach((r, i) => {
       const row = Math.floor(i / 2);
+      const wide = rows.length % 2 === 1 && i === rows.length - 1;
       write(`try-${i}-${themeName}${sfx}.svg`,
             tryRow(t, r, {
               offsetY: tryStart + row * TRY_ROW_H, pageH,
-              offsetX: (i % 2) * (PAGE_W / 2), pageW: PAGE_W,
-            }));
+              offsetX: wide ? 0 : (i % 2) * (PAGE_W / 2), pageW: PAGE_W,
+            }, wide));
     });
 
     /* Cards, two per row, each carrying its own slice of the page sky. Odd
@@ -371,7 +366,10 @@ function markdown(lang) {
        the alt still said 27 merged pull requests when the count was 41. */
     pic("stats", statsAlt(lang)),
     pic("try", `${c.tryEyebrow}. ${c.tryTitle}`),
-    ...c.rows.map((r, i) => pic(`try-${i}`, `${r.label}: ${r.desc}`, 'width="50%"', r.href)),
+    ...c.rows.map((r, i) => {
+      const wide = c.rows.length % 2 === 1 && i === c.rows.length - 1;
+      return pic(`try-${i}`, `${r.label}: ${r.desc}`, `width="${wide ? 100 : 50}%"`, r.href);
+    }),
     pic("work", `${c.workEyebrow}. ${c.workTitle}`),
     ...CARDS.map((card, i) => {
       const blurb = (lang === "de" ? card.blurbDe : card.blurb).join(" ");
