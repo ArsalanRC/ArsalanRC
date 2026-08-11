@@ -84,8 +84,8 @@ const CLOUDS = [
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1400, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2460, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.4028, rx: 140, ry: 18 },  // work header
+  { cx: 0.30, cy: 0.2358, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.3824, rx: 140, ry: 18 },  // work header
   { cx: 0.12, cy: 0.6444, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
 ];
@@ -236,15 +236,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
 // unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "8",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+  { n: "9",    en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "294",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "344",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "79",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "83",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -339,6 +339,11 @@ function stack(t, lang, o = {}) {
 // ------------------------------------------------------------------ cards
 
 const CARDS = [
+  { id: "slotting", title: "slotting", lang: "Python",
+    blurb: ["The picker walks one route, not many.", "Frequency ranking cannot see that."],
+    blurbDe: ["Eine Tour, nicht viele Einzelwege.", "Häufigkeit sieht das nicht."],
+    meta: "50 tests · 0 deps · 7% less walking",
+    metaDe: "50 Tests · 0 Abhängigkeiten · 7% weniger Laufweg", accent: true },
   { id: "stylo", title: "stylo", lang: "TypeScript",
     blurb: ["Nineteen measurements of a text,", "each against real human writing."],
     blurbDe: ["Neunzehn Messungen an einem Text,", "jede gegen echte menschliche Prosa."],
