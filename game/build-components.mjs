@@ -31,6 +31,9 @@ const THEME = {
     glass: "#FFFFFF", glassOpacity: 0.055, line: "#FFFFFF", lineOpacity: 0.13,
     text: "#EAF1F7", dim: "#9FB6C6", faint: "#6C879A",
     accent: "#FF6A3D", accent2: "#4FA6F0", glow: 0.28,
+    /* Card edge and card shadow. On the dark sky the tinted edge does nearly
+       all the separating, so it runs stronger and the shadow stays quiet. */
+    cardEdge: 0.5, shadow: 0.4,
     /* Cloud opacity. This key was missing until 2026-07-31, which put
        opacity="undefined" on every panel: an invalid value is dropped, so the
        panels drew their clouds at full white while the header, which had the
@@ -49,6 +52,9 @@ const THEME = {
     glass: "#FFFFFF", glassOpacity: 0.68, line: "#15202B", lineOpacity: 0.13,
     text: "#15202B", dim: "#4B6274", faint: "#8FA9BC",
     accent: "#E8552B", accent2: "#2B8FEA", glow: 0.72,
+    /* The other way round on the light sky: a real shadow lands there, and a
+       saturated edge over pale blue is louder than the bar ever was. */
+    cardEdge: 0.42, shadow: 0.16,
     cloud: 0.85,
     label: "#FFFFFF", labelShadow: true,
   },
@@ -85,7 +91,7 @@ const CLOUDS = [
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1400, rx: 130, ry: 22 },  // intro
   { cx: 0.30, cy: 0.2358, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.3824, rx: 140, ry: 18 },  // work header
+  { cx: 0.88, cy: 0.3761, rx: 140, ry: 18 },  // work header
   { cx: 0.12, cy: 0.6444, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
 ];
@@ -191,12 +197,36 @@ function wrapText(text, maxWidth, perChar) {
 
 /* A glass panel: translucent fill, hairline edge, and a highlight along the top
    where light would catch a real pane. The third part is what stops it reading
-   as a flat translucent box. */
-function glass(t, x, y, w, h, rx = 14) {
-  return `
+   as a flat translucent box.
+ *
+ * `stroke` and `strokeOpacity` override the hairline, and `lift` puts a soft
+ * shadow under the panel. Both exist for the project cards, which used to carry
+ * a coloured bar down their left edge. The bar did the job of separating the
+ * cards and naming them by colour, and it did it by drawing attention to the
+ * frame rather than to what is in it. A tinted edge plus a shadow separates them
+ * just as well and stops shouting.
+ *
+ * The shadow is worth more on the light sky than the dark one, where a dark
+ * shadow over a dark gradient returns almost nothing. That is why the edge does
+ * the work and the shadow only adds depth: one of the two has to carry it in
+ * each theme. */
+let liftId = 0;
+
+function glass(t, x, y, w, h, rx = 14, o = {}) {
+  const stroke = o.stroke ?? t.line;
+  const strokeOpacity = o.strokeOpacity ?? t.lineOpacity;
+  const id = `l${++liftId}`;
+  const shadow = o.lift
+    ? `<defs><filter id="lift-${id}" x="-25%" y="-25%" width="150%" height="170%">
+         <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
+                       flood-opacity="${t.shadow}"/>
+       </filter></defs>`
+    : "";
+  return `${shadow}
     <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}"
           fill="${t.glass}" fill-opacity="${t.glassOpacity}"
-          stroke="${t.line}" stroke-opacity="${t.lineOpacity}"/>
+          stroke="${stroke}" stroke-opacity="${strokeOpacity}"
+          ${o.lift ? `filter="url(#lift-${id})"` : ""}/>
     <path d="M${x + rx} ${y + 0.75} H${x + w - rx}" stroke="#FFFFFF"
           stroke-opacity="${t.glassOpacity > 0.3 ? 0.85 : 0.14}" stroke-width="1.5"/>`;
 }
@@ -414,14 +444,15 @@ function card(t, c, lang, o = {}) {
     role="img" aria-label="${esc(c.title)}: ${esc((lang === 'de' ? c.blurbDe : c.blurb).join(" "))}">
     <title>${esc(c.title)}</title>
     ${sky(t, W, H, o)}
-    ${glass(t, 14, 14, W - 28, H - 28, 12)}
-    <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
-         past the curve at the top and bottom, which reads as a misaligned edge
-         rather than as an accent. -->
-    <clipPath id="cardclip-${c.id}"><rect x="14" y="14" width="${W - 28}" height="${H - 28}" rx="12"/></clipPath>
-    <rect x="14" y="14" width="4" height="${H - 28}" fill="${accent}" clip-path="url(#cardclip-${c.id})"/>
+    ${glass(t, 14, 14, W - 28, H - 28, 12, { stroke: accent, strokeOpacity: t.cardEdge, lift: true })}
     <text x="36" y="52" font-family='${SANS}' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="${t.text}">${esc(c.title)}</text>
+    ${c.repo ? `<!-- The one thing the page never said out loud: a card is a link
+         to source, and a try-it row is a link to something running. The row has
+         carried a play triangle since it shipped; this is its opposite number. -->
+    <text x="${W - 36}" y="50" text-anchor="end" font-family='${MONO}' font-size="10.5"
+          font-weight="700" letter-spacing="1.4" fill="${accent}"
+          fill-opacity="0.9">[ code ]</text>` : ""}
     <text x="36" y="74" font-family='${MONO}' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="${t.dim}">${esc(c.lang.toUpperCase())}</text>
     ${(lang === 'de' ? c.blurbDe : c.blurb).map((line, i) =>
@@ -487,21 +518,44 @@ export function prose(t, { eyebrow, title, paras, lang }, o = {}) {
 }
 
 /* One clickable row for the try-it-now list. Each is its own image inside its
-   own <a>, which is how the page keeps working links while being made of
-   pictures. */
+ * own <a>, which is how the page keeps working links while being made of
+ * pictures.
+ *
+ * Two to a row since 2026-08-11, same as the cards. Five full-width rows made
+ * the most important block on the page the longest scroll on it, and the demos
+ * are the thing a recruiter is most likely to click. The count must stay even
+ * for the reason the cards must: an odd one leaves half a row unpainted and the
+ * page background shows through as a black rectangle. build-readme.mjs asserts
+ * it.
+ *
+ * Half the width means the description wraps, so it is wrapped here rather than
+ * trusted to fit. TRY_ROW_LINES is the ceiling: a description that needs three
+ * lines overflows the tile silently, which is why it throws instead. */
+export const TRY_ROW_H = 104;
+const TRY_ROW_LINES = 2;
+
 export function tryRow(t, { label, desc }, o = {}) {
-  const W = 1000, H = 84, padX = 44;
+  const W = 500, H = TRY_ROW_H, padX = 30;
+  const textX = padX + 22;
+  const lines = wrapText(desc, W - textX - 28, 6.5);
+  if (lines.length > TRY_ROW_LINES) {
+    throw new Error(
+      `try row "${label}" needs ${lines.length} lines and the tile holds ` +
+      `${TRY_ROW_LINES}. Shorten the description: "${desc}"`
+    );
+  }
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(label)}: ${esc(desc)}">
     <title>${esc(label)}</title>
     ${sky(t, W, H, o)}
-    ${glass(t, padX - 16, 8, W - (padX - 16) * 2, H - 16, 12)}
-    <text x="${padX}" y="${H / 2 - 2}" font-family='${SANS}' font-size="16" font-weight="700"
+    ${glass(t, padX - 16, 10, W - (padX - 16) * 2, H - 20, 12)}
+    <text x="${padX}" y="46" font-family='${SANS}' font-size="16" font-weight="700"
           fill="${t.accent}">&#9654;</text>
-    <text x="${padX + 22}" y="${H / 2 - 2}" font-family='${SANS}' font-size="16" font-weight="700"
+    <text x="${textX}" y="46" font-family='${SANS}' font-size="16" font-weight="700"
           fill="${t.text}">${esc(label)}</text>
-    <text x="${padX + 22}" y="${H / 2 + 19}" font-family='${SANS}' font-size="13"
-          fill="${t.faint}">${esc(desc)}</text>
+    ${lines.map((line, i) =>
+      `<text x="${textX}" y="${68 + i * 19}" font-family='${SANS}' font-size="13"
+             fill="${t.faint}">${esc(line)}</text>`).join("")}
   </svg>\n`;
 }
 

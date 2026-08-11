@@ -1,35 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 84" width="1000" height="84"
-    role="img" aria-label="Watch recon reconcile two exports: Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four">
-    <title>Watch recon reconcile two exports</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 104" width="500" height="104"
+    role="img" aria-label="Reconcile two exports: Six rows, one switch for tolerances, and either six findings or four">
+    <title>Reconcile two exports</title>
     
     <defs>
-      <linearGradient id="ramp-s21" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1040.625" x2="0" y2="2459">
+      <linearGradient id="ramp-s22" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1008.625" x2="0" y2="2463">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s21" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s22" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s21"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s21" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1180.6100000000001" r="1924.79375">
+      <clipPath id="clip-s22"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s22" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1147.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s21)"/><rect width="1000" height="84" fill="url(#sun-s21)"/>
+    <rect width="500" height="104" fill="url(#ramp-s22)"/><rect width="500" height="104" fill="url(#sun-s22)"/>
     
     
-    <rect x="28" y="8" width="944" height="68" rx="12"
+    <rect x="14" y="10" width="472" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
-          stroke="#FFFFFF" stroke-opacity="0.13"/>
-    <path d="M40 8.75 H960" stroke="#FFFFFF"
+          stroke="#FFFFFF" stroke-opacity="0.13"
+          />
+    <path d="M26 10.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
-    <text x="44" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="30" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#FF6A3D">&#9654;</text>
-    <text x="66" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
-          fill="#EAF1F7">Watch recon reconcile two exports</text>
-    <text x="66" y="61" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-          fill="#6C879A">Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four</text>
+    <text x="52" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#EAF1F7">Reconcile two exports</text>
+    <text x="52" y="68" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">Six rows, one switch for tolerances, and either six findings or</text><text x="52" y="87" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">four</text>
   </svg>

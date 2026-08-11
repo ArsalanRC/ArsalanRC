@@ -1,35 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 84" width="1000" height="84"
-    role="img" aria-label="recon beim Abgleich zusehen: Sechs Zeilen und ein Schalter für die Toleranzen. Dieselben Zeilen, sechs Funde oder vier">
-    <title>recon beim Abgleich zusehen</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 104" width="500" height="104"
+    role="img" aria-label="Zwei Exporte abgleichen: Sechs Zeilen, ein Schalter für Toleranzen, sechs Funde oder vier">
+    <title>Zwei Exporte abgleichen</title>
     
     <defs>
-      <linearGradient id="ramp-s137" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1040.625" x2="0" y2="2459">
+      <linearGradient id="ramp-s126" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1008.625" x2="0" y2="2463">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s137" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s126" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s137"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s137" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1180.6100000000001" r="1924.79375">
+      <clipPath id="clip-s126"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s126" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1147.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s137)"/><rect width="1000" height="84" fill="url(#sun-s137)"/>
+    <rect width="500" height="104" fill="url(#ramp-s126)"/><rect width="500" height="104" fill="url(#sun-s126)"/>
     
     
-    <rect x="28" y="8" width="944" height="68" rx="12"
+    <rect x="14" y="10" width="472" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
-    <path d="M40 8.75 H960" stroke="#FFFFFF"
+          stroke="#15202B" stroke-opacity="0.13"
+          />
+    <path d="M26 10.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
-    <text x="44" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="30" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#E8552B">&#9654;</text>
-    <text x="66" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
-          fill="#15202B">recon beim Abgleich zusehen</text>
-    <text x="66" y="61" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-          fill="#8FA9BC">Sechs Zeilen und ein Schalter für die Toleranzen. Dieselben Zeilen, sechs Funde oder vier</text>
+    <text x="52" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#15202B">Zwei Exporte abgleichen</text>
+    <text x="52" y="68" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#8FA9BC">Sechs Zeilen, ein Schalter für Toleranzen, sechs Funde oder vier</text>
   </svg>

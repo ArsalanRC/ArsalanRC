@@ -3,27 +3,28 @@
     <title>Portfolio</title>
     
     <defs>
-      <linearGradient id="ramp-s27" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3223.625" x2="0" y2="276">
+      <linearGradient id="ramp-s17" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3195.625" x2="0" y2="276">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s27" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s17" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s27"><rect width="1000" height="92"/></clipPath>
-      <radialGradient id="sun-s27" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3363.61" r="1924.79375">
+      <clipPath id="clip-s17"><rect width="1000" height="92"/></clipPath>
+      <radialGradient id="sun-s17" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3334.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="92" fill="url(#ramp-s27)"/><rect width="1000" height="92" fill="url(#sun-s27)"/>
+    <rect width="1000" height="92" fill="url(#ramp-s17)"/><rect width="1000" height="92" fill="url(#sun-s17)"/>
     
     
     <rect x="28" y="10" width="944" height="72" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
-          stroke="#FFFFFF" stroke-opacity="0.13"/>
+          stroke="#FFFFFF" stroke-opacity="0.13"
+          />
     <path d="M40 10.75 H960" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
     <g transform="translate(44 34) scale(1)"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18"

@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 104" width="500" height="104"
-    role="img" aria-label="Zwei Exporte abgleichen: Sechs Zeilen, ein Schalter für Toleranzen, sechs Funde oder vier">
-    <title>Zwei Exporte abgleichen</title>
+    role="img" aria-label="Ein Lager neu einsortieren: Eine Tour statt vieler Einzelwege, und Häufigkeit sieht das nicht">
+    <title>Ein Lager neu einsortieren</title>
     
     <defs>
-      <linearGradient id="ramp-s57" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1008.625" x2="0" y2="2463">
+      <linearGradient id="ramp-s60" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1112.625" x2="0" y2="2359">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s57" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s60" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s57"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s57" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1147.49" r="1909.3937500000002">
+      <clipPath id="clip-s60"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s60" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-1251.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s57)"/><rect width="500" height="104" fill="url(#sun-s57)"/>
+    <rect width="500" height="104" fill="url(#ramp-s60)"/><rect width="500" height="104" fill="url(#sun-s60)"/>
     
     
     <rect x="14" y="10" width="472" height="84" rx="12"
@@ -30,7 +30,8 @@
     <text x="30" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#FF6A3D">&#9654;</text>
     <text x="52" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
-          fill="#EAF1F7">Zwei Exporte abgleichen</text>
+          fill="#EAF1F7">Ein Lager neu einsortieren</text>
     <text x="52" y="68" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-             fill="#6C879A">Sechs Zeilen, ein Schalter für Toleranzen, sechs Funde oder vier</text>
+             fill="#6C879A">Eine Tour statt vieler Einzelwege, und Häufigkeit sieht das</text><text x="52" y="87" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">nicht</text>
   </svg>

@@ -3,27 +3,28 @@
     <title>Portfolio</title>
     
     <defs>
-      <linearGradient id="ramp-s143" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3223.625" x2="0" y2="276">
+      <linearGradient id="ramp-s121" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3195.625" x2="0" y2="276">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s143" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s121" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s143"><rect width="1000" height="92"/></clipPath>
-      <radialGradient id="sun-s143" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3363.61" r="1924.79375">
+      <clipPath id="clip-s121"><rect width="1000" height="92"/></clipPath>
+      <radialGradient id="sun-s121" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3334.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="92" fill="url(#ramp-s143)"/><rect width="1000" height="92" fill="url(#sun-s143)"/>
+    <rect width="1000" height="92" fill="url(#ramp-s121)"/><rect width="1000" height="92" fill="url(#sun-s121)"/>
     
     
     <rect x="28" y="10" width="944" height="72" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M40 10.75 H960" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <g transform="translate(44 34) scale(1)"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18"
