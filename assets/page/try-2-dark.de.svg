@@ -3,22 +3,22 @@
     <title>recon beim Abgleich zusehen</title>
     
     <defs>
-      <linearGradient id="ramp-s58" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1040.625" x2="0" y2="2269">
+      <linearGradient id="ramp-s59" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1040.625" x2="0" y2="2459">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s58" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s59" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s58"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s58" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1173.01" r="1820.29375">
+      <clipPath id="clip-s59"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s59" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1180.6100000000001" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s58)"/><rect width="1000" height="84" fill="url(#sun-s58)"/>
+    <rect width="1000" height="84" fill="url(#ramp-s59)"/><rect width="1000" height="84" fill="url(#sun-s59)"/>
     
     
     <rect x="28" y="8" width="944" height="68" rx="12"

@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 168" width="1000" height="168"
-    role="img" aria-label="8 öffentliche Repositories, 294 Tests grün, 0 Laufzeit-Abhängigkeiten, 100% Community-Standard, 79 gemergte Pull Requests">
+    role="img" aria-label="9 öffentliche Repositories, 344 Tests grün, 0 Laufzeit-Abhängigkeiten, 100% Community-Standard, 83 gemergte Pull Requests">
     <title>Profile statistics</title>
     
     <defs>
-      <linearGradient id="ramp-s127" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-576.625" x2="0" y2="2733">
+      <linearGradient id="ramp-s130" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-576.625" x2="0" y2="2923">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s127" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s130" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s127"><rect width="1000" height="168"/></clipPath>
-      <radialGradient id="sun-s127" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-709.01" r="1820.29375">
+      <clipPath id="clip-s130"><rect width="1000" height="168"/></clipPath>
+      <radialGradient id="sun-s130" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-716.61" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="168" fill="url(#ramp-s127)"/><rect width="1000" height="168" fill="url(#sun-s127)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s127)" clip-path="url(#clip-s127)"><ellipse cx="300" cy="237.54274999999996" rx="170" ry="22"/></g>
+    <rect width="1000" height="168" fill="url(#ramp-s130)"/><rect width="1000" height="168" fill="url(#sun-s130)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s130)" clip-path="url(#clip-s130)"><ellipse cx="300" cy="248.58657500000004" rx="170" ry="22"/></g>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         
@@ -29,7 +29,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#15202B">8</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#15202B">9</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#8FA9BC">ÖFFENTLICHE REPOS</text>
       </g>
@@ -41,7 +41,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#E8552B">294</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#E8552B">344</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#8FA9BC">TESTS GRÜN</text>
       </g>
@@ -77,7 +77,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#15202B">79</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#15202B">83</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#8FA9BC">GEMERGTE PRS</text>
       </g></g>

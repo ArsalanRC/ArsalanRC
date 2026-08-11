@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="stylo: Neunzehn Messungen an einem Text, jede gegen echte menschliche Prosa.">
-    <title>stylo</title>
+    role="img" aria-label="slotting: The picker walks one route, not many. Frequency ranking cannot see that.">
+    <title>slotting</title>
     
     <defs>
-      <linearGradient id="ramp-s69" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s30" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-1404.625" x2="0" y2="2095">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s69" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s30" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s69"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s69" gradientUnits="userSpaceOnUse"
-                      cx="320" cy="-1544.6100000000001" r="1924.79375">
+      <clipPath id="clip-s30"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s30" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1544.6100000000001" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s69)"/><rect width="500" height="190" fill="url(#sun-s69)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s69)" clip-path="url(#clip-s69)"><ellipse cx="380" cy="-66.36839999999984" rx="140" ry="18"/></g>
+    <rect width="500" height="190" fill="url(#ramp-s30)"/><rect width="500" height="190" fill="url(#sun-s30)"/>
+    
     
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
@@ -29,16 +29,16 @@
     <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
          past the curve at the top and bottom, which reads as a misaligned edge
          rather than as an accent. -->
-    <clipPath id="cardclip-stylo"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
-    <rect x="14" y="14" width="4" height="162" fill="#FF6A3D" clip-path="url(#cardclip-stylo)"/>
+    <clipPath id="cardclip-slotting"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
+    <rect x="14" y="14" width="4" height="162" fill="#FF6A3D" clip-path="url(#cardclip-slotting)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
-          letter-spacing="-0.6" fill="#EAF1F7">stylo</text>
+          letter-spacing="-0.6" fill="#EAF1F7">slotting</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="#9FB6C6">TYPESCRIPT</text>
+          letter-spacing="2" fill="#9FB6C6">PYTHON</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">Neunzehn Messungen an einem Text,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">jede gegen echte menschliche Prosa.</text>
+             fill="#9FB6C6">The picker walks one route, not many.</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">Frequency ranking cannot see that.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#6C879A">61 Tests · 0 Abhängigkeiten · nie ein Urteil</text>
+          fill="#6C879A">50 tests · 0 deps · 7% less walking</text>
   </svg>

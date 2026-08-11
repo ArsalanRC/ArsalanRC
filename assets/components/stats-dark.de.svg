@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 168" width="1000" height="168"
-    role="img" aria-label="8 öffentliche Repositories, 294 Tests grün, 0 Laufzeit-Abhängigkeiten, 100% Community-Standard, 79 gemergte Pull Requests">
+    role="img" aria-label="9 öffentliche Repositories, 344 Tests grün, 0 Laufzeit-Abhängigkeiten, 100% Community-Standard, 83 gemergte Pull Requests">
     <title>Profile statistics</title>
     
     <defs>
-      <linearGradient id="ramp-s9" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s10" gradientUnits="userSpaceOnUse"
                       x1="0" y1="0" x2="0" y2="168">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s9" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s10" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s9"><rect width="1000" height="168"/></clipPath>
-      <radialGradient id="sun-s9" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s10"><rect width="1000" height="168"/></clipPath>
+      <radialGradient id="sun-s10" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-6.72" r="92.4">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="168" fill="url(#ramp-s9)"/><rect width="1000" height="168" fill="url(#sun-s9)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s9)" clip-path="url(#clip-s9)"><ellipse cx="830" cy="4.367999999999999" rx="130" ry="24"/><ellipse cx="780" cy="3.6959999999999997" rx="80" ry="18"/><ellipse cx="140" cy="15.456" rx="150" ry="26"/><ellipse cx="200" cy="15.203999999999999" rx="90" ry="21"/><ellipse cx="620" cy="23.520000000000003" rx="130" ry="22"/><ellipse cx="300" cy="41.328" rx="170" ry="22"/><ellipse cx="880" cy="67.6704" rx="140" ry="18"/><ellipse cx="120" cy="108.25919999999999" rx="120" ry="20"/><ellipse cx="720" cy="147.1344" rx="160" ry="24"/></g>
+    <rect width="1000" height="168" fill="url(#ramp-s10)"/><rect width="1000" height="168" fill="url(#sun-s10)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s10)" clip-path="url(#clip-s10)"><ellipse cx="830" cy="4.367999999999999" rx="130" ry="24"/><ellipse cx="780" cy="3.6959999999999997" rx="80" ry="18"/><ellipse cx="140" cy="15.456" rx="150" ry="26"/><ellipse cx="200" cy="15.203999999999999" rx="90" ry="21"/><ellipse cx="620" cy="23.520000000000003" rx="130" ry="22"/><ellipse cx="300" cy="39.6144" rx="170" ry="22"/><ellipse cx="880" cy="64.2432" rx="140" ry="18"/><ellipse cx="120" cy="108.25919999999999" rx="120" ry="20"/><ellipse cx="720" cy="147.1344" rx="160" ry="24"/></g>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         
@@ -29,7 +29,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">8</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">9</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#6C879A">ÖFFENTLICHE REPOS</text>
       </g>
@@ -41,7 +41,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#FF6A3D">294</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#FF6A3D">344</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#6C879A">TESTS GRÜN</text>
       </g>
@@ -77,7 +77,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">79</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#EAF1F7">83</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#6C879A">GEMERGTE PRS</text>
       </g></g>
