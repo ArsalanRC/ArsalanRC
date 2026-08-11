@@ -72,7 +72,7 @@ const COPY = {
         desc: "Nineteen features of a text, each against a human corpus. It will not say who wrote it, and it tells you why" },
     ],
     workEyebrow: "SELECTED WORK",
-    workTitle: "Eight repositories, all of them running",
+    workTitle: "Nine repositories, and one still in the workshop",
     howEyebrow: "APPROACH",
     howTitle: "How I think about building",
     how: [
@@ -114,7 +114,7 @@ const COPY = {
         desc: "Neunzehn Merkmale eines Textes gegen ein menschliches Korpus. Wer ihn geschrieben hat, sagt es nicht, und es sagt warum" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
-    workTitle: "Acht Repositories, alle im Betrieb",
+    workTitle: "Neun Repositories, und eines noch in der Werkstatt",
     howEyebrow: "HALTUNG",
     howTitle: "Wie ich an Bauen herangehe",
     how: [
@@ -334,8 +334,15 @@ function markdown(lang) {
     pic("work", `${c.workEyebrow}. ${c.workTitle}`),
     ...CARDS.map((card, i) => {
       const blurb = (lang === "de" ? card.blurbDe : card.blurb).join(" ");
-      const href = card.id === "arena" ? "#game-arena" : `https://github.com/ArsalanRC/${
-        { stylo: "stylo", outbox: "pg-outbox", recon: "recon", chess: "chess-engine", patterns: "integration-patterns" }[card.id]}`;
+      /* The link comes off the card's own `repo` field rather than a lookup
+         table keyed by id. The table was missing `slotting` the day it shipped,
+         so that card pointed at github.com/ArsalanRC/undefined on the live
+         profile. A field on the card cannot fall out of step with the card. */
+      const href = card.id === "arena"
+        ? "#game-arena"
+        : card.repo
+          ? `https://github.com/ArsalanRC/${card.repo}`
+          : undefined;
       return pic(`card-${card.id}`, `${card.title}: ${blurb}`, 'width="50%"', href);
     }),
     pic("how", howAlt),

@@ -3,23 +3,23 @@
     <title>Den eigenen Text vermessen</title>
     
     <defs>
-      <linearGradient id="ramp-s61" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s62" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-1176.625" x2="0" y2="2323">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s61" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s62" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s61"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s61" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s62"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s62" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-1316.6100000000001" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s61)"/><rect width="1000" height="84" fill="url(#sun-s61)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s61)" clip-path="url(#clip-s61)"><ellipse cx="880" cy="161.63160000000016" rx="140" ry="18"/></g>
+    <rect width="1000" height="84" fill="url(#ramp-s62)"/><rect width="1000" height="84" fill="url(#sun-s62)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s62)" clip-path="url(#clip-s62)"><ellipse cx="880" cy="161.63160000000016" rx="140" ry="18"/></g>
     
     <rect x="28" y="8" width="944" height="68" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"

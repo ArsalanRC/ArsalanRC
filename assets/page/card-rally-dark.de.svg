@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="Game Arena: 28 games, one codebase, one rule: game logic never touches React.">
-    <title>Game Arena</title>
+    role="img" aria-label="rally: Zwei Browser, ein Spiel, kein Server. Rollback-Netcode, Peer-to-Peer.">
+    <title>rally</title>
     
     <defs>
-      <linearGradient id="ramp-s37" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s75" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-1974.625" x2="0" y2="1525">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s37" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s75" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s37"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s37" gradientUnits="userSpaceOnUse"
-                      cx="320" cy="-2114.61" r="1924.79375">
+      <clipPath id="clip-s75"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s75" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2114.61" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s37)"/><rect width="500" height="190" fill="url(#sun-s37)"/>
+    <rect width="500" height="190" fill="url(#ramp-s75)"/><rect width="500" height="190" fill="url(#sun-s75)"/>
     
     
     <rect x="14" y="14" width="472" height="162" rx="12"
@@ -29,16 +29,16 @@
     <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
          past the curve at the top and bottom, which reads as a misaligned edge
          rather than as an accent. -->
-    <clipPath id="cardclip-arena"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
-    <rect x="14" y="14" width="4" height="162" fill="#4FA6F0" clip-path="url(#cardclip-arena)"/>
+    <clipPath id="cardclip-rally"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
+    <rect x="14" y="14" width="4" height="162" fill="#4FA6F0" clip-path="url(#cardclip-rally)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
-          letter-spacing="-0.6" fill="#EAF1F7">Game Arena</text>
+          letter-spacing="-0.6" fill="#EAF1F7">rally</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="#9FB6C6">NEXT.JS · SUPABASE</text>
+          letter-spacing="2" fill="#9FB6C6">TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">28 games, one codebase, one rule:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">game logic never touches React.</text>
+             fill="#9FB6C6">Zwei Browser, ein Spiel, kein Server.</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">Rollback-Netcode, Peer-to-Peer.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#6C879A">940 tests · 23 languages · private</text>
+          fill="#6C879A">24 Tests · 0 Abhängigkeiten · in Arbeit</text>
   </svg>

@@ -3,23 +3,23 @@
     <title>stylo</title>
     
     <defs>
-      <linearGradient id="ramp-s144" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s147" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-1404.625" x2="0" y2="2095">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s144" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s147" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s144"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s144" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s147"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s147" gradientUnits="userSpaceOnUse"
                       cx="320" cy="-1544.6100000000001" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s144)"/><rect width="500" height="190" fill="url(#sun-s144)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s144)" clip-path="url(#clip-s144)"><ellipse cx="380" cy="-66.36839999999984" rx="140" ry="18"/></g>
+    <rect width="500" height="190" fill="url(#ramp-s147)"/><rect width="500" height="190" fill="url(#sun-s147)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s147)" clip-path="url(#clip-s147)"><ellipse cx="380" cy="-66.36839999999984" rx="140" ry="18"/></g>
     
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
