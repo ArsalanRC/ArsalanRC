@@ -539,7 +539,15 @@ export const TRY_ROW_H = 104;
 const TRY_ROW_LINES = 2;
 
 export function tryRow(t, { label, desc }, o = {}, wide = false) {
-  const W = wide ? 1000 : 500, H = TRY_ROW_H, padX = wide ? 44 : 30;
+  /* padX is the same at both widths, and that is the whole point.
+   *
+   * The wide row used 44 while the grid rows used 30. Both draw their glass at
+   * padX - 16, and page units are page pixels either way, so the full-width row
+   * sat 14 units further in on the left and 14 short on the right. Against three
+   * rows above it with a shared edge, that reads as the layout being broken
+   * rather than as a wider tile. Any panel sharing a vertical edge with another
+   * has to share its inset. */
+  const W = wide ? 1000 : 500, H = TRY_ROW_H, padX = 30;
   const textX = padX + 22;
   const lines = wrapText(desc, W - textX - 28, 6.5);
   if (lines.length > TRY_ROW_LINES) {
@@ -548,17 +556,25 @@ export function tryRow(t, { label, desc }, o = {}, wide = false) {
       `${TRY_ROW_LINES}. Shorten the description: "${desc}"`
     );
   }
+  /* The block is centred in the tile rather than pinned to a fixed baseline.
+   *
+   * Every tile is the same height whether its description wraps to one line or
+   * two, so a fixed baseline leaves the one-line tiles top-heavy with a band of
+   * empty glass underneath. Sitting next to a two-line neighbour, that reads as
+   * two different components. Derived from the line count so the two cases
+   * centre on the same axis: 52, the middle of the glass. */
+  const labelY = Math.round(45 - (lines.length - 1) * 9.5);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(label)}: ${esc(desc)}">
     <title>${esc(label)}</title>
     ${sky(t, W, H, o)}
     ${glass(t, padX - 16, 10, W - (padX - 16) * 2, H - 20, 12)}
-    <text x="${padX}" y="46" font-family='${SANS}' font-size="16" font-weight="700"
+    <text x="${padX}" y="${labelY}" font-family='${SANS}' font-size="16" font-weight="700"
           fill="${t.accent}">&#9654;</text>
-    <text x="${textX}" y="46" font-family='${SANS}' font-size="16" font-weight="700"
+    <text x="${textX}" y="${labelY}" font-family='${SANS}' font-size="16" font-weight="700"
           fill="${t.text}">${esc(label)}</text>
     ${lines.map((line, i) =>
-      `<text x="${textX}" y="${68 + i * 19}" font-family='${SANS}' font-size="13"
+      `<text x="${textX}" y="${labelY + 22 + i * 19}" font-family='${SANS}' font-size="13"
              fill="${t.faint}">${esc(line)}</text>`).join("")}
   </svg>\n`;
 }
