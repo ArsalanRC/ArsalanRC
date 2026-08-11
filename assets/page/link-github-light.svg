@@ -3,27 +3,28 @@
     <title>GitHub</title>
     
     <defs>
-      <linearGradient id="ramp-s106" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3407.625" x2="0" y2="92">
+      <linearGradient id="ramp-s88" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3379.625" x2="0" y2="92">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s106" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s88" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s106"><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z"/></clipPath>
-      <radialGradient id="sun-s106" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3547.61" r="1924.79375">
+      <clipPath id="clip-s88"><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z"/></clipPath>
+      <radialGradient id="sun-s88" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3518.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#ramp-s106)"/><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#sun-s106)"/>
+    <path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#ramp-s88)"/><path d="M0 0 H1000 V78 A14 14 0 0 1 986 92 H14 A14 14 0 0 1 0 78 Z" fill="url(#sun-s88)"/>
     
     
     <rect x="28" y="10" width="944" height="72" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M40 10.75 H960" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <g transform="translate(44 34) scale(1)"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3" fill="#15202B"/></g>

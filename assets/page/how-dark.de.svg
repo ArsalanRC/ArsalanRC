@@ -3,23 +3,23 @@
     <title>Wie ich an Bauen herangehe</title>
     
     <defs>
-      <linearGradient id="ramp-s64" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-2164.625" x2="0" y2="1335">
+      <linearGradient id="ramp-s50" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2136.625" x2="0" y2="1335">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s64" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s50" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s64"><rect width="1000" height="488"/></clipPath>
-      <radialGradient id="sun-s64" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2304.61" r="1924.79375">
+      <clipPath id="clip-s50"><rect width="1000" height="488"/></clipPath>
+      <radialGradient id="sun-s50" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-2275.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="488" fill="url(#ramp-s64)"/><rect width="1000" height="488" fill="url(#sun-s64)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s64)" clip-path="url(#clip-s64)"><ellipse cx="120" cy="90.5333499999997" rx="120" ry="20"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <rect width="1000" height="488" fill="url(#ramp-s50)"/><rect width="1000" height="488" fill="url(#sun-s50)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s50)" clip-path="url(#clip-s50)"><ellipse cx="120" cy="100.49015000000009" rx="120" ry="20"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">HALTUNG</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Wie ich an Bauen herangehe</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#9FB6C6">
           <tspan font-weight="700" fill="#EAF1F7">Zuerst die Grenzen ziehen.</tspan> Wo die Schichten getrennt werden, ist die eine Entscheidung, die teuer wird, sobald Code</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"

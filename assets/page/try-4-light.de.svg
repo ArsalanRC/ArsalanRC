@@ -1,35 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 84" width="1000" height="84"
-    role="img" aria-label="Den eigenen Text vermessen: Neunzehn Merkmale eines Textes gegen ein menschliches Korpus. Wer ihn geschrieben hat, sagt es nicht, und es sagt warum">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 104" width="500" height="104"
+    role="img" aria-label="Den eigenen Text vermessen: Neunzehn Merkmale eines Textes, jedes gegen ein menschliches Korpus">
     <title>Den eigenen Text vermessen</title>
     
     <defs>
-      <linearGradient id="ramp-s139" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1176.625" x2="0" y2="2323">
+      <linearGradient id="ramp-s128" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1112.625" x2="0" y2="2359">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s139" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s128" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s139"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s139" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1316.6100000000001" r="1924.79375">
+      <clipPath id="clip-s128"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s128" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1251.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s139)"/><rect width="1000" height="84" fill="url(#sun-s139)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s139)" clip-path="url(#clip-s139)"><ellipse cx="880" cy="161.63160000000016" rx="140" ry="18"/></g>
+    <rect width="500" height="104" fill="url(#ramp-s128)"/><rect width="500" height="104" fill="url(#sun-s128)"/>
     
-    <rect x="28" y="8" width="944" height="68" rx="12"
+    
+    <rect x="14" y="10" width="472" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
-    <path d="M40 8.75 H960" stroke="#FFFFFF"
+          stroke="#15202B" stroke-opacity="0.13"
+          />
+    <path d="M26 10.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
-    <text x="44" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="30" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#E8552B">&#9654;</text>
-    <text x="66" y="40" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="52" y="46" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#15202B">Den eigenen Text vermessen</text>
-    <text x="66" y="61" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-          fill="#8FA9BC">Neunzehn Merkmale eines Textes gegen ein menschliches Korpus. Wer ihn geschrieben hat, sagt es nicht, und es sagt warum</text>
+    <text x="52" y="68" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#8FA9BC">Neunzehn Merkmale eines Textes, jedes gegen ein menschliches</text><text x="52" y="87" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#8FA9BC">Korpus</text>
   </svg>

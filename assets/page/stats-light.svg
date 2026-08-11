@@ -3,29 +3,30 @@
     <title>Profile statistics</title>
     
     <defs>
-      <linearGradient id="ramp-s94" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-576.625" x2="0" y2="2923">
+      <linearGradient id="ramp-s81" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-576.625" x2="0" y2="2895">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s94" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s81" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s94"><rect width="1000" height="168"/></clipPath>
-      <radialGradient id="sun-s94" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-716.61" r="1924.79375">
+      <clipPath id="clip-s81"><rect width="1000" height="168"/></clipPath>
+      <radialGradient id="sun-s81" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-715.49" r="1909.3937500000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="168" fill="url(#ramp-s94)"/><rect width="1000" height="168" fill="url(#sun-s94)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s94)" clip-path="url(#clip-s94)"><ellipse cx="300" cy="248.58657500000004" rx="170" ry="22"/></g>
+    <rect width="1000" height="168" fill="url(#ramp-s81)"/><rect width="1000" height="168" fill="url(#sun-s81)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s81)" clip-path="url(#clip-s81)"><ellipse cx="300" cy="241.98417500000005" rx="170" ry="22"/></g>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         
     <rect x="0" y="0" width="183.2" height="132" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
@@ -37,7 +38,8 @@
         
     <rect x="0" y="0" width="183.2" height="132" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
@@ -49,7 +51,8 @@
         
     <rect x="0" y="0" width="183.2" height="132" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
@@ -61,7 +64,8 @@
         
     <rect x="0" y="0" width="183.2" height="132" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
@@ -73,7 +77,8 @@
         
     <rect x="0" y="0" width="183.2" height="132" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
-          stroke="#15202B" stroke-opacity="0.13"/>
+          stroke="#15202B" stroke-opacity="0.13"
+          />
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'

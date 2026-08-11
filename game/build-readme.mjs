@@ -27,7 +27,7 @@
  */
 
 import { writeFileSync } from "node:fs";
-import { THEME, prose, tryRow, linkTile, stats, statsAlt, stack, card, CARDS } from "./build-components.mjs";
+import { THEME, prose, tryRow, TRY_ROW_H, linkTile, stats, statsAlt, stack, card, CARDS } from "./build-components.mjs";
 import { header, HEADER_THEME, HEADER_H } from "./build-header.mjs";
 
 const OUT = new URL("../assets/page/", import.meta.url);
@@ -59,17 +59,23 @@ const COPY = {
     },
     tryEyebrow: "TRY SOMETHING OF MINE, RIGHT NOW",
     tryTitle: "No install, no sign-up",
+    /* Two to a row, so the count stays even and the descriptions stay short.
+       They were written for a full-width tile and ran to twenty-two words;
+       at half the width that is four lines of grey under a link nobody has
+       clicked yet. */
     rows: [
       { href: "https://arsalanrc.github.io/chess-engine/", label: "Play my chess engine",
-        desc: "A minimax bot with alpha-beta pruning, and the engine's internal state on display beside the board" },
-      { href: "https://arsalanrc.github.io/integration-patterns/", label: "See how integration-patterns works",
-        desc: "Send the same webhook twice and watch the second one do nothing. Then watch a retry storm finish off a recovering service" },
-      { href: "https://arsalanrc.github.io/recon/", label: "Watch recon reconcile two exports",
-        desc: "Six rows, and a switch that turns tolerances on and off. Same rows, six findings or four" },
+        desc: "A minimax bot with alpha-beta pruning, and its position hash beside the board" },
+      { href: "https://arsalanrc.github.io/integration-patterns/", label: "See integration-patterns work",
+        desc: "Send the same webhook twice and watch the second one do nothing" },
+      { href: "https://arsalanrc.github.io/recon/", label: "Reconcile two exports",
+        desc: "Six rows, one switch for tolerances, and either six findings or four" },
       { href: "https://arsalanrc.github.io/pg-outbox/", label: "Kill a process mid-transaction",
-        desc: "Three ways to publish an event, and the two that leave the database and the broker disagreeing" },
+        desc: "Three ways to publish an event, and the two that leave the broker wrong" },
       { href: "https://arsalanrc.github.io/stylo/", label: "Measure your own writing",
-        desc: "Nineteen features of a text, each against a human corpus. It will not say who wrote it, and it tells you why" },
+        desc: "Nineteen features of a text, each held against a human corpus" },
+      { href: "https://arsalanrc.github.io/slotting/", label: "Reslot a warehouse floor",
+        desc: "The picker walks one route, not many, and frequency ranking cannot see it" },
     ],
     workEyebrow: "SELECTED WORK",
     workTitle: "Nine repositories, and one still in the workshop",
@@ -103,15 +109,17 @@ const COPY = {
     tryTitle: "Keine Installation, keine Anmeldung",
     rows: [
       { href: "https://arsalanrc.github.io/chess-engine/", label: "Schach-Engine spielen",
-        desc: "Ein Minimax-Bot mit Alpha-Beta-Pruning, und der innere Zustand der Engine direkt neben dem Brett" },
+        desc: "Ein Minimax-Bot mit Alpha-Beta-Pruning, daneben der Positions-Hash" },
       { href: "https://arsalanrc.github.io/integration-patterns/", label: "integration-patterns ansehen",
-        desc: "Denselben Webhook zweimal schicken und zusehen, wie der zweite nichts tut, dann einem Retry-Sturm beim Erledigen eines Dienstes zusehen" },
-      { href: "https://arsalanrc.github.io/recon/", label: "recon beim Abgleich zusehen",
-        desc: "Sechs Zeilen und ein Schalter für die Toleranzen. Dieselben Zeilen, sechs Funde oder vier" },
-      { href: "https://arsalanrc.github.io/pg-outbox/", label: "Einen Prozess mitten in der Transaktion abschießen",
-        desc: "Drei Wege, ein Event zu veröffentlichen, und die zwei, nach denen Datenbank und Broker sich widersprechen" },
+        desc: "Denselben Webhook zweimal schicken und zusehen, wie der zweite nichts tut" },
+      { href: "https://arsalanrc.github.io/recon/", label: "Zwei Exporte abgleichen",
+        desc: "Sechs Zeilen, ein Schalter für Toleranzen, sechs Funde oder vier" },
+      { href: "https://arsalanrc.github.io/pg-outbox/", label: "Prozess mitten in der Transaktion killen",
+        desc: "Drei Wege, ein Event zu senden, und die zwei, nach denen der Broker falsch liegt" },
       { href: "https://arsalanrc.github.io/stylo/", label: "Den eigenen Text vermessen",
-        desc: "Neunzehn Merkmale eines Textes gegen ein menschliches Korpus. Wer ihn geschrieben hat, sagt es nicht, und es sagt warum" },
+        desc: "Neunzehn Merkmale eines Textes, jedes gegen ein menschliches Korpus" },
+      { href: "https://arsalanrc.github.io/slotting/", label: "Ein Lager neu einsortieren",
+        desc: "Eine Tour statt vieler Einzelwege, und Häufigkeit sieht das nicht" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
     workTitle: "Neun Repositories, und eines noch in der Werkstatt",
@@ -151,12 +159,23 @@ function layout(t, lang) {
   const panels = [];
   const push = (id, render) => panels.push({ id, render });
 
+  /* The try rows must be even for the same reason CARDS must: they render two
+     to a row at width="50%", and an odd count leaves half of the last row with
+     no panel painting it, so the page background shows through as a hard black
+     rectangle against the sky. That defect shipped once already, on the cards,
+     the day slotting took the count from six to seven. */
+  if (c.rows.length % 2 !== 0) {
+    throw new Error(
+      `try rows must be even: ${c.rows.length} in ${lang} leaves a hole in the ` +
+      `last row. Add or remove one, or change the layout deliberately.`
+    );
+  }
+
   push("intro", (o) => prose(t, { paras: c.intro.paras, lang }, o));
   push("stats", (o) => ({ svg: stats(t, lang, o), H: 168 }));
   push("try", (o) => prose(t, { eyebrow: c.tryEyebrow, title: c.tryTitle, paras: [], lang }, o));
-  for (const [i, r] of c.rows.entries()) {
-    push(`try-${i}`, (o) => ({ svg: tryRow(t, r, o), H: 68 }));
-  }
+  // The try rows are a grid now, not part of the sequential run, so they are
+  // shifted in below alongside the cards rather than measured here.
   push("work", (o) => prose(t, { eyebrow: c.workEyebrow, title: c.workTitle, paras: [], lang }, o));
   push("how", (o) => prose(t, { eyebrow: c.howEyebrow, title: c.howTitle, paras: c.how, lang }, o));
   push("foot", (o) => prose(t, { eyebrow: c.footEyebrow, title: c.footTitle, paras: c.foot, lang }, o));
@@ -177,21 +196,32 @@ function layout(t, lang) {
     return entry;
   });
 
+  /* Two grids get inserted into the measured run, and the order matters: the
+     try rows sit above the cards, so their shift has to land before the card
+     block's own offset is read. Doing it the other way round puts every card
+     one try-block too high and every seam below them out of step. */
+  const tryRows = Math.ceil(c.rows.length / 2);
+  const tryIdx = measured.findIndex((m) => m.id === "try");
+  const tryShift = tryRows * TRY_ROW_H;
+  for (let i = tryIdx + 1; i < measured.length; i++) measured[i].offsetY += tryShift;
+
   // The cards sit between "work" and "how"; they are 190 tall in a 2-up grid.
   const CARD_H = 190;
   const cardRows = Math.ceil(CARDS.length / 2);
   const workIdx = measured.findIndex((m) => m.id === "work");
-  let shift = cardRows * CARD_H;
-  for (let i = workIdx + 1; i < measured.length; i++) measured[i].offsetY += shift;
+  const cardShift = cardRows * CARD_H;
+  for (let i = workIdx + 1; i < measured.length; i++) measured[i].offsetY += cardShift;
 
   const stackIdx = measured.findIndex((m) => m.id === "foot");
   const stackH = stack(t, lang, { offsetY: 0, pageH: 4000 }).match(/height="(\d+)"/);
   const sH = stackH ? Number(stackH[1]) : 272;
   for (let i = stackIdx; i < measured.length; i++) measured[i].offsetY += sH;
 
-  const pageH = y + shift + sH;
+  const pageH = y + tryShift + cardShift + sH;
 
-  return { measured, pageH, cardStart: measured[workIdx].offsetY + measured[workIdx].H, CARD_H, sH,
+  return { measured, pageH, rows: c.rows,
+           tryStart: measured[tryIdx].offsetY + measured[tryIdx].H, tryRows,
+           cardStart: measured[workIdx].offsetY + measured[workIdx].H, CARD_H, sH,
            stackOffset: measured[stackIdx].offsetY - sH };
 }
 
@@ -203,7 +233,7 @@ function layout(t, lang) {
  * height, which is exactly the failure the audit exists to catch. */
 export function pageMap() {
   const t = THEME.light;
-  const { measured, pageH, cardStart, CARD_H, sH, stackOffset } = layout(t, "en");
+  const { measured, pageH, tryStart, tryRows, cardStart, CARD_H, sH, stackOffset } = layout(t, "en");
   const at = (id) => measured.find((m) => m.id === id);
   const bands = [];
 
@@ -217,8 +247,9 @@ export function pageMap() {
   const s = at("stats");
   bands.push({ id: "stats tiles", from: s.offsetY + 18, to: s.offsetY + 150 });
 
-  for (const m of measured.filter((x) => x.id.startsWith("try-"))) {
-    bands.push({ id: m.id, from: m.offsetY + 8, to: m.offsetY + 76 });
+  for (let row = 0; row < tryRows; row++) {
+    const top = tryStart + row * TRY_ROW_H;
+    bands.push({ id: `try row ${row + 1}`, from: top + 10, to: top + TRY_ROW_H - 10 });
   }
 
   for (let row = 0; row < Math.ceil(CARDS.length / 2); row++) {
@@ -246,12 +277,22 @@ const isMain = import.meta.url === `file://${process.argv[1]}`;
 if (isMain) for (const [themeName, t] of Object.entries(THEME)) {
   for (const lang of ["en", "de"]) {
     const sfx = lang === "en" ? "" : ".de";
-    const { measured, pageH, cardStart, CARD_H, stackOffset } = layout(t, lang);
+    const { measured, pageH, rows, tryStart, cardStart, CARD_H, stackOffset } = layout(t, lang);
 
     for (const m of measured) {
       const { svg } = m.render({ offsetY: m.offsetY, pageH });
       write(`${m.id}-${themeName}${sfx}.svg`, svg);
     }
+
+    /* Try rows, two per row, same grid as the cards below them. */
+    rows.forEach((r, i) => {
+      const row = Math.floor(i / 2);
+      write(`try-${i}-${themeName}${sfx}.svg`,
+            tryRow(t, r, {
+              offsetY: tryStart + row * TRY_ROW_H, pageH,
+              offsetX: (i % 2) * (PAGE_W / 2), pageW: PAGE_W,
+            }));
+    });
 
     /* Cards, two per row, each carrying its own slice of the page sky. Odd
        index means the right column, so it starts half a page across. */
@@ -330,7 +371,7 @@ function markdown(lang) {
        the alt still said 27 merged pull requests when the count was 41. */
     pic("stats", statsAlt(lang)),
     pic("try", `${c.tryEyebrow}. ${c.tryTitle}`),
-    ...c.rows.map((r, i) => pic(`try-${i}`, `${r.label}: ${r.desc}`, 'width="100%"', r.href)),
+    ...c.rows.map((r, i) => pic(`try-${i}`, `${r.label}: ${r.desc}`, 'width="50%"', r.href)),
     pic("work", `${c.workEyebrow}. ${c.workTitle}`),
     ...CARDS.map((card, i) => {
       const blurb = (lang === "de" ? card.blurbDe : card.blurb).join(" ");
