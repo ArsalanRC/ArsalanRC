@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="integration-patterns: Idempotenz und Retry mit Full Jitter, je neben dem Fehler, den sie verhindern.">
-    <title>integration-patterns</title>
+    role="img" aria-label="rally: Two browsers, one game, no server. Rollback netcode, peer to peer.">
+    <title>rally</title>
     
     <defs>
-      <linearGradient id="ramp-s18" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s9" gradientUnits="userSpaceOnUse"
                       x1="0" y1="0" x2="0" y2="190">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s18" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s9" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s18"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s18" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s9"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s9" gradientUnits="userSpaceOnUse"
                       cx="410" cy="-7.6000000000000005" r="104.50000000000001">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s18)"/><rect width="500" height="190" fill="url(#sun-s18)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s18)" clip-path="url(#clip-s18)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="44.802" rx="170" ry="22"/><ellipse cx="440" cy="72.656" rx="140" ry="18"/><ellipse cx="60" cy="122.43599999999999" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
+    <rect width="500" height="190" fill="url(#ramp-s9)"/><rect width="500" height="190" fill="url(#sun-s9)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s9)" clip-path="url(#clip-s9)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="44.802" rx="170" ry="22"/><ellipse cx="440" cy="72.656" rx="140" ry="18"/><ellipse cx="60" cy="122.43599999999999" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
     
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
@@ -29,16 +29,16 @@
     <!-- Clipped to the panel. A straight bar against a rounded corner pokes out
          past the curve at the top and bottom, which reads as a misaligned edge
          rather than as an accent. -->
-    <clipPath id="cardclip-patterns"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
-    <rect x="14" y="14" width="4" height="162" fill="#4FA6F0" clip-path="url(#cardclip-patterns)"/>
+    <clipPath id="cardclip-rally"><rect x="14" y="14" width="472" height="162" rx="12"/></clipPath>
+    <rect x="14" y="14" width="4" height="162" fill="#4FA6F0" clip-path="url(#cardclip-rally)"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
-          letter-spacing="-0.6" fill="#EAF1F7">integration-patterns</text>
+          letter-spacing="-0.6" fill="#EAF1F7">rally</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#9FB6C6">TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">Idempotenz und Retry mit Full Jitter,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">je neben dem Fehler, den sie verhindern.</text>
+             fill="#9FB6C6">Two browsers, one game, no server.</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">Rollback netcode, peer to peer.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#6C879A">41 Tests · Postgres · animiert erklärt</text>
+          fill="#6C879A">24 tests · 0 deps · in progress</text>
   </svg>

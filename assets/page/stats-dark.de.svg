@@ -3,23 +3,23 @@
     <title>Profile statistics</title>
     
     <defs>
-      <linearGradient id="ramp-s55" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s56" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-576.625" x2="0" y2="2923">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s55" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s56" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s55"><rect width="1000" height="168"/></clipPath>
-      <radialGradient id="sun-s55" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s56"><rect width="1000" height="168"/></clipPath>
+      <radialGradient id="sun-s56" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-716.61" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="168" fill="url(#ramp-s55)"/><rect width="1000" height="168" fill="url(#sun-s55)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s55)" clip-path="url(#clip-s55)"><ellipse cx="300" cy="248.58657500000004" rx="170" ry="22"/></g>
+    <rect width="1000" height="168" fill="url(#ramp-s56)"/><rect width="1000" height="168" fill="url(#sun-s56)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s56)" clip-path="url(#clip-s56)"><ellipse cx="300" cy="248.58657500000004" rx="170" ry="22"/></g>
     <g transform="translate(0 18)">
       <g transform="translate(18 0)">
         

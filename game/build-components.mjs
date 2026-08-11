@@ -338,43 +338,66 @@ function stack(t, lang, o = {}) {
 
 // ------------------------------------------------------------------ cards
 
+/* CARDS must stay EVEN.
+ *
+ * They render two per row at width="50%". An odd count leaves the last row
+ * half empty, and because no panel paints that region the page background
+ * shows through as a hard black rectangle against the sky. It looks like the
+ * README is broken, which is worse than a missing card.
+ *
+ * This happened on 2026-08-11: adding `slotting` took the count from six to
+ * seven and put a hole under the last row on the live profile. The assertion
+ * below is why it cannot happen quietly again. If you add one card, add two,
+ * or say why the grid changed shape. */
 const CARDS = [
-  { id: "slotting", title: "slotting", lang: "Python",
+  { id: "slotting", repo: "slotting", title: "slotting", lang: "Python",
     blurb: ["The picker walks one route, not many.", "Frequency ranking cannot see that."],
     blurbDe: ["Eine Tour, nicht viele Einzelwege.", "Häufigkeit sieht das nicht."],
     meta: "50 tests · 0 deps · 7% less walking",
     metaDe: "50 Tests · 0 Abhängigkeiten · 7% weniger Laufweg", accent: true },
-  { id: "stylo", title: "stylo", lang: "TypeScript",
+  { id: "stylo", repo: "stylo", title: "stylo", lang: "TypeScript",
     blurb: ["Nineteen measurements of a text,", "each against real human writing."],
     blurbDe: ["Neunzehn Messungen an einem Text,", "jede gegen echte menschliche Prosa."],
     meta: "61 tests · 0 deps · no verdict, ever",
     metaDe: "61 Tests · 0 Abhängigkeiten · nie ein Urteil", accent: true },
-  { id: "outbox", title: "pg-outbox", lang: "Java · Postgres",
+  { id: "outbox", repo: "pg-outbox", title: "pg-outbox", lang: "Java · Postgres",
     blurb: ["Commit a row and publish an event", "without them coming apart."],
     blurbDe: ["Eine Zeile committen und ein Event", "senden, ohne dass beides zerfällt."],
     meta: "57 tests · 0 deps · Java 17 and 21",
     metaDe: "57 Tests · 0 Abhängigkeiten · Java 17 und 21", accent: true },
-  { id: "recon", title: "recon", lang: "Python",
+  { id: "recon", repo: "recon", title: "recon", lang: "Python",
     blurb: ["Two systems disagree. Telling the real", "differences from the formatting."],
     blurbDe: ["Zwei Systeme widersprechen sich. Echte", "Abweichungen von Formatierung trennen."],
     meta: "86 tests · 0 deps · streams from Postgres",
     metaDe: "86 Tests · 0 Abhängigkeiten · streamt aus Postgres", accent: false },
-  { id: "chess", title: "chess-engine", lang: "TypeScript",
+  { id: "chess", repo: "chess-engine", title: "chess-engine", lang: "TypeScript",
     blurb: ["Full FIDE rules and a minimax bot", "with alpha-beta pruning."],
     blurbDe: ["Alle FIDE-Regeln und ein Minimax-Bot", "mit Alpha-Beta-Pruning."],
     meta: "49 tests · 0 deps · playable",
     metaDe: "49 Tests · 0 Abhängigkeiten · spielbar", accent: false },
-  { id: "patterns", title: "integration-patterns", lang: "TypeScript",
+  { id: "patterns", repo: "integration-patterns", title: "integration-patterns", lang: "TypeScript",
     blurb: ["Idempotency and retry with full jitter,", "each shown next to what it prevents."],
     blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je neben dem Fehler, den sie verhindern."],
     meta: "41 tests · Postgres · animated explainer",
     metaDe: "41 Tests · Postgres · animiert erklärt", accent: false },
-  { id: "arena", title: "Game Arena", lang: "Next.js · Supabase",
+  { id: "rally", repo: null, title: "rally", lang: "TypeScript",
+    blurb: ["Two browsers, one game, no server.", "Rollback netcode, peer to peer."],
+    blurbDe: ["Zwei Browser, ein Spiel, kein Server.", "Rollback-Netcode, Peer-to-Peer."],
+    meta: "24 tests · 0 deps · in progress",
+    metaDe: "24 Tests · 0 Abhängigkeiten · in Arbeit", accent: false },
+  { id: "arena", repo: null, title: "Game Arena", lang: "Next.js · Supabase",
     blurb: ["28 games, one codebase, one rule:", "game logic never touches React."],
     blurbDe: ["28 Spiele, eine Codebasis, eine Regel:", "Spiellogik fasst React nie an."],
     meta: "940 tests · 23 languages · private",
     metaDe: "940 Tests · 23 Sprachen · privat", accent: false },
 ];
+
+if (CARDS.length % 2 !== 0) {
+  throw new Error(
+    `CARDS must be even: ${CARDS.length} cards leaves a hole in the last row. ` +
+    `Add or remove one, or change the layout deliberately.`
+  );
+}
 
 /* Two cards to a row, each rendered at width="50%".
  *

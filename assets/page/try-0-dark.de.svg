@@ -3,23 +3,23 @@
     <title>Schach-Engine spielen</title>
     
     <defs>
-      <linearGradient id="ramp-s57" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s58" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-904.625" x2="0" y2="2595">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s57" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s58" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s57"><rect width="1000" height="84"/></clipPath>
-      <radialGradient id="sun-s57" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s58"><rect width="1000" height="84"/></clipPath>
+      <radialGradient id="sun-s58" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-1044.6100000000001" r="1924.79375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="84" fill="url(#ramp-s57)"/><rect width="1000" height="84" fill="url(#sun-s57)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s57)" clip-path="url(#clip-s57)"><ellipse cx="300" cy="-79.41342499999996" rx="170" ry="22"/></g>
+    <rect width="1000" height="84" fill="url(#ramp-s58)"/><rect width="1000" height="84" fill="url(#sun-s58)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s58)" clip-path="url(#clip-s58)"><ellipse cx="300" cy="-79.41342499999996" rx="170" ry="22"/></g>
     
     <rect x="28" y="8" width="944" height="68" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
