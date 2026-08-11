@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 104" width="1000" height="104"
-    role="img" aria-label="Ohne Server gegeneinander spielen: Rollback-Netcode beim Korrigieren zusehen, Handshake per Copy and Paste">
+    role="img" aria-label="Ohne Server gegeneinander spielen: Einen Link schicken, einen zurückbekommen, dann reden die Browser direkt">
     <title>Ohne Server gegeneinander spielen</title>
     
     <defs>
@@ -32,5 +32,5 @@
     <text x="52" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#EAF1F7">Ohne Server gegeneinander spielen</text>
     <text x="52" y="67" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-             fill="#6C879A">Rollback-Netcode beim Korrigieren zusehen, Handshake per Copy and Paste</text>
+             fill="#6C879A">Einen Link schicken, einen zurückbekommen, dann reden die Browser direkt</text>
   </svg>
