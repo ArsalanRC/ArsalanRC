@@ -219,7 +219,8 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // It comes back two higher, because it counts the two archived tutorial repos
 // that are private now and are not work anybody should be credited for. That
 // query was recorded here as the source once and quietly inflated the tile.
-// 61 on 2026-08-10, before this change.
+// 64 on 2026-08-11, before this change: a stylo pull request merged after the
+// last count landed, so the tile sat one short until it was recounted.
 //
 // The merged-PR tile counts itself. Updating it is a pull request, so a number
 // read from the API and committed is already one short by the time it merges,
@@ -241,7 +242,7 @@ const STATS = [
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "63",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "66",   en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
