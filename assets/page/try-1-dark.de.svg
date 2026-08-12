@@ -3,23 +3,23 @@
     <title>integration-patterns ansehen</title>
     
     <defs>
-      <linearGradient id="ramp-s57" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-904.625" x2="0" y2="2671">
+      <linearGradient id="ramp-s59" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-904.625" x2="0" y2="2861">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s57" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s59" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s57"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s57" gradientUnits="userSpaceOnUse"
-                      cx="320" cy="-1047.65" r="1966.5937500000002">
+      <clipPath id="clip-s59"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s59" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-1055.25" r="2071.09375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s57)"/><rect width="500" height="104" fill="url(#sun-s57)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s57)" clip-path="url(#clip-s57)"><ellipse cx="-200" cy="-77.94050000000004" rx="170" ry="22"/></g>
+    <rect width="500" height="104" fill="url(#ramp-s59)"/><rect width="500" height="104" fill="url(#sun-s59)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s59)" clip-path="url(#clip-s59)"><ellipse cx="-200" cy="-78.0703125" rx="170" ry="22"/></g>
     
     <rect x="14" y="10" width="472" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"

@@ -27,7 +27,7 @@
  */
 
 import { writeFileSync } from "node:fs";
-import { THEME, prose, tryRow, TRY_ROW_H, linkTile, stats, statsAlt, stack, card, CARDS } from "./build-components.mjs";
+import { THEME, prose, tryRow, TRY_ROW_H, linkTile, stats, statsAlt, stack, card, CARDS, cardLayout, cardRowCount } from "./build-components.mjs";
 import { header, HEADER_THEME, HEADER_H } from "./build-header.mjs";
 
 const OUT = new URL("../assets/page/", import.meta.url);
@@ -78,9 +78,11 @@ const COPY = {
         desc: "The picker walks one route, not many, and frequency ranking cannot see it" },
       { href: "https://arsalanrc.github.io/rally/", label: "Play a friend, with no server",
         desc: "Scan a code or send a link, then the two browsers talk to each other directly" },
+      { href: "https://arsalanrc.github.io/plinth/", label: "Mint an NFT and put it up for sale",
+        desc: "A marketplace with the art drawn on chain, and a demo if you would rather not connect a wallet" },
     ],
     workEyebrow: "SELECTED WORK",
-    workTitle: "Ten repositories, and the newest one is playable",
+    workTitle: "Eleven repositories, and the newest one takes a wallet",
     howEyebrow: "APPROACH",
     howTitle: "How I think about building",
     how: [
@@ -124,9 +126,11 @@ const COPY = {
         desc: "Eine Tour statt vieler Einzelwege, und Häufigkeit sieht das nicht" },
       { href: "https://arsalanrc.github.io/rally/", label: "Ohne Server gegeneinander spielen",
         desc: "Code scannen oder Link schicken, dann reden die Browser direkt miteinander" },
+      { href: "https://arsalanrc.github.io/plinth/", label: "Ein NFT minten und anbieten",
+        desc: "Ein Marktplatz mit Grafik on chain, und eine Demo, falls du keine Wallet verbinden willst" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
-    workTitle: "Zehn Repositories, und das neueste ist spielbar",
+    workTitle: "Elf Repositories, und das neueste nimmt eine Wallet",
     howEyebrow: "HALTUNG",
     howTitle: "Wie ich an Bauen herangehe",
     how: [
@@ -199,7 +203,7 @@ function layout(t, lang) {
 
   // The cards sit between "work" and "how"; they are 190 tall in a 2-up grid.
   const CARD_H = 190;
-  const cardRows = Math.ceil(CARDS.length / 2);
+  const cardRows = cardRowCount();
   const workIdx = measured.findIndex((m) => m.id === "work");
   const cardShift = cardRows * CARD_H;
   for (let i = workIdx + 1; i < measured.length; i++) measured[i].offsetY += cardShift;
@@ -289,15 +293,16 @@ if (isMain) for (const [themeName, t] of Object.entries(THEME)) {
             }, wide));
     });
 
-    /* Cards, two per row, each carrying its own slice of the page sky. Odd
-       index means the right column, so it starts half a page across. */
-    CARDS.forEach((c, i) => {
-      const row = Math.floor(i / 2);
+    /* Cards, each carrying its own slice of the page sky. Wide cards take a
+       whole row; the rest go two per row, and the right column starts half a
+       page across. `cardLayout` owns that arithmetic so the SVG writer and the
+       markdown emitter below cannot disagree about where a card is. */
+    cardLayout().forEach(({ card: c, row, column, wide }) => {
       write(`card-${c.id}-${themeName}${sfx}.svg`,
             card(t, c, lang, {
               offsetY: cardStart + row * CARD_H, pageH,
-              offsetX: (i % 2) * (PAGE_W / 2), pageW: PAGE_W,
-            }));
+              offsetX: column * (PAGE_W / 2), pageW: PAGE_W,
+            }, wide));
     });
 
     write(`stack-${themeName}${sfx}.svg`, stack(t, lang, { offsetY: stackOffset, pageH }));
@@ -371,7 +376,7 @@ function markdown(lang) {
       return pic(`try-${i}`, `${r.label}: ${r.desc}`, `width="${wide ? 100 : 50}%"`, r.href);
     }),
     pic("work", `${c.workEyebrow}. ${c.workTitle}`),
-    ...CARDS.map((card, i) => {
+    ...cardLayout().map(({ card, wide }) => {
       const blurb = (lang === "de" ? card.blurbDe : card.blurb).join(" ");
       /* The link comes off the card's own `repo` field rather than a lookup
          table keyed by id. The table was missing `slotting` the day it shipped,
@@ -382,7 +387,8 @@ function markdown(lang) {
         : card.repo
           ? `https://github.com/ArsalanRC/${card.repo}`
           : undefined;
-      return pic(`card-${card.id}`, `${card.title}: ${blurb}`, 'width="50%"', href);
+      const width = wide ? 'width="100%"' : 'width="50%"';
+      return pic(`card-${card.id}`, `${card.title}: ${blurb}`, width, href);
     }),
     pic("how", howAlt),
     pic("stack", "Stack. Shipping today: TypeScript, Python, Java, JavaScript, Node.js, PostgreSQL. Day job also: Next.js, Nuxt, React, Tailwind, CSS, SQL, Supabase, REST, Webhooks, Bash. Next on the plan: Rust, C++, C, C#."),

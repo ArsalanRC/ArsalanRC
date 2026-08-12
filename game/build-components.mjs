@@ -90,10 +90,10 @@ const CLOUDS = [
   { cx: 0.78, cy: 0.0220, rx: 80,  ry: 18 },  // header, right of the name pane
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
-  { cx: 0.62, cy: 0.1400, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2312, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.3903, rx: 140, ry: 18 },  // work header
-  { cx: 0.12, cy: 0.6507, rx: 120, ry: 20 },  // how
+  { cx: 0.62, cy: 0.1308, rx: 130, ry: 22 },  // intro
+  { cx: 0.30, cy: 0.2195, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.3743, rx: 140, ry: 18 },  // work header
+  { cx: 0.12, cy: 0.6683, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
 ];
 
@@ -267,15 +267,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
 // unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "10",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+  { n: "11",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "450",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "550",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "106",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "109",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -381,6 +381,14 @@ function stack(t, lang, o = {}) {
  * below is why it cannot happen quietly again. If you add one card, add two,
  * or say why the grid changed shape. */
 const CARDS = [
+  /* Wide, and first, because it is the newest and the only one you can use
+     with a wallet. Wide cards must stay at the top of this list: `cardLayout`
+     assumes it. */
+  { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon", wide: true,
+    blurb: ["An NFT marketplace where the art is drawn on chain,", "and the front end talks to it with no library at all."],
+    blurbDe: ["Ein NFT-Marktplatz, dessen Grafik on chain entsteht,", "und ein Frontend ganz ohne Library."],
+    meta: "100 tests · 8 mutations, all caught · mint, list, buy",
+    metaDe: "100 Tests · 8 Mutationen, alle gefangen · minten, anbieten, kaufen", accent: true },
   { id: "slotting", repo: "slotting", title: "slotting", lang: "Python",
     blurb: ["The picker walks one route, not many.", "Frequency ranking cannot see that."],
     blurbDe: ["Eine Tour, nicht viele Einzelwege.", "Häufigkeit sieht das nicht."],
@@ -423,12 +431,44 @@ const CARDS = [
     metaDe: "940 Tests · 23 Sprachen · privat", accent: false },
 ];
 
-if (CARDS.length % 2 !== 0) {
-  throw new Error(
-    `CARDS must be even: ${CARDS.length} cards leaves a hole in the last row. ` +
-    `Add or remove one, or change the layout deliberately.`
-  );
+/* Where each card sits, and how wide.
+ *
+ * Wide cards take a whole row to themselves and must come first, which is what
+ * puts the newest repo above everything else. The rest pair up two to a row.
+ *
+ * This replaces a flat "CARDS must be even" assertion. That rule was right
+ * while every card was half width, because an odd count left a visible hole. It
+ * is the wrong rule once a card can fill its own row on purpose, so the check
+ * below counts only the half-width ones. */
+export function cardLayout(cards = CARDS) {
+  const firstNarrow = cards.findIndex((c) => !c.wide);
+  const wide = firstNarrow === -1 ? cards.length : firstNarrow;
+
+  if (cards.slice(wide).some((c) => c.wide)) {
+    throw new Error("Wide cards must come first, or the row maths here is wrong.");
+  }
+
+  if ((cards.length - wide) % 2 !== 0) {
+    throw new Error(
+      `CARDS leaves a hole: ${cards.length - wide} half-width cards after ${wide} ` +
+      `full-width one(s) is odd. Add or remove one, or mark another card wide.`
+    );
+  }
+
+  return cards.map((card, i) => {
+    const isWide = i < wide;
+    return {
+      card,
+      wide: isWide,
+      row: isWide ? i : wide + Math.floor((i - wide) / 2),
+      column: isWide ? 0 : (i - wide) % 2,
+    };
+  });
 }
+
+/** Total rows the card grid occupies. */
+export const cardRowCount = (cards = CARDS) =>
+  cardLayout(cards).reduce((max, p) => Math.max(max, p.row + 1), 0);
 
 /* Two cards to a row, each rendered at width="50%".
  *
@@ -438,8 +478,8 @@ if (CARDS.length % 2 !== 0) {
  * against its neighbours and the card rows sat 24px lower than the layout
  * thought they did. The caller passes offsetX so each card knows which half of
  * the page it is; without it both columns paint the same sky. */
-function card(t, c, lang, o = {}) {
-  const W = 500, H = 190;
+function card(t, c, lang, o = {}, wide = false) {
+  const W = wide ? 1000 : 500, H = 190;
   const accent = c.accent ? t.accent : t.accent2;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"
     role="img" aria-label="${esc(c.title)}: ${esc((lang === 'de' ? c.blurbDe : c.blurb).join(" "))}">

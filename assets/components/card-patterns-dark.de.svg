@@ -3,31 +3,31 @@
     <title>integration-patterns</title>
     
     <defs>
-      <linearGradient id="ramp-s18" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s20" gradientUnits="userSpaceOnUse"
                       x1="0" y1="0" x2="0" y2="190">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s18" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s20" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s18"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s18" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s20"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s20" gradientUnits="userSpaceOnUse"
                       cx="410" cy="-7.6000000000000005" r="104.50000000000001">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s18)"/><rect width="500" height="190" fill="url(#sun-s18)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s18)" clip-path="url(#clip-s18)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="26.6" rx="130" ry="22"/><ellipse cx="150" cy="43.928" rx="170" ry="22"/><ellipse cx="440" cy="74.157" rx="140" ry="18"/><ellipse cx="60" cy="123.633" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
-    <defs><filter id="lift-l24" x="-25%" y="-25%" width="150%" height="170%">
+    <rect width="500" height="190" fill="url(#ramp-s20)"/><rect width="500" height="190" fill="url(#sun-s20)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s20)" clip-path="url(#clip-s20)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="24.852" rx="130" ry="22"/><ellipse cx="150" cy="41.705" rx="170" ry="22"/><ellipse cx="440" cy="71.117" rx="140" ry="18"/><ellipse cx="60" cy="126.977" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
+    <defs><filter id="lift-l26" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.4"/>
        </filter></defs>
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#4FA6F0" stroke-opacity="0.5"
-          filter="url(#lift-l24)"/>
+          filter="url(#lift-l26)"/>
     <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"

@@ -1,36 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 104" width="1000" height="104"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 104" width="500" height="104"
     role="img" aria-label="Play a friend, with no server: Scan a code or send a link, then the two browsers talk to each other directly">
     <title>Play a friend, with no server</title>
     
     <defs>
       <linearGradient id="ramp-s26" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1216.625" x2="0" y2="2359">
+                      x1="0" y1="-1216.625" x2="0" y2="2549">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
       <filter id="soft-s26" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s26"><rect width="1000" height="104"/></clipPath>
+      <clipPath id="clip-s26"><rect width="500" height="104"/></clipPath>
       <radialGradient id="sun-s26" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1359.65" r="1966.5937500000002">
+                      cx="820" cy="-1367.25" r="2071.09375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="104" fill="url(#ramp-s26)"/><rect width="1000" height="104" fill="url(#sun-s26)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s26)" clip-path="url(#clip-s26)"><ellipse cx="880" cy="178.9414374999999" rx="140" ry="18"/></g>
+    <rect width="500" height="104" fill="url(#ramp-s26)"/><rect width="500" height="104" fill="url(#sun-s26)"/>
     
-    <rect x="14" y="10" width="972" height="84" rx="12"
+    
+    <rect x="14" y="10" width="472" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#FFFFFF" stroke-opacity="0.13"
           />
-    <path d="M26 10.75 H974" stroke="#FFFFFF"
+    <path d="M26 10.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
-    <text x="30" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="30" y="36" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#FF6A3D">&#9654;</text>
-    <text x="52" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+    <text x="52" y="36" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
           fill="#EAF1F7">Play a friend, with no server</text>
-    <text x="52" y="67" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
-             fill="#6C879A">Scan a code or send a link, then the two browsers talk to each other directly</text>
+    <text x="52" y="58" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">Scan a code or send a link, then the two browsers talk to each</text><text x="52" y="77" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">other directly</text>
   </svg>

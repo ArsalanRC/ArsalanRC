@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
+    role="img" aria-label="plinth: Ein NFT-Marktplatz, dessen Grafik on chain entsteht, und ein Frontend ganz ohne Library.">
+    <title>plinth</title>
+    
+    <defs>
+      <linearGradient id="ramp-s36" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="0" x2="0" y2="190">
+        <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
+        <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
+      </linearGradient>
+      <filter id="soft-s36" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s36"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s36" gradientUnits="userSpaceOnUse"
+                      cx="410" cy="-7.6000000000000005" r="104.50000000000001">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="500" height="190" fill="url(#ramp-s36)"/><rect width="500" height="190" fill="url(#sun-s36)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s36)" clip-path="url(#clip-s36)"><ellipse cx="415" cy="4.9399999999999995" rx="130" ry="24"/><ellipse cx="390" cy="4.18" rx="80" ry="18"/><ellipse cx="70" cy="17.48" rx="150" ry="26"/><ellipse cx="100" cy="17.195" rx="90" ry="21"/><ellipse cx="310" cy="24.852" rx="130" ry="22"/><ellipse cx="150" cy="41.705" rx="170" ry="22"/><ellipse cx="440" cy="71.117" rx="140" ry="18"/><ellipse cx="60" cy="126.977" rx="120" ry="20"/><ellipse cx="360" cy="166.40200000000002" rx="160" ry="24"/></g>
+    <defs><filter id="lift-l48" x="-25%" y="-25%" width="150%" height="170%">
+         <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
+                       flood-opacity="0.16"/>
+       </filter></defs>
+    <rect x="14" y="14" width="472" height="162" rx="12"
+          fill="#FFFFFF" fill-opacity="0.68"
+          stroke="#E8552B" stroke-opacity="0.42"
+          filter="url(#lift-l48)"/>
+    <path d="M26 14.75 H474" stroke="#FFFFFF"
+          stroke-opacity="0.85" stroke-width="1.5"/>
+    <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
+          letter-spacing="-0.6" fill="#15202B">plinth</text>
+    <!-- The one thing the page never said out loud: a card is a link
+         to source, and a try-it row is a link to something running. The row has
+         carried a play triangle since it shipped; this is its opposite number. -->
+    <text x="464" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+          font-weight="700" letter-spacing="1.4" fill="#E8552B"
+          fill-opacity="0.9">[ code ]</text>
+    <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
+          letter-spacing="2" fill="#4B6274">SOLIDITY · POLYGON</text>
+    <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#4B6274">Ein NFT-Marktplatz, dessen Grafik on chain entsteht,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#4B6274">und ein Frontend ganz ohne Library.</text>
+    <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
+    <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+          fill="#8FA9BC">100 Tests · 8 Mutationen, alle gefangen · minten, anbieten, kaufen</text>
+  </svg>

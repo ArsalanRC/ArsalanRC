@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 104" width="500" height="104"
+    role="img" aria-label="Mint an NFT and put it up for sale: A marketplace with the art drawn on chain, and a demo if you would rather not connect a wallet">
+    <title>Mint an NFT and put it up for sale</title>
+    
+    <defs>
+      <linearGradient id="ramp-s27" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1216.625" x2="0" y2="2549">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <filter id="soft-s27" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s27"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s27" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-1367.25" r="2071.09375">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="500" height="104" fill="url(#ramp-s27)"/><rect width="500" height="104" fill="url(#sun-s27)"/>
+    
+    
+    <rect x="14" y="10" width="472" height="84" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"
+          />
+    <path d="M26 10.75 H474" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+    <text x="30" y="36" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#FF6A3D">&#9654;</text>
+    <text x="52" y="36" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#EAF1F7">Mint an NFT and put it up for sale</text>
+    <text x="52" y="58" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">A marketplace with the art drawn on chain, and a demo if you</text><text x="52" y="77" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">would rather not connect a wallet</text>
+  </svg>
