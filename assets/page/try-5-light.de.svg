@@ -3,22 +3,22 @@
     <title>Ein Lager neu einsortieren</title>
     
     <defs>
-      <linearGradient id="ramp-s138" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1112.625" x2="0" y2="2653">
+      <linearGradient id="ramp-s141" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1112.625" x2="0" y2="2843">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s138" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s141" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s138"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s138" gradientUnits="userSpaceOnUse"
-                      cx="320" cy="-1263.25" r="2071.09375">
+      <clipPath id="clip-s141"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s141" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-1270.85" r="2175.59375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s138)"/><rect width="500" height="104" fill="url(#sun-s138)"/>
+    <rect width="500" height="104" fill="url(#ramp-s141)"/><rect width="500" height="104" fill="url(#sun-s141)"/>
     
     
     <rect x="14" y="10" width="472" height="84" rx="12"

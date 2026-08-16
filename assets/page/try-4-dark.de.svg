@@ -3,22 +3,22 @@
     <title>Den eigenen Text vermessen</title>
     
     <defs>
-      <linearGradient id="ramp-s62" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1112.625" x2="0" y2="2653">
+      <linearGradient id="ramp-s63" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1112.625" x2="0" y2="2843">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s62" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s63" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s62"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s62" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1263.25" r="2071.09375">
+      <clipPath id="clip-s63"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s63" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1270.85" r="2175.59375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s62)"/><rect width="500" height="104" fill="url(#sun-s62)"/>
+    <rect width="500" height="104" fill="url(#ramp-s63)"/><rect width="500" height="104" fill="url(#sun-s63)"/>
     
     
     <rect x="14" y="10" width="472" height="84" rx="12"

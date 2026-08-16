@@ -3,23 +3,23 @@
     <title>Schach-Engine spielen</title>
     
     <defs>
-      <linearGradient id="ramp-s133" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-904.625" x2="0" y2="2861">
+      <linearGradient id="ramp-s136" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-904.625" x2="0" y2="3051">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s133" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s136" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s133"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s133" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1055.25" r="2071.09375">
+      <clipPath id="clip-s136"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s136" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1062.85" r="2175.59375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s133)"/><rect width="500" height="104" fill="url(#sun-s133)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s133)" clip-path="url(#clip-s133)"><ellipse cx="300" cy="-78.0703125" rx="170" ry="22"/></g>
+    <rect width="500" height="104" fill="url(#ramp-s136)"/><rect width="500" height="104" fill="url(#sun-s136)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s136)" clip-path="url(#clip-s136)"><ellipse cx="300" cy="-77.89937500000008" rx="170" ry="22"/></g>
     
     <rect x="14" y="10" width="472" height="84" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
