@@ -384,11 +384,11 @@ const CARDS = [
   /* Wide, and first, because it is the newest and the only one you can walk
      into on a phone. Wide cards must stay at the top of this list:
      `cardLayout` assumes it. */
-  { id: "lounge", repo: "arena-lounge", title: "Arena Lounge", lang: "Decentraland SDK7 · TypeScript", wide: true,
+  { id: "lounge", repo: "arena-lounge", page: "https://arsalanrc.github.io/arena-lounge/", title: "Arena Lounge", lang: "Decentraland SDK7 · TypeScript", wide: true,
     blurb: ["A game lounge in Decentraland, built for phones:", "shared tables, three games, a house bot, no server."],
     blurbDe: ["Eine Spiel-Lounge in Decentraland, gebaut fürs Handy:", "gemeinsame Tische, drei Spiele, ein Bot, kein Server."],
-    meta: "87 tests · 3 games · plays on a phone",
-    metaDe: "87 Tests · 3 Spiele · läuft auf dem Handy", accent: true },
+    meta: "87 tests · 3 games · plays on a phone · code opens Sept 2026",
+    metaDe: "87 Tests · 3 Spiele · läuft auf dem Handy · Code ab Sept. 2026", accent: true },
   /* Wide too: the only one you can use with a wallet. */
   { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon", wide: true,
     blurb: ["An NFT marketplace where the art is drawn on chain,", "and the front end talks to it with no library at all."],
