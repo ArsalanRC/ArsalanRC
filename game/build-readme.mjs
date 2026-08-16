@@ -382,11 +382,15 @@ function markdown(lang) {
          table keyed by id. The table was missing `slotting` the day it shipped,
          so that card pointed at github.com/ArsalanRC/undefined on the live
          profile. A field on the card cannot fall out of step with the card. */
+      /* `page` wins over `repo`: the lounge repo is private until the
+         buildathon submission, so its card goes to the public page instead. */
       const href = card.id === "arena"
         ? "#game-arena"
-        : card.repo
-          ? `https://github.com/ArsalanRC/${card.repo}`
-          : undefined;
+        : card.page
+          ? card.page
+          : card.repo
+            ? `https://github.com/ArsalanRC/${card.repo}`
+            : undefined;
       const width = wide ? 'width="100%"' : 'width="50%"';
       return pic(`card-${card.id}`, `${card.title}: ${blurb}`, width, href);
     }),
