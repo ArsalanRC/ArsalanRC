@@ -3,31 +3,31 @@
     <title>integration-patterns</title>
     
     <defs>
-      <linearGradient id="ramp-s72" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-2050.625" x2="0" y2="1715">
+      <linearGradient id="ramp-s74" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2240.625" x2="0" y2="1715">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s72" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s74" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s72"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s72" gradientUnits="userSpaceOnUse"
-                      cx="320" cy="-2201.25" r="2071.09375">
+      <clipPath id="clip-s74"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s74" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-2398.85" r="2175.59375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s72)"/><rect width="500" height="190" fill="url(#sun-s72)"/>
+    <rect width="500" height="190" fill="url(#ramp-s74)"/><rect width="500" height="190" fill="url(#sun-s74)"/>
     
-    <defs><filter id="lift-l64" x="-25%" y="-25%" width="150%" height="170%">
+    <defs><filter id="lift-l66" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.4"/>
        </filter></defs>
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.055"
           stroke="#4FA6F0" stroke-opacity="0.5"
-          filter="url(#lift-l64)"/>
+          filter="url(#lift-l66)"/>
     <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.14" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"

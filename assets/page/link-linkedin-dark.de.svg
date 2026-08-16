@@ -3,22 +3,22 @@
     <title>LinkedIn</title>
     
     <defs>
-      <linearGradient id="ramp-s56" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3581.625" x2="0" y2="184">
+      <linearGradient id="ramp-s57" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3771.625" x2="0" y2="184">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s56" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s57" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s56"><rect width="1000" height="92"/></clipPath>
-      <radialGradient id="sun-s56" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3732.25" r="2071.09375">
+      <clipPath id="clip-s57"><rect width="1000" height="92"/></clipPath>
+      <radialGradient id="sun-s57" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3929.85" r="2175.59375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="92" fill="url(#ramp-s56)"/><rect width="1000" height="92" fill="url(#sun-s56)"/>
+    <rect width="1000" height="92" fill="url(#ramp-s57)"/><rect width="1000" height="92" fill="url(#sun-s57)"/>
     
     
     <rect x="28" y="10" width="944" height="72" rx="12"

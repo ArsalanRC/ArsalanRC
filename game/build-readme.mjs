@@ -82,7 +82,7 @@ const COPY = {
         desc: "A marketplace with the art drawn on chain, and a demo if you would rather not connect a wallet" },
     ],
     workEyebrow: "SELECTED WORK",
-    workTitle: "Eleven repositories, and the newest one takes a wallet",
+    workTitle: "Twelve repositories, and the newest one plays on a phone",
     howEyebrow: "APPROACH",
     howTitle: "How I think about building",
     how: [
@@ -130,7 +130,7 @@ const COPY = {
         desc: "Ein Marktplatz mit Grafik on chain, und eine Demo, falls du keine Wallet verbinden willst" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
-    workTitle: "Elf Repositories, und das neueste nimmt eine Wallet",
+    workTitle: "Zwölf Repositories, und das neueste läuft auf dem Handy",
     howEyebrow: "HALTUNG",
     howTitle: "Wie ich an Bauen herangehe",
     how: [

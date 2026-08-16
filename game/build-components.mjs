@@ -90,11 +90,11 @@ const CLOUDS = [
   { cx: 0.78, cy: 0.0220, rx: 80,  ry: 18 },  // header, right of the name pane
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
-  { cx: 0.62, cy: 0.1308, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2195, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.3743, rx: 140, ry: 18 },  // work header
+  { cx: 0.62, cy: 0.1245, rx: 130, ry: 22 },  // intro
+  { cx: 0.30, cy: 0.2090, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.3564, rx: 140, ry: 18 },  // work header
   { cx: 0.12, cy: 0.6683, rx: 120, ry: 20 },  // how
-  { cx: 0.72, cy: 0.8758, rx: 160, ry: 24 },  // foot
+  { cx: 0.72, cy: 0.8809, rx: 160, ry: 24 },  // foot
 ];
 
 let skyId = 0;
@@ -267,15 +267,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
 // unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "11",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+  { n: "12",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "550",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "637",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "109",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "120",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -381,9 +381,15 @@ function stack(t, lang, o = {}) {
  * below is why it cannot happen quietly again. If you add one card, add two,
  * or say why the grid changed shape. */
 const CARDS = [
-  /* Wide, and first, because it is the newest and the only one you can use
-     with a wallet. Wide cards must stay at the top of this list: `cardLayout`
-     assumes it. */
+  /* Wide, and first, because it is the newest and the only one you can walk
+     into on a phone. Wide cards must stay at the top of this list:
+     `cardLayout` assumes it. */
+  { id: "lounge", repo: "arena-lounge", title: "Arena Lounge", lang: "Decentraland SDK7 · TypeScript", wide: true,
+    blurb: ["A game lounge in Decentraland, built for phones:", "shared tables, three games, a house bot, no server."],
+    blurbDe: ["Eine Spiel-Lounge in Decentraland, gebaut fürs Handy:", "gemeinsame Tische, drei Spiele, ein Bot, kein Server."],
+    meta: "87 tests · 3 games · plays on a phone",
+    metaDe: "87 Tests · 3 Spiele · läuft auf dem Handy", accent: true },
+  /* Wide too: the only one you can use with a wallet. */
   { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon", wide: true,
     blurb: ["An NFT marketplace where the art is drawn on chain,", "and the front end talks to it with no library at all."],
     blurbDe: ["Ein NFT-Marktplatz, dessen Grafik on chain entsteht,", "und ein Frontend ganz ohne Library."],

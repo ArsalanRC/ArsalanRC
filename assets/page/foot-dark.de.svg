@@ -3,23 +3,23 @@
     <title>Kontakt</title>
     
     <defs>
-      <linearGradient id="ramp-s54" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3190.625" x2="0" y2="575">
+      <linearGradient id="ramp-s55" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3380.625" x2="0" y2="575">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s54" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s55" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s54"><rect width="1000" height="299"/></clipPath>
-      <radialGradient id="sun-s54" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3341.25" r="2071.09375">
+      <clipPath id="clip-s55"><rect width="1000" height="299"/></clipPath>
+      <radialGradient id="sun-s55" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3538.85" r="2175.59375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="299" fill="url(#ramp-s54)"/><rect width="1000" height="299" fill="url(#sun-s54)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s54)" clip-path="url(#clip-s54)"><ellipse cx="720" cy="107.30937500000027" rx="160" ry="24"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <rect width="1000" height="299" fill="url(#ramp-s55)"/><rect width="1000" height="299" fill="url(#sun-s55)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s55)" clip-path="url(#clip-s55)"><ellipse cx="720" cy="103.8850625" rx="160" ry="24"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">ANDERSWO</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Kontakt</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">Über LinkedIn erreichst du mich am besten. Das Portfolio auf arsalanrc.github.io zeigt dieselbe Arbeit, mit den Demos</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
