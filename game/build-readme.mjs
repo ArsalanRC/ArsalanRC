@@ -27,7 +27,7 @@
  */
 
 import { writeFileSync } from "node:fs";
-import { THEME, prose, tryRow, TRY_ROW_H, linkTile, stats, statsAlt, stack, card, CARDS, cardLayout, cardRowCount } from "./build-components.mjs";
+import { THEME, prose, tryRow, TRY_ROW_H, linkTile, stats, statsAlt, stack, stackAlt, card, CARDS, cardLayout, cardRowCount } from "./build-components.mjs";
 import { header, HEADER_THEME, HEADER_H } from "./build-header.mjs";
 
 const OUT = new URL("../assets/page/", import.meta.url);
@@ -82,7 +82,7 @@ const COPY = {
         desc: "A marketplace with the art drawn on chain, and a demo if you would rather not connect a wallet" },
     ],
     workEyebrow: "SELECTED WORK",
-    workTitle: "Twelve repositories, and the newest one plays on a phone",
+    workTitle: "Eleven repositories, and the newest one plays on a phone",
     howEyebrow: "APPROACH",
     howTitle: "How I think about building",
     how: [
@@ -130,7 +130,7 @@ const COPY = {
         desc: "Ein Marktplatz mit Grafik on chain, und eine Demo, falls du keine Wallet verbinden willst" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
-    workTitle: "Zwölf Repositories, und das neueste läuft auf dem Handy",
+    workTitle: "Elf Repositories, und das neueste läuft auf dem Handy",
     howEyebrow: "HALTUNG",
     howTitle: "Wie ich an Bauen herangehe",
     how: [
@@ -395,7 +395,7 @@ function markdown(lang) {
       return pic(`card-${card.id}`, `${card.title}: ${blurb}`, width, href);
     }),
     pic("how", howAlt),
-    pic("stack", "Stack. Shipping today: TypeScript, Python, Java, JavaScript, Node.js, PostgreSQL. Day job also: Next.js, Nuxt, React, Tailwind, CSS, SQL, Supabase, REST, Webhooks, Bash. Next on the plan: Rust, C++, C, C#."),
+    pic("stack", stackAlt(lang)),
     pic("foot", footAlt),
     ...PROFILE_LINKS.map((l) => pic(`link-${l.icon}`, `${l.label}: ${l.url}`, 'width="100%"', l.href)),
   ];

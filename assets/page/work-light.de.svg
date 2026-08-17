@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 160" width="1000" height="160"
-    role="img" aria-label="Zwölf Repositories, und das neueste läuft auf dem Handy">
-    <title>Zwölf Repositories, und das neueste läuft auf dem Handy</title>
+    role="img" aria-label="Elf Repositories, und das neueste läuft auf dem Handy">
+    <title>Elf Repositories, und das neueste läuft auf dem Handy</title>
     
     <defs>
       <linearGradient id="ramp-s130" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1320.625" x2="0" y2="2635">
+                      x1="0" y1="-1320.625" x2="0" y2="2445">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
@@ -13,13 +13,13 @@
       </filter>
       <clipPath id="clip-s130"><rect width="1000" height="160"/></clipPath>
       <radialGradient id="sun-s130" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1478.85" r="2175.59375">
+                      cx="820" cy="-1471.25" r="2071.09375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1000" height="160" fill="url(#ramp-s130)"/><rect width="1000" height="160" fill="url(#sun-s130)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s130)" clip-path="url(#clip-s130)"><ellipse cx="880" cy="89.15975000000003" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s130)" clip-path="url(#clip-s130)"><ellipse cx="880" cy="74.91562499999986" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">AUSGEWÄHLTE ARBEITEN</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
-      font-weight="800" letter-spacing="-1" fill="#15202B">Zwölf Repositories, und das neueste läuft auf dem Handy</text>
+      font-weight="800" letter-spacing="-1" fill="#15202B">Elf Repositories, und das neueste läuft auf dem Handy</text>
   </svg>

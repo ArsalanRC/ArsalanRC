@@ -1,34 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 190" width="1000" height="190"
-    role="img" aria-label="plinth: Ein NFT-Marktplatz, dessen Grafik on chain entsteht, und ein Frontend ganz ohne Library.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
+    role="img" aria-label="plinth: Ein NFT-Marktplatz, Grafik on chain, Frontend ohne Library.">
     <title>plinth</title>
     
     <defs>
       <linearGradient id="ramp-s145" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1670.625" x2="0" y2="2285">
+                      x1="0" y1="-1480.625" x2="0" y2="2285">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
       <filter id="soft-s145" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s145"><rect width="1000" height="190"/></clipPath>
+      <clipPath id="clip-s145"><rect width="500" height="190"/></clipPath>
       <radialGradient id="sun-s145" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1828.85" r="2175.59375">
+                      cx="320" cy="-1631.25" r="2071.09375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="190" fill="url(#ramp-s145)"/><rect width="1000" height="190" fill="url(#sun-s145)"/>
+    <rect width="500" height="190" fill="url(#ramp-s145)"/><rect width="500" height="190" fill="url(#sun-s145)"/>
     
     <defs><filter id="lift-l128" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.16"/>
        </filter></defs>
-    <rect x="14" y="14" width="972" height="162" rx="12"
+    <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
           stroke="#E8552B" stroke-opacity="0.42"
           filter="url(#lift-l128)"/>
-    <path d="M26 14.75 H974" stroke="#FFFFFF"
+    <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#15202B">plinth</text>
@@ -36,15 +36,15 @@
          to source, and a try-it row is a link to something running. The row has
          carried a play triangle since it shipped; this is its opposite number.
          A card that links to a page instead (repo still private) carries no kicker. -->
-    <text x="964" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <text x="464" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           font-weight="700" letter-spacing="1.4" fill="#E8552B"
           fill-opacity="0.9">[ code ]</text>
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#4B6274">SOLIDITY · POLYGON</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#4B6274">Ein NFT-Marktplatz, dessen Grafik on chain entsteht,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#4B6274">und ein Frontend ganz ohne Library.</text>
-    <line x1="36" y1="152" x2="964" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
+             fill="#4B6274">Ein NFT-Marktplatz, Grafik on</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#4B6274">chain, Frontend ohne Library.</text>
+    <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#8FA9BC">100 Tests · 8 Mutationen, alle gefangen · minten, anbieten, kaufen</text>
+          fill="#8FA9BC">132 Tests · 13 Mutationen · minten, kaufen</text>
   </svg>

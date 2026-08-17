@@ -4,7 +4,7 @@
     
     <defs>
       <linearGradient id="ramp-s16" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3380.625" x2="0" y2="575">
+                      x1="0" y1="-3190.625" x2="0" y2="575">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
@@ -13,13 +13,13 @@
       </filter>
       <clipPath id="clip-s16"><rect width="1000" height="299"/></clipPath>
       <radialGradient id="sun-s16" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3538.85" r="2175.59375">
+                      cx="820" cy="-3341.25" r="2071.09375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1000" height="299" fill="url(#ramp-s16)"/><rect width="1000" height="299" fill="url(#sun-s16)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s16)" clip-path="url(#clip-s16)"><ellipse cx="720" cy="103.8850625" rx="160" ry="24"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s16)" clip-path="url(#clip-s16)"><ellipse cx="720" cy="126.51406249999991" rx="160" ry="24"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">ELSEWHERE</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Get in touch</text><text x="44" y="146" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#9FB6C6">LinkedIn is the best way to reach me. The portfolio at arsalanrc.github.io shows the same work, with the demos running</text><text x="44" y="171" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"

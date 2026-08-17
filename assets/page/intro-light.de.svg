@@ -4,7 +4,7 @@
     
     <defs>
       <linearGradient id="ramp-s127" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-265.625" x2="0" y2="3690">
+                      x1="0" y1="-265.625" x2="0" y2="3500">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
@@ -13,13 +13,13 @@
       </filter>
       <clipPath id="clip-s127"><rect width="1000" height="311"/></clipPath>
       <radialGradient id="sun-s127" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-423.85" r="2175.59375">
+                      cx="820" cy="-416.25" r="2071.09375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1000" height="311" fill="url(#ramp-s127)"/><rect width="1000" height="311" fill="url(#sun-s127)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s127)" clip-path="url(#clip-s127)"><ellipse cx="140" cy="98.29250000000002" rx="150" ry="26"/><ellipse cx="200" cy="92.3590625" rx="90" ry="21"/><ellipse cx="620" cy="226.85031249999997" rx="130" ry="22"/></g><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s127)" clip-path="url(#clip-s127)"><ellipse cx="140" cy="80.8125" rx="150" ry="26"/><ellipse cx="200" cy="75.1640625" rx="90" ry="21"/><ellipse cx="620" cy="203.1953125" rx="130" ry="22"/></g><text x="44" y="26" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5" fill="#4B6274">
           <tspan font-weight="700" fill="#15202B">Softwarearchitekt und Full-Stack-Engineer.</tspan> Aktuell Software Development Manager, das heißt, mir gehören die Systeme</text><text x="44" y="51" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">und die Roadmap, dazu ein ordentlicher Teil der Commits.</text><text x="44" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"
           fill="#4B6274">Der größte Teil meiner Arbeit liegt auf der unglamourösen Hälfte der Softwareentwicklung: Systeme dazu bringen,</text><text x="44" y="133" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="15.5"

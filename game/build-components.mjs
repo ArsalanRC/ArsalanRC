@@ -91,8 +91,8 @@ const CLOUDS = [
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1245, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2090, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.3564, rx: 140, ry: 18 },  // work header
+  { cx: 0.30, cy: 0.2163, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.3706, rx: 140, ry: 18 },  // work header
   { cx: 0.12, cy: 0.6683, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8809, rx: 160, ry: 24 },  // foot
 ];
@@ -316,15 +316,48 @@ function stats(t, lang, o = {}) {
 // only sits in the top row once there is something public written in it, which
 // is the whole point of the row. Rust stays in the bottom row until there is:
 // a university project that ran out of time is not something to claim.
+/*
+ * `enAlt` and `deAlt` are the spoken forms, and they are written out rather
+ * than derived from the display label. The labels are upper case for the
+ * design, and lower-casing them mechanically gives "Im einsatz", which is wrong
+ * in German: the noun keeps its capital. Same reason `STATS` carries its own
+ * alt strings.
+ */
 const STACK = [
-  { en: "SHIPPING TODAY", de: "IM EINSATZ",
+  { en: "SHIPPING TODAY", de: "IM EINSATZ", enAlt: "Shipping today", deAlt: "Im Einsatz",
     items: ["TypeScript", "Python", "Java", "Solidity", "JavaScript", "Node.js", "PostgreSQL"] },
-  { en: "DAY JOB", de: "IM BERUF",
+  { en: "DAY JOB", de: "IM BERUF", enAlt: "Day job also", deAlt: "Im Beruf außerdem",
     items: ["TypeScript", "JavaScript", "Next.js", "Nuxt", "Node.js", "React", "Tailwind", "CSS",
             "Python", "SQL", "PostgreSQL", "Supabase", "REST", "Webhooks", "Bash"] },
   { en: "NEXT ON THE PLAN", de: "ALS NÄCHSTES GEPLANT",
+    enAlt: "Next on the plan", deAlt: "Als Nächstes geplant",
     items: ["Rust", "C++", "C", "C#"], muted: true },
 ];
+
+/**
+ * Spoken form of the stack strip, derived from `STACK` rather than retyped.
+ *
+ * This existed as a hand-written English sentence in `build-readme.mjs` and it
+ * had already drifted: Solidity was in the picture and missing from the words,
+ * and German readers were served the English list. Same lesson as the stats
+ * alt, which is why it now works the same way. When a thing has to appear
+ * twice, derive the second one.
+ *
+ * The day-job row drops anything the shipping row already said. Fifteen pills
+ * read aloud is a long sentence, and hearing "TypeScript, JavaScript, Python"
+ * twice in it helps nobody.
+ */
+export const stackAlt = (lang) => {
+  const de = lang === "de";
+  const shipping = STACK[0].items;
+
+  const rows = STACK.map((row, i) => {
+    const items = i === 1 ? row.items.filter((item) => !shipping.includes(item)) : row.items;
+    return `${row[de ? "deAlt" : "enAlt"]}: ${items.join(", ")}`;
+  });
+
+  return `Stack. ${rows.join(". ")}.`;
+};
 
 function stack(t, lang, o = {}) {
   /* Pills wrap. The day-job row carries fifteen of them now, because the real
@@ -383,20 +416,23 @@ function stack(t, lang, o = {}) {
  * below is why it cannot happen quietly again. If you add one card, add two,
  * or say why the grid changed shape. */
 const CARDS = [
-  /* Wide, and first, because it is the newest and the only one you can walk
-     into on a phone. Wide cards must stay at the top of this list:
-     `cardLayout` assumes it. */
-  { id: "lounge", repo: "arena-lounge", page: "https://arsalanrc.github.io/arena-lounge/", title: "Arena Lounge", lang: "Decentraland · TypeScript", wide: true,
-    blurb: ["My Friendzone Mobile Buildathon 2026 entry, kept under wraps:", "what it is and how it plays appears after 4 September 2026."],
-    blurbDe: ["Mein Beitrag zum Friendzone Mobile Buildathon 2026, unter Verschluss:", "was es ist und wie es sich spielt, erscheint nach dem 4. September 2026."],
-    meta: "Buildathon 2026 entry · revealed after 4 Sept · code opens Sept 2026",
-    metaDe: "Buildathon-Beitrag 2026 · Enthüllung nach dem 4. Sept. · Code ab Sept. 2026", accent: true },
-  /* Wide too: the only one you can use with a wallet. */
-  { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon", wide: true,
-    blurb: ["An NFT marketplace where the art is drawn on chain,", "and the front end talks to it with no library at all."],
-    blurbDe: ["Ein NFT-Marktplatz, dessen Grafik on chain entsteht,", "und ein Frontend ganz ohne Library."],
-    meta: "100 tests · 8 mutations, all caught · mint, list, buy",
-    metaDe: "100 Tests · 8 Mutationen, alle gefangen · minten, anbieten, kaufen", accent: true },
+  /* The two newest, sharing the first row. They were a full-width card each
+     until 2026-08-17, when Arsalan asked for them side by side: two of them
+     stacked pushed everything else below the fold, and a row of two reads as a
+     pair rather than as two announcements. The copy is shorter to match, since
+     a half-width card holds about forty characters a line rather than seventy. */
+  { id: "lounge", repo: "arena-lounge", page: "https://arsalanrc.github.io/arena-lounge/", title: "Arena Lounge", lang: "Decentraland · TypeScript",
+    blurb: ["My Buildathon 2026 entry, still", "under wraps until 4 September."],
+    blurbDe: ["Mein Buildathon-Beitrag 2026,", "unter Verschluss bis 4. September."],
+    /* No longer promises the source. Arsalan's decision 2026-08-17: the repo
+       stays private and the showcase page carries it instead. */
+    meta: "Buildathon 2026 · revealed after 4 Sept",
+    metaDe: "Buildathon 2026 · Enthüllung nach 4. Sept.", accent: true },
+  { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon",
+    blurb: ["An NFT marketplace with the art", "drawn on chain, and no library."],
+    blurbDe: ["Ein NFT-Marktplatz, Grafik on", "chain, Frontend ohne Library."],
+    meta: "132 tests · 13 mutations · mint, list, buy",
+    metaDe: "132 Tests · 13 Mutationen · minten, kaufen", accent: true },
   { id: "slotting", repo: "slotting", title: "slotting", lang: "Python",
     blurb: ["The picker walks one route, not many.", "Frequency ranking cannot see that."],
     blurbDe: ["Eine Tour, nicht viele Einzelwege.", "Häufigkeit sieht das nicht."],
