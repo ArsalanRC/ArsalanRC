@@ -85,17 +85,24 @@ if (String(publicRepos.length) !== tileRepos) {
 }
 
 /*
- * The merged-PR tile deliberately reads one high mid-session.
+ * The merged-PR tile cannot be exact, and chasing the last one is a trap.
  *
- * It holds the count *after* the pull request carrying it lands, so committing
- * the API's answer leaves it short by that very pull request. Anything other
- * than exactly one ahead is real drift.
+ * It holds the count *after* the pull request carrying it lands, so while that
+ * pull request is open it reads one ahead of the API. And this number lives on
+ * two surfaces, here and the portfolio, which land one after the other: the
+ * second one to merge leaves the first one behind by one. Correcting that costs
+ * another pull request, which moves the count again, which leaves it behind by
+ * one. There is no fixed point.
+ *
+ * So the band is plus or minus one, and it is a band on purpose. Ten behind is
+ * the drift worth catching, which is what this was actually at. A check that
+ * fails every single session is a check people stop reading.
  */
 const ahead = Number(tilePrs) - merged;
-if (ahead !== 1) {
+if (ahead > 1 || ahead < -1) {
   problems.push(
-    `merged PRs: tile says ${tilePrs}, the API says ${merged}. The tile should be ` +
-      `${merged + 1}, one ahead, because it counts its own pull request.`,
+    `merged PRs: tile says ${tilePrs}, the API says ${merged}, which is ` +
+      `${Math.abs(ahead)} out. The tile should be ${merged} or ${merged + 1}.`,
   );
 }
 
