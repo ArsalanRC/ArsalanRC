@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 190" width="1000" height="190"
-    role="img" aria-label="Arena Lounge: A game lounge in Decentraland, built for phones: shared tables, fourteen games, house bots, no server.">
+    role="img" aria-label="Arena Lounge: My Friendzone Mobile Buildathon 2026 entry, kept under wraps: what it is and how it plays appears after 4 September 2026.">
     <title>Arena Lounge</title>
     
     <defs>
@@ -34,11 +34,11 @@
           letter-spacing="-0.6" fill="#EAF1F7">Arena Lounge</text>
     
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="#9FB6C6">DECENTRALAND SDK7 · TYPESCRIPT</text>
+          letter-spacing="2" fill="#9FB6C6">DECENTRALAND · TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">A game lounge in Decentraland, built for phones:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">shared tables, fourteen games, house bots, no server.</text>
+             fill="#9FB6C6">My Friendzone Mobile Buildathon 2026 entry, kept under wraps:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">what it is and how it plays appears after 4 September 2026.</text>
     <line x1="36" y1="152" x2="964" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#6C879A">561 tests · 14 games · live in Decentraland · code opens Sept 2026</text>
+          fill="#6C879A">Buildathon 2026 entry · revealed after 4 Sept · code opens Sept 2026</text>
   </svg>

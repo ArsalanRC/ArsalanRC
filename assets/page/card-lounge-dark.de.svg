@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 190" width="1000" height="190"
-    role="img" aria-label="Arena Lounge: Eine Spiel-Lounge in Decentraland, gebaut fürs Handy: gemeinsame Tische, vierzehn Spiele, Bots, kein Server.">
+    role="img" aria-label="Arena Lounge: Mein Beitrag zum Friendzone Mobile Buildathon 2026, unter Verschluss: was es ist und wie es sich spielt, erscheint nach dem 4. September 2026.">
     <title>Arena Lounge</title>
     
     <defs>
@@ -34,11 +34,11 @@
           letter-spacing="-0.6" fill="#EAF1F7">Arena Lounge</text>
     
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
-          letter-spacing="2" fill="#9FB6C6">DECENTRALAND SDK7 · TYPESCRIPT</text>
+          letter-spacing="2" fill="#9FB6C6">DECENTRALAND · TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">Eine Spiel-Lounge in Decentraland, gebaut fürs Handy:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">gemeinsame Tische, vierzehn Spiele, Bots, kein Server.</text>
+             fill="#9FB6C6">Mein Beitrag zum Friendzone Mobile Buildathon 2026, unter Verschluss:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">was es ist und wie es sich spielt, erscheint nach dem 4. September 2026.</text>
     <line x1="36" y1="152" x2="964" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#6C879A">561 Tests · 14 Spiele · live in Decentraland · Code ab Sept. 2026</text>
+          fill="#6C879A">Buildathon-Beitrag 2026 · Enthüllung nach dem 4. Sept. · Code ab Sept. 2026</text>
   </svg>
