@@ -275,7 +275,7 @@ const STATS = [
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "131",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "135",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
