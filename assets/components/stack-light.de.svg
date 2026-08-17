@@ -47,6 +47,14 @@
                 fill="#15202B">Java</text>
         </g>
         <g transform="translate(296 40)">
+          <rect width="94.8" height="30" rx="15"
+                fill="#FFFFFF" fill-opacity="0.68"
+                stroke="#15202B" stroke-opacity="0.13"
+                stroke-dasharray="0"/>
+          <text x="47.4" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
+                fill="#15202B">Solidity</text>
+        </g>
+        <g transform="translate(398.8 40)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"
                 stroke="#15202B" stroke-opacity="0.13"
@@ -54,7 +62,7 @@
           <text x="56" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#15202B">JavaScript</text>
         </g>
-        <g transform="translate(416 40)">
+        <g transform="translate(518.8 40)">
           <rect width="86.19999999999999" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"
                 stroke="#15202B" stroke-opacity="0.13"
@@ -62,7 +70,7 @@
           <text x="43.099999999999994" y="20" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="12.5"
                 fill="#15202B">Node.js</text>
         </g>
-        <g transform="translate(510.2 40)">
+        <g transform="translate(613 40)">
           <rect width="112" height="30" rx="15"
                 fill="#FFFFFF" fill-opacity="0.68"
                 stroke="#15202B" stroke-opacity="0.13"
