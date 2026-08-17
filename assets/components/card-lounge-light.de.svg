@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="Arena Lounge: Eine Spiel-Lounge in Decentraland, gebaut fürs Handy: gemeinsame Tische, drei Spiele, ein Bot, kein Server.">
+    role="img" aria-label="Arena Lounge: Eine Spiel-Lounge in Decentraland, gebaut fürs Handy: gemeinsame Tische, vierzehn Spiele, Bots, kein Server.">
     <title>Arena Lounge</title>
     
     <defs>
@@ -32,18 +32,13 @@
           stroke-opacity="0.85" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="#15202B">Arena Lounge</text>
-    <!-- The one thing the page never said out loud: a card is a link
-         to source, and a try-it row is a link to something running. The row has
-         carried a play triangle since it shipped; this is its opposite number. -->
-    <text x="464" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          font-weight="700" letter-spacing="1.4" fill="#E8552B"
-          fill-opacity="0.9">[ code ]</text>
+    
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#4B6274">DECENTRALAND SDK7 · TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
              fill="#4B6274">Eine Spiel-Lounge in Decentraland, gebaut fürs Handy:</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#4B6274">gemeinsame Tische, drei Spiele, ein Bot, kein Server.</text>
+             fill="#4B6274">gemeinsame Tische, vierzehn Spiele, Bots, kein Server.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#8FA9BC">87 Tests · 3 Spiele · läuft auf dem Handy · Code ab Sept. 2026</text>
+          fill="#8FA9BC">561 Tests · 14 Spiele · live in Decentraland · Code ab Sept. 2026</text>
   </svg>

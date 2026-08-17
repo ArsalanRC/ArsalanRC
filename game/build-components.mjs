@@ -385,10 +385,10 @@ const CARDS = [
      into on a phone. Wide cards must stay at the top of this list:
      `cardLayout` assumes it. */
   { id: "lounge", repo: "arena-lounge", page: "https://arsalanrc.github.io/arena-lounge/", title: "Arena Lounge", lang: "Decentraland SDK7 · TypeScript", wide: true,
-    blurb: ["A game lounge in Decentraland, built for phones:", "shared tables, three games, a house bot, no server."],
-    blurbDe: ["Eine Spiel-Lounge in Decentraland, gebaut fürs Handy:", "gemeinsame Tische, drei Spiele, ein Bot, kein Server."],
-    meta: "87 tests · 3 games · plays on a phone · code opens Sept 2026",
-    metaDe: "87 Tests · 3 Spiele · läuft auf dem Handy · Code ab Sept. 2026", accent: true },
+    blurb: ["A game lounge in Decentraland, built for phones:", "shared tables, fourteen games, house bots, no server."],
+    blurbDe: ["Eine Spiel-Lounge in Decentraland, gebaut fürs Handy:", "gemeinsame Tische, vierzehn Spiele, Bots, kein Server."],
+    meta: "561 tests · 14 games · live in Decentraland · code opens Sept 2026",
+    metaDe: "561 Tests · 14 Spiele · live in Decentraland · Code ab Sept. 2026", accent: true },
   /* Wide too: the only one you can use with a wallet. */
   { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon", wide: true,
     blurb: ["An NFT marketplace where the art is drawn on chain,", "and the front end talks to it with no library at all."],
@@ -494,9 +494,10 @@ function card(t, c, lang, o = {}, wide = false) {
     ${glass(t, 14, 14, W - 28, H - 28, 12, { stroke: accent, strokeOpacity: t.cardEdge, lift: true })}
     <text x="36" y="52" font-family='${SANS}' font-size="22" font-weight="800"
           letter-spacing="-0.6" fill="${t.text}">${esc(c.title)}</text>
-    ${c.repo ? `<!-- The one thing the page never said out loud: a card is a link
+    ${c.repo && !c.page ? `<!-- The one thing the page never said out loud: a card is a link
          to source, and a try-it row is a link to something running. The row has
-         carried a play triangle since it shipped; this is its opposite number. -->
+         carried a play triangle since it shipped; this is its opposite number.
+         A card that links to a page instead (repo still private) carries no kicker. -->
     <text x="${W - 36}" y="50" text-anchor="end" font-family='${MONO}' font-size="10.5"
           font-weight="700" letter-spacing="1.4" fill="${accent}"
           fill-opacity="0.9">[ code ]</text>` : ""}
