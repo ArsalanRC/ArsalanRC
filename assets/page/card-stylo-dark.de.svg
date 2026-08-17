@@ -34,7 +34,8 @@
           letter-spacing="-0.6" fill="#EAF1F7">stylo</text>
     <!-- The one thing the page never said out loud: a card is a link
          to source, and a try-it row is a link to something running. The row has
-         carried a play triangle since it shipped; this is its opposite number. -->
+         carried a play triangle since it shipped; this is its opposite number.
+         A card that links to a page instead (repo still private) carries no kicker. -->
     <text x="464" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
           font-weight="700" letter-spacing="1.4" fill="#FF6A3D"
           fill-opacity="0.9">[ code ]</text>
