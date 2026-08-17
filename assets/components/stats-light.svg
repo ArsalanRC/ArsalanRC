@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 168" width="1000" height="168"
-    role="img" aria-label="11 public repositories, 619 tests passing, 0 runtime dependencies, 100% community standards, 131 merged pull requests">
+    role="img" aria-label="11 public repositories, 619 tests passing, 0 runtime dependencies, 100% community standards, 135 merged pull requests">
     <title>Profile statistics</title>
     
     <defs>
@@ -82,7 +82,7 @@
     <path d="M12 0.75 H171.2" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
         <text x="91.6" y="74" text-anchor="middle" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif'
-              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#15202B">131</text>
+              font-size="44" font-weight="800" letter-spacing="-1.5" fill="#15202B">135</text>
         <text x="91.6" y="102" text-anchor="middle" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace'
               font-size="10.5" letter-spacing="2.2" fill="#8FA9BC">MERGED PRS</text>
       </g></g>
