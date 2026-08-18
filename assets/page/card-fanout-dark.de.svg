@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 190" width="1000" height="190"
+    role="img" aria-label="fanout: Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt.">
+    <title>fanout</title>
+    
+    <defs>
+      <linearGradient id="ramp-s70" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1584.625" x2="0" y2="2475">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <filter id="soft-s70" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s70"><rect width="1000" height="190"/></clipPath>
+      <radialGradient id="sun-s70" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1747.01" r="2232.7937500000003">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="190" fill="url(#ramp-s70)"/><rect width="1000" height="190" fill="url(#sun-s70)"/>
+    
+    <defs><filter id="lift-l62" x="-25%" y="-25%" width="150%" height="170%">
+         <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
+                       flood-opacity="0.4"/>
+       </filter></defs>
+    <rect x="14" y="14" width="972" height="162" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FF6A3D" stroke-opacity="0.5"
+          filter="url(#lift-l62)"/>
+    <path d="M26 14.75 H974" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+    <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
+          letter-spacing="-0.6" fill="#EAF1F7">fanout</text>
+    <!-- The one thing the page never said out loud: a card is a link
+         to source, and a try-it row is a link to something running. The row has
+         carried a play triangle since it shipped; this is its opposite number.
+         A card that links to a page instead (repo still private) carries no kicker. -->
+    <text x="964" y="50" text-anchor="end" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+          font-weight="700" letter-spacing="1.4" fill="#FF6A3D"
+          fill-opacity="0.9">[ code ]</text>
+    <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
+          letter-spacing="2" fill="#9FB6C6">JAVA · 2 SERVICES</text>
+    <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt.</text>
+    <line x1="36" y1="152" x2="964" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+          fill="#6C879A">138 Tests · 0 Abhängigkeiten · die Frist überquert die Leitung</text>
+  </svg>

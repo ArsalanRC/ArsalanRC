@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 104" width="1000" height="104"
+    role="img" aria-label="Miss a deadline on purpose: Four suppliers answer at their real speeds, then cut the budget and watch one drop out">
+    <title>Miss a deadline on purpose</title>
+    
+    <defs>
+      <linearGradient id="ramp-s28" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1320.625" x2="0" y2="2739">
+        <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
+        <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
+      </linearGradient>
+      <filter id="soft-s28" x="-40%" y="-200%" width="180%" height="500%">
+        <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <clipPath id="clip-s28"><rect width="1000" height="104"/></clipPath>
+      <radialGradient id="sun-s28" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1483.01" r="2232.7937500000003">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
+        <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1000" height="104" fill="url(#ramp-s28)"/><rect width="1000" height="104" fill="url(#sun-s28)"/>
+    
+    
+    <rect x="14" y="10" width="972" height="84" rx="12"
+          fill="#FFFFFF" fill-opacity="0.055"
+          stroke="#FFFFFF" stroke-opacity="0.13"
+          />
+    <path d="M26 10.75 H974" stroke="#FFFFFF"
+          stroke-opacity="0.14" stroke-width="1.5"/>
+    <text x="30" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#FF6A3D">&#9654;</text>
+    <text x="52" y="45" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="16" font-weight="700"
+          fill="#EAF1F7">Miss a deadline on purpose</text>
+    <text x="52" y="67" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="13"
+             fill="#6C879A">Four suppliers answer at their real speeds, then cut the budget and watch one drop out</text>
+  </svg>

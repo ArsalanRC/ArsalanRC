@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 160" width="1000" height="160"
-    role="img" aria-label="Elf Repositories, und das neueste läuft auf dem Handy">
-    <title>Elf Repositories, und das neueste läuft auf dem Handy</title>
+    role="img" aria-label="Zwölf Repositories, und das neueste ist ein System">
+    <title>Zwölf Repositories, und das neueste ist ein System</title>
     
     <defs>
-      <linearGradient id="ramp-s53" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1320.625" x2="0" y2="2445">
+      <linearGradient id="ramp-s55" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1424.625" x2="0" y2="2635">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s53" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s55" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s53"><rect width="1000" height="160"/></clipPath>
-      <radialGradient id="sun-s53" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1471.25" r="2071.09375">
+      <clipPath id="clip-s55"><rect width="1000" height="160"/></clipPath>
+      <radialGradient id="sun-s55" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1587.01" r="2232.7937500000003">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="160" fill="url(#ramp-s53)"/><rect width="1000" height="160" fill="url(#sun-s53)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s53)" clip-path="url(#clip-s53)"><ellipse cx="880" cy="74.91562499999986" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <rect width="1000" height="160" fill="url(#ramp-s55)"/><rect width="1000" height="160" fill="url(#sun-s55)"/>
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s55)" clip-path="url(#clip-s55)"><ellipse cx="880" cy="79.8720249999999" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">AUSGEWÄHLTE ARBEITEN</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
-      font-weight="800" letter-spacing="-1" fill="#EAF1F7">Elf Repositories, und das neueste läuft auf dem Handy</text>
+      font-weight="800" letter-spacing="-1" fill="#EAF1F7">Zwölf Repositories, und das neueste ist ein System</text>
   </svg>
