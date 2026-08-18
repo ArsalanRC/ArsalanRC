@@ -45,5 +45,5 @@
              fill="#4B6274">Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt.</text>
     <line x1="36" y1="152" x2="964" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#8FA9BC">138 Tests · 0 Abhängigkeiten · die Frist überquert die Leitung</text>
+          fill="#8FA9BC">139 Tests · 0 Abhängigkeiten · 7 Strecken · 364 Suchen</text>
   </svg>

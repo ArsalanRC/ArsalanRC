@@ -269,13 +269,13 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const STATS = [
   { n: "12",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "757",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "758",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "154",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "160",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -430,8 +430,8 @@ const CARDS = [
     lang: "Java · 2 Services", wide: true,
     blurb: ["Eight suppliers, one shared deadline, and an answer that names whoever did not reply."],
     blurbDe: ["Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt."],
-    meta: "138 tests · 0 deps · the deadline crosses the wire",
-    metaDe: "138 Tests · 0 Abhängigkeiten · die Frist überquert die Leitung", accent: true },
+    meta: "139 tests · 0 deps · 7 routes · 364 recorded searches",
+    metaDe: "139 Tests · 0 Abhängigkeiten · 7 Strecken · 364 Suchen", accent: true },
   /* The two newest, sharing the first row. They were a full-width card each
      until 2026-08-17, when Arsalan asked for them side by side: two of them
      stacked pushed everything else below the fold, and a row of two reads as a

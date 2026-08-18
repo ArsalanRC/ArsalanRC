@@ -45,5 +45,5 @@
              fill="#4B6274">Eight suppliers, one shared deadline, and an answer that names whoever did not reply.</text>
     <line x1="36" y1="152" x2="964" y2="152" stroke="#15202B" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#8FA9BC">138 tests · 0 deps · the deadline crosses the wire</text>
+          fill="#8FA9BC">139 tests · 0 deps · 7 routes · 364 recorded searches</text>
   </svg>
