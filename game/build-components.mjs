@@ -91,9 +91,9 @@ const CLOUDS = [
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1245, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.2163, rx: 170, ry: 22 },  // try header
+  { cx: 0.30, cy: 0.2036, rx: 170, ry: 22 },  // try header
   { cx: 0.88, cy: 0.3706, rx: 140, ry: 18 },  // work header
-  { cx: 0.12, cy: 0.6683, rx: 120, ry: 20 },  // how
+  { cx: 0.12, cy: 0.6923, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8809, rx: 160, ry: 24 },  // foot
 ];
 
@@ -267,15 +267,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
 // unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "11",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+  { n: "12",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "619",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "757",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "139",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "154",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -416,6 +416,22 @@ function stack(t, lang, o = {}) {
  * below is why it cannot happen quietly again. If you add one card, add two,
  * or say why the grid changed shape. */
 const CARDS = [
+  /* Wide, and therefore first, because the layout only allows full-width cards
+     at the top and eleven cards cannot be paired otherwise. One announcement
+     rather than two: Arsalan's objection on 2026-08-17 was to lounge and plinth
+     both taking a whole row, which pushed everything else below the fold.
+
+     It is also the one repo on the account whose subject is an architecture
+     rather than a library, which is the positioning the profile is arguing. */
+  /* No `page` here on purpose, unlike the lounge card. A card carrying `page`
+     drops its [ code ] badge, which is right when the source is private and
+     wrong here: fanout is public and the demo already has its own try-it row. */
+  { id: "fanout", repo: "fanout", title: "fanout",
+    lang: "Java · 2 Services", wide: true,
+    blurb: ["Eight suppliers, one shared deadline, and an answer that names whoever did not reply."],
+    blurbDe: ["Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt."],
+    meta: "138 tests · 0 deps · the deadline crosses the wire",
+    metaDe: "138 Tests · 0 Abhängigkeiten · die Frist überquert die Leitung", accent: true },
   /* The two newest, sharing the first row. They were a full-width card each
      until 2026-08-17, when Arsalan asked for them side by side: two of them
      stacked pushed everything else below the fold, and a row of two reads as a
