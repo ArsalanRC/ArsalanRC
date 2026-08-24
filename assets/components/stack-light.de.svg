@@ -3,23 +3,23 @@
     <title>Stack</title>
     
     <defs>
-      <linearGradient id="ramp-s41" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s44" gradientUnits="userSpaceOnUse"
                       x1="0" y1="0" x2="0" y2="272">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s41" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s44" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s41"><rect width="1000" height="272"/></clipPath>
-      <radialGradient id="sun-s41" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s44"><rect width="1000" height="272"/></clipPath>
+      <radialGradient id="sun-s44" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-10.88" r="149.60000000000002">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="272" fill="url(#ramp-s41)"/><rect width="1000" height="272" fill="url(#sun-s41)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s41)" clip-path="url(#clip-s41)"><ellipse cx="830" cy="7.072" rx="130" ry="24"/><ellipse cx="780" cy="5.984" rx="80" ry="18"/><ellipse cx="140" cy="25.024" rx="150" ry="26"/><ellipse cx="200" cy="24.616" rx="90" ry="21"/><ellipse cx="620" cy="33.864" rx="130" ry="22"/><ellipse cx="300" cy="55.3792" rx="170" ry="22"/><ellipse cx="880" cy="100.80319999999999" rx="140" ry="18"/><ellipse cx="120" cy="188.3056" rx="120" ry="20"/><ellipse cx="720" cy="239.6048" rx="160" ry="24"/></g>
+    <rect width="1000" height="272" fill="url(#ramp-s44)"/><rect width="1000" height="272" fill="url(#sun-s44)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s44)" clip-path="url(#clip-s44)"><ellipse cx="830" cy="7.072" rx="130" ry="24"/><ellipse cx="780" cy="5.984" rx="80" ry="18"/><ellipse cx="140" cy="25.024" rx="150" ry="26"/><ellipse cx="200" cy="24.616" rx="90" ry="21"/><ellipse cx="620" cy="30.790399999999998" rx="130" ry="22"/><ellipse cx="300" cy="51.652800000000006" rx="170" ry="22"/><ellipse cx="880" cy="100.80319999999999" rx="140" ry="18"/><ellipse cx="120" cy="188.3056" rx="120" ry="20"/><ellipse cx="720" cy="242.5696" rx="160" ry="24"/></g>
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
             letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">IM EINSATZ</text>
         <g transform="translate(22 40)">

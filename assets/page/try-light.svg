@@ -3,23 +3,23 @@
     <title>No install, no sign-up</title>
     
     <defs>
-      <linearGradient id="ramp-s96" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-744.625" x2="0" y2="3315">
+      <linearGradient id="ramp-s100" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-744.625" x2="0" y2="3609">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s96" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s100" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s96"><rect width="1000" height="160"/></clipPath>
-      <radialGradient id="sun-s96" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-907.01" r="2232.7937500000003">
+      <clipPath id="clip-s100"><rect width="1000" height="160"/></clipPath>
+      <radialGradient id="sun-s100" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-918.77" r="2394.49375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="160" fill="url(#ramp-s96)"/><rect width="1000" height="160" fill="url(#sun-s96)"/>
-    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s96)" clip-path="url(#clip-s96)"><ellipse cx="300" cy="81.91465000000005" rx="170" ry="22"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <rect width="1000" height="160" fill="url(#ramp-s100)"/><rect width="1000" height="160" fill="url(#sun-s100)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s100)" clip-path="url(#clip-s100)"><ellipse cx="300" cy="82.12838750000003" rx="170" ry="22"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">TRY SOMETHING OF MINE, RIGHT NOW</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#15202B">No install, no sign-up</text>
   </svg>

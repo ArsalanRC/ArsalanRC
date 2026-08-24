@@ -3,31 +3,31 @@
     <title>rally</title>
     
     <defs>
-      <linearGradient id="ramp-s122" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-2534.625" x2="0" y2="1525">
+      <linearGradient id="ramp-s128" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-2828.625" x2="0" y2="1525">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s122" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s128" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s122"><rect width="500" height="190"/></clipPath>
-      <radialGradient id="sun-s122" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-2697.01" r="2232.7937500000003">
+      <clipPath id="clip-s128"><rect width="500" height="190"/></clipPath>
+      <radialGradient id="sun-s128" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3002.77" r="2394.49375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="190" fill="url(#ramp-s122)"/><rect width="500" height="190" fill="url(#sun-s122)"/>
-    
-    <defs><filter id="lift-l110" x="-25%" y="-25%" width="150%" height="170%">
+    <rect width="500" height="190" fill="url(#ramp-s128)"/><rect width="500" height="190" fill="url(#sun-s128)"/>
+    <g fill="#FFFFFF" opacity="0.85" filter="url(#soft-s128)" clip-path="url(#clip-s128)"><ellipse cx="120" cy="185.3895875000003" rx="120" ry="20"/></g>
+    <defs><filter id="lift-l116" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.16"/>
        </filter></defs>
     <rect x="14" y="14" width="472" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
           stroke="#2B8FEA" stroke-opacity="0.42"
-          filter="url(#lift-l110)"/>
+          filter="url(#lift-l116)"/>
     <path d="M26 14.75 H474" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"

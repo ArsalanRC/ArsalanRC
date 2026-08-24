@@ -3,22 +3,22 @@
     <title>Reslot a warehouse floor</title>
     
     <defs>
-      <linearGradient id="ramp-s108" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1112.625" x2="0" y2="2947">
+      <linearGradient id="ramp-s112" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1112.625" x2="0" y2="3241">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s108" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s112" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s108"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s108" gradientUnits="userSpaceOnUse"
-                      cx="320" cy="-1275.01" r="2232.7937500000003">
+      <clipPath id="clip-s112"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s112" gradientUnits="userSpaceOnUse"
+                      cx="320" cy="-1286.77" r="2394.49375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s108)"/><rect width="500" height="104" fill="url(#sun-s108)"/>
+    <rect width="500" height="104" fill="url(#ramp-s112)"/><rect width="500" height="104" fill="url(#sun-s112)"/>
     
     
     <rect x="14" y="10" width="472" height="84" rx="12"
