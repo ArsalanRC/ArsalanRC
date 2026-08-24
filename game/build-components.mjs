@@ -269,13 +269,13 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const STATS = [
   { n: "13",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "1395", en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "1408", en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "263",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "267",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -451,8 +451,8 @@ const CARDS = [
   { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon",
     blurb: ["An NFT marketplace with the art", "drawn on chain, and no library."],
     blurbDe: ["Ein NFT-Marktplatz, Grafik on", "chain, Frontend ohne Library."],
-    meta: "188 tests · 13 mutations · mint, list, buy",
-    metaDe: "188 Tests · 13 Mutationen · minten, kaufen", accent: true },
+    meta: "201 tests · 13 mutations · mint, list, buy",
+    metaDe: "201 Tests · 13 Mutationen · minten, kaufen", accent: true },
   { id: "slotting", repo: "slotting", title: "slotting", lang: "Python",
     blurb: ["The picker walks one route, not many.", "Frequency ranking cannot see that."],
     blurbDe: ["Eine Tour, nicht viele Einzelwege.", "Häufigkeit sieht das nicht."],
