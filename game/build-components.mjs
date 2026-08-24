@@ -267,15 +267,15 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 // and "COMMUNITY STD" read aloud is not a phrase. A screen reader gets the
 // unabbreviated version; where the two agree the label is used as-is.
 const STATS = [
-  { n: "12",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
+  { n: "13",   en: "PUBLIC REPOS",  de: "ÖFFENTLICHE REPOS", accent: false,
     enAlt: "public repositories", deAlt: "öffentliche Repositories" },
-  { n: "803",  en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
+  { n: "1395", en: "TESTS PASSING", de: "TESTS GRÜN",        accent: true,
     enAlt: "tests passing", deAlt: "Tests grün" },
   { n: "0",    en: "RUNTIME DEPS",  de: "ABHÄNGIGKEITEN",    accent: true,
     enAlt: "runtime dependencies", deAlt: "Laufzeit-Abhängigkeiten" },
   { n: "100%", en: "COMMUNITY STD", de: "COMMUNITY STANDARD", accent: false,
     enAlt: "community standards", deAlt: "Community-Standard" },
-  { n: "172",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
+  { n: "259",  en: "MERGED PRS",    de: "GEMERGTE PRS",       accent: false,
     enAlt: "merged pull requests", deAlt: "gemergte Pull Requests" },
 ];
 
@@ -430,25 +430,29 @@ const CARDS = [
     lang: "Java · 2 Services", wide: true,
     blurb: ["Eight suppliers, one shared deadline, and an answer that names whoever did not reply."],
     blurbDe: ["Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt."],
-    meta: "139 tests · 0 deps · 7 routes · 364 recorded searches",
-    metaDe: "139 Tests · 0 Abhängigkeiten · 7 Strecken · 364 Suchen", accent: true },
+    meta: "159 tests · 0 deps · 7 routes · 364 recorded searches",
+    metaDe: "159 Tests · 0 Abhängigkeiten · 7 Strecken · 364 Suchen", accent: true },
   /* The two newest, sharing the first row. They were a full-width card each
      until 2026-08-17, when Arsalan asked for them side by side: two of them
      stacked pushed everything else below the fold, and a row of two reads as a
      pair rather than as two announcements. The copy is shorter to match, since
      a half-width card holds about forty characters a line rather than seventy. */
   { id: "lounge", repo: "arena-lounge", page: "https://arsalanrc.github.io/arena-lounge/", title: "Arena Lounge", lang: "Decentraland · TypeScript",
-    blurb: ["My Buildathon 2026 entry, still", "under wraps until 4 September."],
-    blurbDe: ["Mein Buildathon-Beitrag 2026,", "unter Verschluss bis 4. September."],
-    /* No longer promises the source. Arsalan's decision 2026-08-17: the repo
-       stays private and the showcase page carries it instead. */
-    meta: "Buildathon 2026 · revealed after 4 Sept",
-    metaDe: "Buildathon 2026 · Enthüllung nach 4. Sept.", accent: true },
+    blurb: ["Fourteen games at twenty-eight tables,", "on four floors, built for phones."],
+    blurbDe: ["Vierzehn Spiele an achtundzwanzig", "Tischen, gebaut fürs Handy zuerst."],
+    /* Still points at the showcase page rather than the source, and the reason
+       changed on 2026-08-22 when the repo went public and the entry went in.
+       It is not secrecy any more: this is a world you walk into, so the page
+       that shows it beats a directory listing. Nothing else in the README links
+       to that page, unlike the repos that have a try-it row of their own.
+       The meta carries MIT, so nobody has to infer the source is shut. */
+    meta: "561 tests · live in Decentraland · MIT",
+    metaDe: "561 Tests · live in Decentraland · MIT", accent: true },
   { id: "plinth", repo: "plinth", title: "plinth", lang: "Solidity · Polygon",
     blurb: ["An NFT marketplace with the art", "drawn on chain, and no library."],
     blurbDe: ["Ein NFT-Marktplatz, Grafik on", "chain, Frontend ohne Library."],
-    meta: "132 tests · 13 mutations · mint, list, buy",
-    metaDe: "132 Tests · 13 Mutationen · minten, kaufen", accent: true },
+    meta: "188 tests · 13 mutations · mint, list, buy",
+    metaDe: "188 Tests · 13 Mutationen · minten, kaufen", accent: true },
   { id: "slotting", repo: "slotting", title: "slotting", lang: "Python",
     blurb: ["The picker walks one route, not many.", "Frequency ranking cannot see that."],
     blurbDe: ["Eine Tour, nicht viele Einzelwege.", "Häufigkeit sieht das nicht."],
@@ -472,13 +476,13 @@ const CARDS = [
   { id: "chess", repo: "chess-engine", title: "chess-engine", lang: "TypeScript",
     blurb: ["Full FIDE rules and a minimax bot", "with alpha-beta pruning."],
     blurbDe: ["Alle FIDE-Regeln und ein Minimax-Bot", "mit Alpha-Beta-Pruning."],
-    meta: "49 tests · 0 deps · playable",
-    metaDe: "49 Tests · 0 Abhängigkeiten · spielbar", accent: false },
+    meta: "77 tests · 0 deps · playable",
+    metaDe: "77 Tests · 0 Abhängigkeiten · spielbar", accent: false },
   { id: "patterns", repo: "integration-patterns", title: "integration-patterns", lang: "TypeScript",
     blurb: ["Idempotency and retry with full jitter,", "each shown next to what it prevents."],
     blurbDe: ["Idempotenz und Retry mit Full Jitter,", "je neben dem Fehler, den sie verhindern."],
-    meta: "41 tests · Postgres · animated explainer",
-    metaDe: "41 Tests · Postgres · animiert erklärt", accent: false },
+    meta: "50 tests · Postgres · animated explainer",
+    metaDe: "50 Tests · Postgres · animiert erklärt", accent: false },
   { id: "rally", repo: "rally", title: "rally", lang: "TypeScript",
     blurb: ["Two browsers, one game, no server.", "Rollback netcode, peer to peer."],
     blurbDe: ["Zwei Browser, ein Spiel, kein Server.", "Rollback-Netcode, Peer-to-Peer."],

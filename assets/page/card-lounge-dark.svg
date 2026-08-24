@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 190" width="500" height="190"
-    role="img" aria-label="Arena Lounge: My Buildathon 2026 entry, still under wraps until 4 September.">
+    role="img" aria-label="Arena Lounge: Fourteen games at twenty-eight tables, on four floors, built for phones.">
     <title>Arena Lounge</title>
     
     <defs>
@@ -36,9 +36,9 @@
     <text x="36" y="74" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
           letter-spacing="2" fill="#9FB6C6">DECENTRALAND · TYPESCRIPT</text>
     <text x="36" y="108" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">My Buildathon 2026 entry, still</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
-             fill="#9FB6C6">under wraps until 4 September.</text>
+             fill="#9FB6C6">Fourteen games at twenty-eight tables,</text><text x="36" y="129" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="14"
+             fill="#9FB6C6">on four floors, built for phones.</text>
     <line x1="36" y1="152" x2="464" y2="152" stroke="#FFFFFF" stroke-opacity="0.13"/>
     <text x="36" y="171" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
-          fill="#6C879A">Buildathon 2026 · revealed after 4 Sept</text>
+          fill="#6C879A">561 tests · live in Decentraland · MIT</text>
   </svg>
