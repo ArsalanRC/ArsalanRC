@@ -3,22 +3,22 @@
     <title>Stack</title>
     
     <defs>
-      <linearGradient id="ramp-s166" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-3212.625" x2="0" y2="847">
+      <linearGradient id="ramp-s174" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-3506.625" x2="0" y2="847">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s166" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s174" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s166"><rect width="1000" height="272"/></clipPath>
-      <radialGradient id="sun-s166" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-3375.01" r="2232.7937500000003">
+      <clipPath id="clip-s174"><rect width="1000" height="272"/></clipPath>
+      <radialGradient id="sun-s174" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-3680.77" r="2394.49375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="272" fill="url(#ramp-s166)"/><rect width="1000" height="272" fill="url(#sun-s166)"/>
+    <rect width="1000" height="272" fill="url(#ramp-s174)"/><rect width="1000" height="272" fill="url(#sun-s174)"/>
     
       <text x="22" y="26" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5" font-weight="700"
             letter-spacing="2.4" fill="#FFFFFF" style="paint-order:stroke" stroke="#2E6EA6" stroke-opacity="0.55" stroke-width="2.5">IM EINSATZ</text>

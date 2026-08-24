@@ -3,22 +3,22 @@
     <title>Absichtlich eine Frist reißen</title>
     
     <defs>
-      <linearGradient id="ramp-s70" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1320.625" x2="0" y2="2739">
+      <linearGradient id="ramp-s72" gradientUnits="userSpaceOnUse"
+                      x1="0" y1="-1320.625" x2="0" y2="3033">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
-      <filter id="soft-s70" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s72" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s70"><rect width="500" height="104"/></clipPath>
-      <radialGradient id="sun-s70" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1483.01" r="2232.7937500000003">
+      <clipPath id="clip-s72"><rect width="500" height="104"/></clipPath>
+      <radialGradient id="sun-s72" gradientUnits="userSpaceOnUse"
+                      cx="820" cy="-1494.77" r="2394.49375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="500" height="104" fill="url(#ramp-s70)"/><rect width="500" height="104" fill="url(#sun-s70)"/>
+    <rect width="500" height="104" fill="url(#ramp-s72)"/><rect width="500" height="104" fill="url(#sun-s72)"/>
     
     
     <rect x="14" y="10" width="472" height="84" rx="12"
