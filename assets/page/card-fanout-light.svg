@@ -3,31 +3,31 @@
     <title>fanout</title>
     
     <defs>
-      <linearGradient id="ramp-s110" gradientUnits="userSpaceOnUse"
+      <linearGradient id="ramp-s113" gradientUnits="userSpaceOnUse"
                       x1="0" y1="-1584.625" x2="0" y2="2475">
         <stop offset="0" stop-color="#4E9BD9"/><stop offset="0.42" stop-color="#6FB2E6"/>
         <stop offset="0.78" stop-color="#97CBEF"/><stop offset="1" stop-color="#B9DEF6"/>
       </linearGradient>
-      <filter id="soft-s110" x="-40%" y="-200%" width="180%" height="500%">
+      <filter id="soft-s113" x="-40%" y="-200%" width="180%" height="500%">
         <feGaussianBlur stdDeviation="18"/>
       </filter>
-      <clipPath id="clip-s110"><rect width="1000" height="190"/></clipPath>
-      <radialGradient id="sun-s110" gradientUnits="userSpaceOnUse"
+      <clipPath id="clip-s113"><rect width="1000" height="190"/></clipPath>
+      <radialGradient id="sun-s113" gradientUnits="userSpaceOnUse"
                       cx="820" cy="-1747.01" r="2232.7937500000003">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <rect width="1000" height="190" fill="url(#ramp-s110)"/><rect width="1000" height="190" fill="url(#sun-s110)"/>
+    <rect width="1000" height="190" fill="url(#ramp-s113)"/><rect width="1000" height="190" fill="url(#sun-s113)"/>
     
-    <defs><filter id="lift-l98" x="-25%" y="-25%" width="150%" height="170%">
+    <defs><filter id="lift-l101" x="-25%" y="-25%" width="150%" height="170%">
          <feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#03080F"
                        flood-opacity="0.16"/>
        </filter></defs>
     <rect x="14" y="14" width="972" height="162" rx="12"
           fill="#FFFFFF" fill-opacity="0.68"
           stroke="#E8552B" stroke-opacity="0.42"
-          filter="url(#lift-l98)"/>
+          filter="url(#lift-l101)"/>
     <path d="M26 14.75 H974" stroke="#FFFFFF"
           stroke-opacity="0.85" stroke-width="1.5"/>
     <text x="36" y="52" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="22" font-weight="800"
