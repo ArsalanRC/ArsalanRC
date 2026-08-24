@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 160" width="1000" height="160"
-    role="img" aria-label="Twelve repositories, and the newest one is a system">
-    <title>Twelve repositories, and the newest one is a system</title>
+    role="img" aria-label="Thirteen repositories, and the newest one is a world">
+    <title>Thirteen repositories, and the newest one is a world</title>
     
     <defs>
       <linearGradient id="ramp-s14" gradientUnits="userSpaceOnUse"
@@ -21,5 +21,5 @@
     <rect width="1000" height="160" fill="url(#ramp-s14)"/><rect width="1000" height="160" fill="url(#sun-s14)"/>
     <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s14)" clip-path="url(#clip-s14)"><ellipse cx="880" cy="79.8720249999999" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">SELECTED WORK</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
-      font-weight="800" letter-spacing="-1" fill="#EAF1F7">Twelve repositories, and the newest one is a system</text>
+      font-weight="800" letter-spacing="-1" fill="#EAF1F7">Thirteen repositories, and the newest one is a world</text>
   </svg>

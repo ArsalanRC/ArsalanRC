@@ -84,7 +84,7 @@ const COPY = {
         desc: "Four suppliers answer at their real speeds, then cut the budget and watch one drop out" },
     ],
     workEyebrow: "SELECTED WORK",
-    workTitle: "Twelve repositories, and the newest one is a system",
+    workTitle: "Thirteen repositories, and the newest one is a world",
     howEyebrow: "APPROACH",
     howTitle: "How I think about building",
     how: [
@@ -134,7 +134,7 @@ const COPY = {
         desc: "Vier Anbieter in ihrem echten Tempo, dann das Budget kürzen und zusehen wie einer rausfällt" },
     ],
     workEyebrow: "AUSGEWÄHLTE ARBEITEN",
-    workTitle: "Zwölf Repositories, und das neueste ist ein System",
+    workTitle: "Dreizehn Repositories, und das neueste ist eine Welt",
     howEyebrow: "HALTUNG",
     howTitle: "Wie ich an Bauen herangehe",
     how: [
