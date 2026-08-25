@@ -4,7 +4,7 @@
     
     <defs>
       <linearGradient id="ramp-s14" gradientUnits="userSpaceOnUse"
-                      x1="0" y1="-1528.625" x2="0" y2="2825">
+                      x1="0" y1="-1528.625" x2="0" y2="2635">
         <stop offset="0" stop-color="#070E17"/><stop offset="0.42" stop-color="#0B1622"/>
         <stop offset="0.78" stop-color="#12212F"/><stop offset="1" stop-color="#1A2E3F"/>
       </linearGradient>
@@ -13,13 +13,13 @@
       </filter>
       <clipPath id="clip-s14"><rect width="1000" height="160"/></clipPath>
       <radialGradient id="sun-s14" gradientUnits="userSpaceOnUse"
-                      cx="820" cy="-1702.77" r="2394.49375">
+                      cx="820" cy="-1695.17" r="2289.99375">
         <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.28"/>
         <stop offset="0.62" stop-color="#FFFFFF" stop-opacity="0"/>
       </radialGradient>
     </defs>
     <rect width="1000" height="160" fill="url(#ramp-s14)"/><rect width="1000" height="160" fill="url(#sun-s14)"/>
-    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s14)" clip-path="url(#clip-s14)"><ellipse cx="880" cy="84.82842499999992" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
+    <g fill="#FFFFFF" opacity="0.12" filter="url(#soft-s14)" clip-path="url(#clip-s14)"><ellipse cx="880" cy="75.20335" rx="140" ry="18"/></g><text x="44" y="58" font-family='ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace' font-size="10.5"
       font-weight="700" letter-spacing="2.4" fill="#FFFFFF">SELECTED WORK</text><text x="44" y="104" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, sans-serif' font-size="34"
       font-weight="800" letter-spacing="-1" fill="#EAF1F7">Fourteen repositories, and the newest one is a pinball table</text>
   </svg>

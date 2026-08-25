@@ -91,9 +91,9 @@ const CLOUDS = [
   { cx: 0.14, cy: 0.0920, rx: 150, ry: 26 },  // across the header/intro seam
   { cx: 0.20, cy: 0.0905, rx: 90,  ry: 21 },  // across the header/intro seam
   { cx: 0.62, cy: 0.1132, rx: 130, ry: 22 },  // intro
-  { cx: 0.30, cy: 0.1899, rx: 170, ry: 22 },  // try header
-  { cx: 0.88, cy: 0.3706, rx: 140, ry: 18 },  // work header
-  { cx: 0.12, cy: 0.6923, rx: 120, ry: 20 },  // how
+  { cx: 0.30, cy: 0.1957, rx: 170, ry: 22 },  // try header
+  { cx: 0.88, cy: 0.3852, rx: 140, ry: 18 },  // work header
+  { cx: 0.12, cy: 0.7000, rx: 120, ry: 20 },  // how
   { cx: 0.72, cy: 0.8918, rx: 160, ry: 24 },  // foot
 ];
 
@@ -430,11 +430,11 @@ const CARDS = [
      the fold. If it reads long, demote fanout to half width and rewrap its
      blurb to about forty characters a line. */
   { id: "siege", repo: "siege", title: "siege",
-    lang: "TypeScript · Canvas", wide: true,
+    lang: "TypeScript · Canvas",
     blurb: ["Three balls and one castle, and every bounce worked out from scratch."],
     blurbDe: ["Drei Kugeln, eine Burg, und jeder Abprall von Hand gerechnet."],
-    meta: "76 tests · 0 deps · no engine, no bundler · playable",
-    metaDe: "76 Tests · 0 Abhängigkeiten · ohne Engine · spielbar", accent: true },
+    meta: "77 tests · 0 deps · no engine · playable",
+    metaDe: "77 Tests · 0 Abhängigkeiten · ohne Engine · spielbar", accent: true },
   /* Wide, and therefore first, because the layout only allows full-width cards
      at the top and eleven cards cannot be paired otherwise. One announcement
      rather than two: Arsalan's objection on 2026-08-17 was to lounge and plinth
@@ -446,9 +446,9 @@ const CARDS = [
      drops its [ code ] badge, which is right when the source is private and
      wrong here: fanout is public and the demo already has its own try-it row. */
   { id: "fanout", repo: "fanout", title: "fanout",
-    lang: "Java · 2 Services", wide: true,
-    blurb: ["Eight suppliers, one shared deadline, and an answer that names whoever did not reply."],
-    blurbDe: ["Acht Anbieter, ein gemeinsames Zeitbudget, und eine Antwort, die sagt, wer fehlt."],
+    lang: "Java · 2 Services",
+    blurb: ["Eight suppliers, one deadline, and an answer", "that names whoever did not reply."],
+    blurbDe: ["Acht Anbieter, eine Frist, und eine Antwort,", "die sagt, wer nicht geantwortet hat."],
     meta: "159 tests · 0 deps · 7 routes · 364 recorded searches",
     metaDe: "159 Tests · 0 Abhängigkeiten · 7 Strecken · 364 Suchen", accent: true },
   /* The two newest, sharing the first row. They were a full-width card each
